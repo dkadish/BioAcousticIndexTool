@@ -1,0 +1,73 @@
+{
+  "name": "SBAT",
+  "keywords": "onewire, 1-wire, bus, sensor, temperature",
+  "description": "Arduino Library for Dallas Temperature ICs (DS18B20, DS18S20, DS1822, DS1820)",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/milesburton/Arduino-Temperature-Control-Library.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Miles Burton",
+      "email": "miles@mnetcs.com",
+      "url": "http://www.milesburton.com",
+      "maintainer": true
+    },
+    {
+      "name": "Tim Newsome",
+      "email": "nuisance@casualhacker.net"
+    },
+    {
+      "name": "Guil Barros",
+      "email": "gfbarros@bappos.com"
+    },
+    {
+      "name": "Rob Tillaart",
+      "email": "rob.tillaart@gmail.com"
+    }
+  ],
+  "dependencies":
+  [{
+    "name": "Audio",
+    "authors": "Paul Stoffregen",
+    "frameworks": "arduino"
+    },
+    {
+      "name": "Adafruit Unified Sensor"
+    },
+    {
+      "name": "Adafruit TSL2561"
+    },
+    {
+      "name": "Adafruit Si7021 Library",
+      "authors": "Adafruit",
+      "frameworks": "arduino"
+    },
+    {
+      "name": "SPI"
+    },
+    {
+      "name": "Wire"
+    },
+    {
+      "name": "Time"
+    },
+    {
+      "name": "TimeAlarms"
+    },
+    {
+      "name": "Metro"
+    },
+    {
+      "name": "Snooze"
+    },
+    {
+      "name": "SD"
+    }
+  ],
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
