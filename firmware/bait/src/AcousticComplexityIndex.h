@@ -13,6 +13,7 @@ class AcousticComplexityIndex : public Sensor {
 public:
 
     AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw);
+    AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, boolean printWindowCount);
 
     void reset() override;
 
@@ -23,6 +24,8 @@ public:
 private:
 
     ACI_TemporalWindow & _aci;
+
+    boolean _printWindowCount= false;
 };
 
 

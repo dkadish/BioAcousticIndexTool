@@ -5,7 +5,7 @@
 #ifndef SBAT_PARAMETERS_H
 #define SBAT_PARAMETERS_H
 
-#define PRECISION 4
+#define PRECISION 8
 
 #define STRINGIFY(VAR) STRINGIFY_(VAR)
 #define STRINGIFY_(VAR) #VAR

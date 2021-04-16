@@ -2,6 +2,9 @@
 // Created by David Kadish on 09/11/2018.
 //
 
+#ifndef TESTING
+#warning ("Warning: Compiling main.")
+
 /// Should measurements begin immediately on boot (0) or on regularized time intervals (1)
 #define START_ON_THE_HOUR 0
 
@@ -33,7 +36,8 @@ long soundSensingInterval = 15L * 60L;
 
 BatteryVoltageSensor batt = BatteryVoltageSensor(environmentSensingInterval, A17);
 
-FFTReader fft = FFTReader(aa_fft);
+const int averageTogether = 1; // Don't average FFT values
+FFTReader fft = FFTReader(aa_fft, averageTogether);
 
 ACI_TemporalWindow aci_tw = ACI_TemporalWindow(aciSubwindowInterval, fft);
 
@@ -223,3 +227,5 @@ void printTimestamp(){
         Serial.print('0');
     Serial.print(second());
 }
+
+#endif

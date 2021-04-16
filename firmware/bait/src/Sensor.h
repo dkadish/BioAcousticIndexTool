@@ -38,10 +38,15 @@ public:
         return m_interval - (now() % m_interval);
     }
 
+    void enablePrint(){ _print=true; };
+    void disablePrint(){ _print=false; };
+    bool getPrint(){ return _print; };
+
 //    bool ready(){ return metro.check(); }
 
 private:
     int _interval; /**< Time between measurements in seconds. */
+    bool _print = true;
 
     Metro metro;
 
