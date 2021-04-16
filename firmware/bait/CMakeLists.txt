@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(sbat)
+project(bait)
 
 include(CMakeListsPrivate.txt)
 
@@ -51,4 +51,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(${PROJECT_NAME} ${SRC_LIST} src/AcousticDiversityIndex.cpp src/AcousticDiversityIndex.h src/AcousticDifferenceIndex.cpp src/AcousticDifferenceIndex.h src/AtmosphericSensors.cpp src/AtmosphericSensors.h src/LowPowerBatteryWake.cpp src/LowPowerBatteryWake.h src/parameters.h)
+add_executable(${PROJECT_NAME} ${SRC_LIST} src/AcousticDiversityIndex.cpp src/AcousticDiversityIndex.h src/AcousticDifferenceIndex.cpp src/AcousticDifferenceIndex.h src/AtmosphericSensors.cpp src/AtmosphericSensors.h src/LowPowerBatteryWake.cpp src/LowPowerBatteryWake.h src/parameters.h src/print_utils.h)
