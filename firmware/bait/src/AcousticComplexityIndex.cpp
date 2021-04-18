@@ -11,6 +11,11 @@ AcousticComplexityIndex::AcousticComplexityIndex(int interval, ACI_TemporalWindo
 
 }
 
+AcousticComplexityIndex::AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, boolean printWindowCount) :
+        Sensor(interval), _aci(aci_tw), _printWindowCount(printWindowCount) {
+
+}
+
 void AcousticComplexityIndex::reset() {
     Sensor::reset();
 
@@ -39,6 +44,11 @@ void AcousticComplexityIndex::record() {
 
     // ACI/ADI
     Serial.print(_aci.getValue(), PRECISION);
+    if(_printWindowCount){
+        Serial.print(", ");
+        // Number of windows processed (j)
+        Serial.print(_aci.getCount());
+    }
     Serial.println();
 
     File dataFile = SD.open("aci.csv", FILE_WRITE);
@@ -63,6 +73,11 @@ void AcousticComplexityIndex::record() {
 
         // ACI/ADI
         dataFile.print(_aci.getValue(), PRECISION);
+        if(_printWindowCount){
+            dataFile.print(", ");
+            // Number of windows processed (j)
+            dataFile.print(_aci.getCount());
+        }
         dataFile.println();
 
         dataFile.close();
