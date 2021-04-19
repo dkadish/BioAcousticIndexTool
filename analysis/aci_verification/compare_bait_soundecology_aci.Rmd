@@ -1,0 +1,165 @@
+---
+title: "Comparing the BAIT and soundecology implementations of ACI"
+output:
+  pdf_document: default
+  html_document:
+    code_folding: hide
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80), tidy=TRUE, dev='png')
+```
+# Setup
+
+Loading the libraries and the data files.
+
+```{r load_libs,echo=FALSE,message=FALSE,warning=FALSE}
+library(tuneR)
+library(seewave)
+library(soundecology)
+library(tidyverse)
+library(ggplot2)
+library("ggpubr")
+```
+
+## Load BAIT ACI Data
+
+Loads ACI values calculated on the BAIT tool.
+
+```{r load_aci}
+bait_aci <- read.csv("aci_totals/ACI_0_49_1avg.CSV", header=FALSE)
+```
+
+
+# Calculate ACI with soundecology
+
+For every sound file (0.wav to 49.wav), the [ACI](https://rdrr.io/cran/soundecology/man/acoustic_complexity_index.html) value is computed.
+
+The [Amplitude Index](https://rdrr.io/cran/seewave/man/M.html) is also computed.
+`M` is the median of the amplitude envelope of the sounds, effectively a measure of how loud the clip is.
+This is used later in the analysis.
+
+```{r calc_aci, cache=TRUE}
+aci <- data.frame(matrix(ncol=5,nrow=50))
+names(aci) <- c('file','file_number','soundecology','BAIT','M')
+aci$soundecology <- as.numeric(aci$soundecology)
+aci$BAIT <- as.numeric(aci$BAIT)
+aci$file_number <- as.numeric(0:49)
+
+i <- 1
+
+for (soundfile_name in paste0('SOUND/', 0:49, '.wav')){
+  soundfile <- readWave(soundfile_name)
+  
+  invisible(capture.output(ac <- acoustic_complexity(soundfile, min_freq = NA, max_freq = NA, j = 5, fft_w = 256)))
+  med <- M(soundfile)
+  aci[i,]$file <- soundfile_name
+  aci[i,3:5] <- c(ac$AciTotAll_left, bait_aci$V2[i], med)
+  
+  i <- i+1
+}
+
+aci
+```
+
+
+# Plot ACI values
+
+Plot the ACI values calculated by BAIT and the `soundecology` package for each sound file side-by-side.
+There are notable differences between the calculations on the two platforms, though some are far closer than others.
+For example, the calcualtions for 0.wav, 7.wav, and 49.wav are relatively close, while the calculations for 6.wav, 17.wav, and 48.wav are wildly different (with the result from BAIT being much higher than the value returned by the `soundecology` package's `aci` function).
+
+
+```{r}
+
+aci_long_df <- aci[,2:4] %>% pivot_longer(!file_number, names_to="source", values_to="aci")
+
+p <- ggplot(aci_long_df, aes(fill=source, y=aci, x=file_number, na.rm=TRUE, width=0.75)) 
+p <- p + geom_bar(position="dodge", stat="identity") 
+# p <- p + theme(axis.text.x = element_text(angle = 90), aspect.ratio = 1/2)
+p <- p + theme(aspect.ratio = 1/2)
+p <- p + scale_x_continuous(breaks=seq(0,49,2)) + xlab("file (#.wav)")
+
+ggtitle("ACI Values")
+
+p
+```
+
+
+```{r, include=FALSE}
+# Save image and results as CSV
+
+ggsave("/Users/davk/Documents/phd/writing/sbat-paper/images/aci_verification/aci_50_files.pdf", width=210, height=210*1/3, units="mm")
+write.csv(aci, 'soundecology_aci.csv')
+```
+
+# Differences between Soundecology and BAIT
+
+```{r}
+ggscatter(aci, x = "soundecology", y = "BAIT")
+```
+There doesn't appear to be a strong correlation between the ACI values calculated by the `soundecology` package and BAIT.
+However, if one looks at the waveforms of the sounds where the aci value calculated on `soundecology` and BAIT is very similar (the 3 plots on the left) and those where the value is very different (the 3 on the right), an obvious pattern is visible. It appears as though tracks with more sound^["More sound" is pretty ill-defined, but a higher average amplitude is what we end up using to measure this.] end up with more similar values.
+```{r}
+# png("/Users/davk/Documents/phd/writing/sbat-paper/images/aci_verification/waveforms.png", width = 210, height = 110, units = "mm", res = 300) 
+
+# Create a plot
+op<-par(mfrow=c(2, 3))
+
+for (soundfile_name in paste0('SOUND/', c(0,7,49,6,17,48), '.wav')){ 
+  soundfile <- readWave(soundfile_name)
+  
+  samples <- length(soundfile@left)
+  rate <- soundfile@samp.rate
+  
+  timeArray <- (0:(samples-1)) / rate
+  plot(timeArray, soundfile@left, type='l', col='black', xlab='Time (ms)', ylab='Amplitude', yaxt='n', ylim=c(-25000,25000), main=soundfile_name)
+}
+
+par(op)
+
+# Close the png file
+# dev.off() 
+
+```
+
+Examining plots of the difference between the ACI values from BAIT and `soundecology` and a plot of the average amplitude of each of the files, there appears to be a relationship.
+
+```{r}
+op<-par(mfrow=c(2,1))
+
+pct_diff <- data.frame(file = 0:49, diff = (aci$BAIT - aci$soundecology) / aci$BAIT)
+diff_plot <- ggplot(pct_diff, aes(y=diff, x=file, na.rm=TRUE)) + geom_bar(position="dodge", stat="identity") + labs(title="Difference between BAIT ACI and soundecology ACI", x = "#.wav", y = "BAIT-soundecology")
+
+M_plot <- ggplot(aci, aes(y=M, x=0:49, na.rm=TRUE)) + geom_bar(position="dodge", stat="identity") + labs(title="Average amplitude of test sound files", x = "#.wav", y = "average amplitude")
+
+ggarrange(diff_plot, M_plot, nrow=2)
+```
+
+Data are not normally distributed, so we use Spearman's Rank correlation.
+
+
+```{r}
+M_diff <- data.frame(file = 0:49, M = aci$M, diff = pct_diff$diff)
+
+cor.test(M_diff$M, M_diff$diff, method='spearman')
+```
+And plot the results in a scatterplot with a regression line.
+
+```{r}
+library("ggpubr")
+ggscatter(M_diff, x = "M", y = "diff", 
+          add = "reg.line", conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "spearman",
+          xlab = "M", ylab = "BAIT ACI vs soundecology ACI")
+```
+```{r}
+ggsave("/Users/davk/Documents/phd/writing/sbat-paper/images/aci_verification/spearman.pdf", width=210, height=210*2/3, units="mm")
+```
+
+# Conclusion
+The test shows a 
+strong negative correlation, meaning that the larger difference in computed ACI values occurs in conjunction with quieter sounds.
+The can likely be attributed to difference in precision (BAIT uses single-precision 16-bit floating point math). Quieter sounds - those with lower median amplitudes - produce smaller values in an FFT. These smaller signals amplify the precision errors that arise due to the 16-bit operation of the microcontroller, leading to greater differences in the final ACI calculation.

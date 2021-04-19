@@ -1,0 +1,27 @@
+--- 
+title: "Save spectrogram to CSV"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80), tidy=TRUE, dev='png')
+```
+
+Load a sound file (6.wav), extract the left channel (in case it is stereo), compute spectrogram and write the first 250 frames (5.780 seconds) of the sound file.
+
+```{r}
+library(tuneR)
+library(seewave)
+
+soundfile <- readWave("./SOUND/6.wav")
+left <- channel(soundfile, which = c("left"))
+sp <- spectro(left, f = soundfile@samp.rate, wl = 256, plot = TRUE, norm = TRUE, dB = NULL, scale = FALSE, wn = "hamming")
+
+write.csv(sp$amp[,0:250],'./fft/soundecology_spectro_6.csv')
+write.csv(sp$time[0:250],'./fft/soundecology_spectro_times_6.csv')
+```
+
+This creates 2 files: soundecology_spectro_norm_6.csv is the spectrogram matrix in csv format (columns are time, rows are FFT bins). soundecology_spectro_norm_times_6.csv is a 250-entry column of the timestamps of the frames.

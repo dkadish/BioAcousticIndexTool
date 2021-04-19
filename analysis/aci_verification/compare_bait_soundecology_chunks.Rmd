@@ -1,0 +1,183 @@
+---
+title: "Comparing the BAIT and soundecology implementations of ACI at the clump level"
+output:
+  pdf_document: default
+  html_document:
+    code_folding: hide
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80), tidy=TRUE, dev='png')
+```
+
+This code is part of the verification of the BAIT implementation of the ACI algorithm by testing it against the results from the soundecology `acoustic_complexity` function.
+Because the FFT produced by BAIT is slightly different than that produced by the `spectro` function of seewave (used in `acoustic_complexity`), we use FFT values logged by test code on BAIT to compare the clump calculations.
+
+# Setup
+Much of this section duplicates code from the soundecology package's `acoustic_complexity` function, modifying it to use FFT values pre-computed by BAIT and loaded from a CSV file.
+
+## Load the libraries
+```{r}
+library(tuneR)
+library(seewave)
+library(soundecology)
+library(tidyverse)
+library(ggplot2)
+```
+
+## Load the Data from BAIT
+Loads the total ACI value calculated by BAIT (`bait_aci`), the clump ACI values (`bait_clump_data`)
+
+```{r}
+bait_aci <- read.csv(paste("./aci_clumps/ACI.CSV", sep=""), header=FALSE)$V2
+bait_clump_data <- read.csv(paste("./aci_clumps/ACI_TW.CSV", sep=""))
+bait_clump_sums <- diff(c(0, bait_clump_data$ACI_j))
+timings <- bait_clump_data$frame
+```
+
+## Initialize the variables
+
+These are already known from the wave files used or from pre-selected settings.
+
+```{r}
+min_freq <- 0
+max_freq <- 44100/2
+j <- 5
+fft_w <- 256
+
+samplingrate <- 44100
+duration <- 50
+nyquist_freq <- (samplingrate/2)
+if (max_freq > nyquist_freq) {
+	cat(paste("\n WARNING: The maximum acoustic frequency that this file can use is ", 
+		nyquist_freq, "Hz. But the script was set to measure up to ", 
+		max_freq, "Hz. The value of max_freq was changed to ", 
+		nyquist_freq, ".\n\n", sep = ""))
+	max_freq <- nyquist_freq
+}
+wlen = fft_w
+```
+
+## get_d function
+
+Calculates $D=\sum^n_{k=1} d_k$ where $d_k=|I_k - I_{(k+1)}|$. `min_col` and `max_col` are effectively `k` and `N` in this equation.
+```{r}
+get_d <- function(spectrum, freq_row, min_col, max_col) {
+	D = 0
+	for (k in min_col:(max_col - 1)) {
+		D = D + abs(spectrum[freq_row, k] - spectrum[freq_row, 
+			k + 1])
+	}
+	return(D)
+}
+```
+
+## Open the FFT file
+
+Here, `acoustic_complexity` would normally process an audio file using `spectro` to extract an FFT. Here, we load it from the FFT calculated by BAIT.
+
+```{r}
+FFT <- read.csv(paste("./aci_clumps/FFT.CSV", sep=""), header=FALSE)
+FFT_t <- t(FFT)
+FFT_t <- head(FFT_t, -1)
+
+spec_left <- list(time=seq(0,50,length.out = dim(FFT_t)[2]), freq=seq(0,22.1,length.out = dim(FFT_t)[1]), amp=FFT_t)
+specA_left <- spec_left$amp
+```
+
+## Parameter calculations
+```{r}
+specA_rows <- dim(specA_left)[1] # Freq bins
+specA_cols <- dim(specA_left)[2] # Time bins
+fl <- rep(NA, specA_rows)
+delta_fl <- (max_freq - min_freq)/specA_rows # Hz per bin
+delta_tk <- duration/specA_cols # time per bin
+no_j <- length(timings)
+```
+
+## Setting up empty containers
+```{r}
+ACI_left_vals <- rep(NA, no_j)
+ACI_fl_left_vector <- rep(NA, no_j)
+ACI_left_matrix <- data.frame(matrix(NA, nrow = specA_rows, 
+	ncol = no_j))
+ACI_right_vals <- rep(NA, no_j)
+ACI_fl_right_vector <- rep(NA, no_j)
+ACI_right_matrix <- data.frame(matrix(NA, nrow = specA_rows, 
+	ncol = no_j))
+```
+
+# ACI Calculations
+
+This code is looped for every cluster in every frequency bin.
+D is $D$.
+`sum_I` is $\sum^n_{k=1} I_k$
+Those are totalled over all clusters and frequencies as `ACI_tot_left`.
+
+Note in here, there is no manipulation of the spectrogram and no subsequent filtering of the data.
+
+There was a problem with the original code, using the FFT data from BAIT. When all of the FFT measurements in a cluster are 0, you get $D=0$ and $\sum^n_{k=1} I_k = 0$. This causes a NAN for that $ACI_{j,\Delta fl}$, which causes a NAN for the whole ACI calculation. Note that this does not seem to occur when using FFTs from spectro because it is not accounted for in the code. I have modified the code to flip those NAN to 0. The logic behind this is that if each of the $I_k$ was a small, positive number, you would get $d_k=0$ for each step. At the same time, $\sum^n_{k=1} I_k > 0$ and so you would get $ACI_{\Delta fl}=0$.
+
+```{r, results="hold"}
+for (q_index in 1:specA_rows) { # For every frequency bin
+	for (j_index in 1:no_j) { # For every cluster
+		# min_col <- j_index * I_per_j - I_per_j + 1 # Cluster min bin
+		# max_col <- j_index * I_per_j # Cluster max bin
+	  min_col <- c(1, timings)[j_index]
+	  max_col <- timings[j_index]
+		
+		# cat("Cluster ", q_index, ": [", min_col, ", ", max_col, "]\n")
+		
+		D <- get_d(specA_left, q_index, min_col, max_col) # Get cluster D
+		sum_I <- sum(specA_left[q_index, min_col:max_col]) # Get Sum of I for cluster
+		ACI_left_vals[j_index] <- D/sum_I
+		ACI_left_matrix[q_index, j_index] <- D/sum_I
+		
+		##### ADDED CODE TO DEAL WITH sum_I = 0 #####
+		if (is.na(ACI_left_vals[j_index])){
+		  ACI_left_vals[j_index] <- 0
+		  ACI_left_matrix[q_index, j_index] <- 0
+		}
+		###########
+		
+	}
+	ACI_fl_left_vector[q_index] <- sum(ACI_left_vals)
+}
+ACI_tot_left <- sum(ACI_fl_left_vector)
+
+aci_cluster_sums <- colSums(ACI_left_matrix)
+
+```
+
+# Print the results
+```{r, results="hold"}
+
+cat("Soundecology:")
+cat("\nAcoustic Complexity Index (total): ")
+cat(ACI_tot_left)
+
+cat("\nCluster Sums: ")
+cat( aci_cluster_sums )
+
+cat("\n\nBAIT")
+cat("\nAcoustic Complexity Index (total): ")
+cat(bait_aci)
+
+cat("\nCluster Sums: ")
+cat(bait_clump_sums)
+```
+
+# Plot the results
+
+```{r}
+aci_df <- data.frame(aci_cluster_sums, bait_clump_sums, timings, row.names = 1:no_j)
+names(aci_df) <- c("soundecology", "BAIT", "timings")
+aci_long_df <- aci_df %>% pivot_longer(!timings, names_to="source", values_to="aci")
+
+ggplot(aci_long_df, aes(fill=source, y=aci, x=timings)) + geom_bar(position="dodge", stat="identity")
+ggtitle("ACI Cluster Sums ($ACI_j$)")
+```
+
+The calculated values for each clump are quite similar between BAIT and the `acoustic_complexity` function. The difference is likely due to the 16-bit floating point math on BAIT and the errors associated with single precision (as opposed to double precision) computation. We can conclude that BAIT is performing the calculations correctly at the clump level.
