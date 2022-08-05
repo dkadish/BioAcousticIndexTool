@@ -14405,7 +14405,7 @@ type 0309, grid 20mm</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GND_POWER" prefix="G">
+<deviceset name="GND_POWER">
 <gates>
 <gate name="G$1" symbol="GND_POWER" x="0" y="0"/>
 </gates>
@@ -14454,54 +14454,6 @@ type 0309, grid 20mm</description>
 <rectangle x1="-0.952" y1="-0.868" x2="0.952" y2="0.868" layer="39"/>
 <circle x="-0.5334" y="-1.2954" radius="0.254" width="0" layer="25"/>
 </package>
-<package name="SMA5P-5.08-6X6MM">
-<pad name="1" x="0" y="0" drill="1.7" diameter="2.8"/>
-<pad name="2" x="2.54" y="2.54" drill="1.7" diameter="2.8"/>
-<pad name="3" x="-2.54" y="2.54" drill="1.7" diameter="2.8"/>
-<pad name="4" x="-2.54" y="-2.54" drill="1.7" diameter="2.8"/>
-<pad name="5" x="2.54" y="-2.54" drill="1.7" diameter="2.8"/>
-<wire x1="3" y1="1.095" x2="3" y2="-1.095" width="0.127" layer="21"/>
-<wire x1="-3" y1="-1.095" x2="-3" y2="1.095" width="0.127" layer="21"/>
-<text x="-1.778" y="3.81" size="0.889" layer="25" ratio="12">&gt;NAME</text>
-<text x="0" y="-0.254" size="0.6096" layer="27" ratio="12" align="center">&gt;VALUE</text>
-<rectangle x1="-3.048" y1="-2.921" x2="3.048" y2="3.048" layer="39"/>
-<wire x1="-1.095" y1="3" x2="1.095" y2="3" width="0.127" layer="21"/>
-<wire x1="1.095" y1="-3" x2="-1.095" y2="-3" width="0.127" layer="21"/>
-</package>
-<package name="SMA5P-5.08-6.15X6.15MM">
-<description>&lt;b&gt;SMA vertical PCB thrue hole jack&lt;/b&gt;&lt;p&gt;
-Source: Lighthorse Technologies, inc. SASF54GT.pdf</description>
-<circle x="0" y="0" radius="1.7" width="0.2032" layer="21"/>
-<wire x1="-1.1" y1="3.075" x2="1.1" y2="3.075" width="0.2032" layer="21"/>
-<wire x1="3.075" y1="1.1" x2="3.075" y2="-1.1" width="0.2032" layer="21"/>
-<wire x1="1.1" y1="-3.075" x2="-1.1" y2="-3.075" width="0.2032" layer="21"/>
-<wire x1="-3.075" y1="-1.1" x2="-3.075" y2="1.1" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.5" diameter="2.2"/>
-<pad name="2" x="-2.54" y="2.54" drill="1.5" diameter="2.2"/>
-<pad name="3" x="2.54" y="2.54" drill="1.5" diameter="2.2"/>
-<pad name="4" x="2.54" y="-2.54" drill="1.5" diameter="2.2"/>
-<pad name="5" x="-2.54" y="-2.54" drill="1.5" diameter="2.2"/>
-<text x="-1.778" y="3.556" size="0.889" layer="25" ratio="11">&gt;NAME</text>
-<text x="-0.127" y="-0.508" size="0.635" layer="27" ratio="11" align="center">&gt;VALUE</text>
-<rectangle x1="-3.048" y1="-3.048" x2="3.048" y2="3.048" layer="39"/>
-</package>
-<package name="SMA5P-SMD-5.1-6.5X6.5X16.5MM">
-<smd name="ANT" x="0" y="0" dx="4" dy="1.524" layer="1" roundness="50" rot="R180"/>
-<smd name="GND1" x="0" y="3" dx="4" dy="2" layer="1" roundness="50" rot="R180"/>
-<smd name="GND2" x="0" y="-3" dx="4" dy="2" layer="1" roundness="50" rot="R180"/>
-<smd name="GND3" x="0" y="3" dx="4" dy="2" layer="16" roundness="50"/>
-<smd name="GND4" x="0" y="-3" dx="4" dy="2" layer="16" roundness="50"/>
-<wire x1="2.254" y1="3.25" x2="15" y2="3.25" width="0.127" layer="51"/>
-<wire x1="2.254" y1="-3.25" x2="15" y2="-3.25" width="0.127" layer="51"/>
-<wire x1="15" y1="3.25" x2="15" y2="-3.25" width="0.127" layer="51"/>
-<wire x1="2" y1="1.98" x2="2" y2="0.56" width="0.127" layer="21"/>
-<wire x1="2" y1="-0.56" x2="2" y2="-1.98" width="0.127" layer="21"/>
-<wire x1="-2" y1="0.56" x2="-2" y2="1.98" width="0.127" layer="21"/>
-<wire x1="-2" y1="-1.98" x2="-2" y2="-0.56" width="0.127" layer="21"/>
-<rectangle x1="-1.905" y1="-3.302" x2="1.905" y2="3.302" layer="39"/>
-<text x="-1.905" y="4.191" size="0.889" layer="25" ratio="12">&gt;NAME</text>
-<text x="0" y="1.27" size="0.6096" layer="27" ratio="12" align="center">&gt;VALUE</text>
-</package>
 </packages>
 <symbols>
 <symbol name="ANTENNA-U-FL">
@@ -14514,29 +14466,6 @@ Source: Lighthorse Technologies, inc. SASF54GT.pdf</description>
 <pin name="D" x="-7.62" y="0" length="middle" function="dotclk"/>
 <pin name="GND1" x="7.62" y="2.54" visible="off" length="middle" rot="R180"/>
 <pin name="GND2" x="7.62" y="-2.54" visible="off" length="middle" rot="R180"/>
-</symbol>
-<symbol name="ANTENNA-SMA-MCX-JE">
-<pin name="ANT" x="5.08" y="5.08" length="short" rot="R180"/>
-<pin name="2" x="5.08" y="2.54" length="short" rot="R180"/>
-<pin name="3" x="5.08" y="0" length="short" rot="R180"/>
-<pin name="4" x="5.08" y="-2.54" length="short" rot="R180"/>
-<pin name="5" x="5.08" y="-5.08" length="short" rot="R180"/>
-<wire x1="1.27" y1="7.62" x2="-5.08" y2="7.62" width="0.1524" layer="94"/>
-<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-7.62" width="0.1524" layer="94"/>
-<wire x1="-5.08" y1="-7.62" x2="1.27" y2="-7.62" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="-7.62" x2="1.27" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="-5.08" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="1.27" y2="0" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="0" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="1.27" y2="5.08" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="5.08" x2="1.27" y2="7.62" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="5.08" x2="1.27" y2="5.08" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="1.27" y2="-5.08" width="0.1524" layer="94"/>
-<text x="-5.08" y="8.89" size="1.27" layer="95" ratio="12">&gt;NAME</text>
-<text x="-5.08" y="7.62" size="1.27" layer="96" ratio="12">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -14567,84 +14496,42 @@ Source: Lighthorse Technologies, inc. SASF54GT.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ANTENNA-SMA-MCX-JE" prefix="ANT" uservalue="yes">
-<gates>
-<gate name="G$1" symbol="ANTENNA-SMA-MCX-JE" x="0" y="0"/>
-</gates>
-<devices>
-<device name="-5.08MM" package="SMA5P-5.08-6X6MM">
-<connects>
-<connect gate="G$1" pin="2" pad="5"/>
-<connect gate="G$1" pin="3" pad="4"/>
-<connect gate="G$1" pin="4" pad="3"/>
-<connect gate="G$1" pin="5" pad="2"/>
-<connect gate="G$1" pin="ANT" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="-LTI-SASF54GT" package="SMA5P-5.08-6.15X6.15MM">
-<connects>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="ANT" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="-320160125" package="SMA5P-SMD-5.1-6.5X6.5X16.5MM">
-<connects>
-<connect gate="G$1" pin="2" pad="GND1"/>
-<connect gate="G$1" pin="3" pad="GND2"/>
-<connect gate="G$1" pin="4" pad="GND3"/>
-<connect gate="G$1" pin="5" pad="GND4"/>
-<connect gate="G$1" pin="ANT" pad="ANT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 <library name="moudle-new">
 <packages>
 <package name="MOUDLE28P-1.25-12X12X2.5MM">
-<smd name="1" x="-6" y="3.75" dx="2" dy="0.9" layer="1"/>
-<smd name="2" x="-6" y="2.5" dx="2" dy="0.9" layer="1"/>
-<smd name="3" x="-6" y="1.25" dx="2" dy="0.9" layer="1"/>
-<smd name="4" x="-6" y="0" dx="2" dy="0.9" layer="1"/>
-<smd name="5" x="-6" y="-1.25" dx="2" dy="0.9" layer="1"/>
-<smd name="6" x="-6" y="-2.5" dx="2" dy="0.9" layer="1"/>
-<smd name="7" x="-6" y="-3.75" dx="2" dy="0.9" layer="1"/>
-<smd name="8" x="-3.75" y="-6" dx="2" dy="0.9" layer="1" rot="R90"/>
-<smd name="9" x="-2.5" y="-6" dx="2" dy="0.9" layer="1" rot="R90"/>
-<smd name="10" x="-1.25" y="-6" dx="2" dy="0.9" layer="1" rot="R90"/>
-<smd name="11" x="0" y="-6" dx="2" dy="0.9" layer="1" rot="R90"/>
-<smd name="12" x="1.25" y="-6" dx="2" dy="0.9" layer="1" rot="R90"/>
-<smd name="13" x="2.5" y="-6" dx="2" dy="0.9" layer="1" rot="R90"/>
-<smd name="14" x="3.75" y="-6" dx="2" dy="0.9" layer="1" rot="R90"/>
-<smd name="15" x="6" y="-3.75" dx="2" dy="0.9" layer="1" rot="R180"/>
-<smd name="16" x="6" y="-2.5" dx="2" dy="0.9" layer="1" rot="R180"/>
-<smd name="17" x="6" y="-1.25" dx="2" dy="0.9" layer="1" rot="R180"/>
-<smd name="18" x="6" y="0" dx="2" dy="0.9" layer="1" rot="R180"/>
-<smd name="19" x="6" y="1.25" dx="2" dy="0.9" layer="1" rot="R180"/>
-<smd name="20" x="6" y="2.5" dx="2" dy="0.9" layer="1" rot="R180"/>
-<smd name="21" x="6" y="3.75" dx="2" dy="0.9" layer="1" rot="R180"/>
-<smd name="22" x="3.75" y="6" dx="2" dy="0.9" layer="1" rot="R270"/>
-<smd name="23" x="2.5" y="6" dx="2" dy="0.9" layer="1" rot="R270"/>
-<smd name="24" x="1.25" y="6" dx="2" dy="0.9" layer="1" rot="R270"/>
-<smd name="25" x="0" y="6" dx="2" dy="0.9" layer="1" rot="R270"/>
-<smd name="26" x="-1.25" y="6" dx="2" dy="0.9" layer="1" rot="R270"/>
-<smd name="27" x="-2.5" y="6" dx="2" dy="0.9" layer="1" rot="R270"/>
-<smd name="28" x="-3.75" y="6" dx="2" dy="0.9" layer="1" rot="R270"/>
-<circle x="-6.731" y="5.08" radius="0.254" width="0" layer="25"/>
-<wire x1="-4.826" y1="5.969" x2="-5.969" y2="4.826" width="0.127" layer="21"/>
+<smd name="1" x="-6" y="3.75" dx="2.3" dy="0.9" layer="1"/>
+<smd name="2" x="-6" y="2.5" dx="2.3" dy="0.9" layer="1"/>
+<smd name="3" x="-6" y="1.25" dx="2.3" dy="0.9" layer="1"/>
+<smd name="4" x="-6" y="0" dx="2.3" dy="0.9" layer="1"/>
+<smd name="5" x="-6" y="-1.25" dx="2.3" dy="0.9" layer="1"/>
+<smd name="6" x="-6" y="-2.5" dx="2.3" dy="0.9" layer="1"/>
+<smd name="7" x="-6" y="-3.75" dx="2.3" dy="0.9" layer="1"/>
+<smd name="8" x="-3.75" y="-6" dx="2.3" dy="0.9" layer="1" rot="R90"/>
+<smd name="9" x="-2.5" y="-6" dx="2.3" dy="0.9" layer="1" rot="R90"/>
+<smd name="10" x="-1.25" y="-6" dx="2.3" dy="0.9" layer="1" rot="R90"/>
+<smd name="11" x="0" y="-6" dx="2.3" dy="0.9" layer="1" rot="R90"/>
+<smd name="12" x="1.25" y="-6" dx="2.3" dy="0.9" layer="1" rot="R90"/>
+<smd name="13" x="2.5" y="-6" dx="2.3" dy="0.9" layer="1" rot="R90"/>
+<smd name="14" x="3.75" y="-6" dx="2.3" dy="0.9" layer="1" rot="R90"/>
+<smd name="15" x="6" y="-3.75" dx="2.3" dy="0.9" layer="1" rot="R180"/>
+<smd name="16" x="6" y="-2.5" dx="2.3" dy="0.9" layer="1" rot="R180"/>
+<smd name="17" x="6" y="-1.25" dx="2.3" dy="0.9" layer="1" rot="R180"/>
+<smd name="18" x="6" y="0" dx="2.3" dy="0.9" layer="1" rot="R180"/>
+<smd name="19" x="6" y="1.25" dx="2.3" dy="0.9" layer="1" rot="R180"/>
+<smd name="20" x="6" y="2.5" dx="2.3" dy="0.9" layer="1" rot="R180"/>
+<smd name="21" x="6" y="3.75" dx="2.3" dy="0.9" layer="1" rot="R180"/>
+<smd name="22" x="3.75" y="6" dx="2.3" dy="0.9" layer="1" rot="R270"/>
+<smd name="23" x="2.5" y="6" dx="2.3" dy="0.9" layer="1" rot="R270"/>
+<smd name="24" x="1.25" y="6" dx="2.3" dy="0.9" layer="1" rot="R270"/>
+<smd name="25" x="0" y="6" dx="2.3" dy="0.9" layer="1" rot="R270"/>
+<smd name="26" x="-1.25" y="6" dx="2.3" dy="0.9" layer="1" rot="R270"/>
+<smd name="27" x="-2.5" y="6" dx="2.3" dy="0.9" layer="1" rot="R270"/>
+<smd name="28" x="-3.75" y="6" dx="2.3" dy="0.9" layer="1" rot="R270"/>
+<circle x="-6.35" y="6.223" radius="0.254" width="0" layer="25"/>
+<wire x1="-4.826" y1="5.969" x2="-5.969" y2="5.969" width="0.127" layer="21"/>
+<wire x1="-5.969" y1="5.969" x2="-5.969" y2="4.699" width="0.127" layer="21"/>
 <wire x1="4.826" y1="5.969" x2="5.969" y2="5.969" width="0.127" layer="21"/>
 <wire x1="5.969" y1="5.969" x2="5.969" y2="4.699" width="0.127" layer="21"/>
 <wire x1="5.969" y1="-4.699" x2="5.969" y2="-5.969" width="0.127" layer="21"/>
@@ -18265,12 +18152,9 @@ Generic symbol for the battery input to a system.</description>
 <part name="ANT2" library="Connector-new" deviceset="ANTENNA-U-FL" device="-320110048" value="U-FL Connector"/>
 <part name="G18" library="Power or GND " deviceset="GND_POWER" device=""/>
 <part name="C10" library="Discrete-new" deviceset="CAP" device="-0603" value="4.7uF"/>
-<part name="ANT1" library="Connector-new" deviceset="ANTENNA-SMA-MCX-JE" device="-320160125" value="DIP SMA-K"/>
-<part name="G39" library="Power or GND " deviceset="GND_POWER" device=""/>
 <part name="TP2" library="Discrete-new" deviceset="TEST-POINT" device="'4545'" value="TEST"/>
 <part name="R14" library="Discrete-new" deviceset="RES" device="-0402" value="0R"/>
 <part name="R15" library="Discrete-new" deviceset="RES" device="-0402" value="0R"/>
-<part name="R16" library="Discrete-new" deviceset="RES" device="-0402" value="DNP"/>
 <part name="C11" library="Discrete-new" deviceset="CAP" device="-0402" value="DNP"/>
 <part name="C12" library="Discrete-new" deviceset="CAP" device="-0402" value="DNP"/>
 <part name="GND72" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -18541,44 +18425,35 @@ Generic symbol for the battery input to a system.</description>
 <instance part="G19" gate="G$1" x="299.72" y="185.42" smashed="yes"/>
 <instance part="G28" gate="G$1" x="320.04" y="207.01" smashed="yes" rot="R90"/>
 <instance part="G29" gate="G$1" x="299.72" y="237.49" smashed="yes" rot="R180"/>
-<instance part="G10" gate="G$1" x="321.31" y="186.69" smashed="yes"/>
-<instance part="G14" gate="G$1" x="335.28" y="186.69" smashed="yes"/>
-<instance part="ANT2" gate="G$1" x="360.68" y="199.39" smashed="yes">
-<attribute name="NAME" x="356.87" y="205.74" size="1.778" layer="95"/>
-<attribute name="VALUE" x="356.87" y="191.77" size="1.778" layer="96"/>
+<instance part="G10" gate="G$1" x="321.31" y="189.23" smashed="yes"/>
+<instance part="G14" gate="G$1" x="335.28" y="189.23" smashed="yes"/>
+<instance part="ANT2" gate="G$1" x="360.68" y="204.47" smashed="yes">
+<attribute name="NAME" x="356.87" y="210.82" size="1.778" layer="95"/>
+<attribute name="VALUE" x="356.87" y="196.85" size="1.778" layer="96"/>
 </instance>
-<instance part="G18" gate="G$1" x="373.38" y="199.39" smashed="yes" rot="R90"/>
+<instance part="G18" gate="G$1" x="373.38" y="204.47" smashed="yes" rot="R90"/>
 <instance part="C10" gate="C" x="261.62" y="219.71" smashed="yes">
 <attribute name="NAME" x="257.81" y="222.25" size="1.27" layer="95" ratio="10"/>
 <attribute name="VALUE" x="261.62" y="222.25" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="ANT1" gate="G$1" x="344.17" y="219.71" smashed="yes" rot="R180">
-<attribute name="NAME" x="355.6" y="217.17" size="1.27" layer="95" ratio="12" rot="R180"/>
-<attribute name="VALUE" x="360.68" y="214.63" size="1.27" layer="96" ratio="12" rot="R180"/>
-</instance>
-<instance part="G39" gate="G$1" x="331.47" y="224.79" smashed="yes" rot="R270"/>
 <instance part="TP2" gate="TP" x="279.4" y="241.3" smashed="yes" rot="R180">
 <attribute name="NAME" x="278.13" y="242.57" size="1.27" layer="95" ratio="10"/>
 </instance>
-<instance part="R14" gate="R" x="327.66" y="199.39" smashed="yes">
-<attribute name="NAME" x="325.12" y="200.66" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="330.2" y="200.66" size="1.27" layer="96" ratio="10"/>
+<instance part="R14" gate="R" x="327.66" y="204.47" smashed="yes">
+<attribute name="NAME" x="325.12" y="205.74" size="1.27" layer="95" ratio="10"/>
+<attribute name="VALUE" x="330.2" y="205.74" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="R15" gate="R" x="335.28" y="207.01" smashed="yes" rot="R90">
-<attribute name="NAME" x="334.01" y="204.47" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="334.01" y="209.55" size="1.27" layer="96" ratio="10" rot="R90"/>
+<instance part="R15" gate="R" x="344.17" y="204.47" smashed="yes">
+<attribute name="NAME" x="341.63" y="205.74" size="1.27" layer="95" ratio="10"/>
+<attribute name="VALUE" x="346.71" y="205.74" size="1.27" layer="96" ratio="10"/>
 </instance>
-<instance part="R16" gate="R" x="344.17" y="199.39" smashed="yes">
-<attribute name="NAME" x="341.63" y="200.66" size="1.27" layer="95" ratio="10"/>
-<attribute name="VALUE" x="346.71" y="200.66" size="1.27" layer="96" ratio="10"/>
+<instance part="C11" gate="C" x="321.31" y="196.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="320.04" y="194.31" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="320.04" y="198.12" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
-<instance part="C11" gate="C" x="321.31" y="194.31" smashed="yes" rot="R90">
-<attribute name="NAME" x="320.04" y="191.77" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="320.04" y="195.58" size="1.27" layer="96" ratio="10" rot="R90"/>
-</instance>
-<instance part="C12" gate="C" x="335.28" y="194.31" smashed="yes" rot="R90">
-<attribute name="NAME" x="334.01" y="191.77" size="1.27" layer="95" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="334.01" y="195.58" size="1.27" layer="96" ratio="10" rot="R90"/>
+<instance part="C12" gate="C" x="335.28" y="196.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="334.01" y="194.31" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="334.01" y="198.12" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
 <instance part="GND72" gate="1" x="279.4" y="53.34" smashed="yes">
 <attribute name="VALUE" x="279.4" y="53.086" size="1.778" layer="96" align="top-center"/>
@@ -18892,42 +18767,24 @@ Generic symbol for the battery input to a system.</description>
 </segment>
 <segment>
 <pinref part="ANT2" gate="G$1" pin="GND1"/>
-<wire x1="368.3" y1="201.93" x2="370.84" y2="201.93" width="0.1524" layer="91"/>
-<wire x1="370.84" y1="201.93" x2="370.84" y2="199.39" width="0.1524" layer="91"/>
+<wire x1="368.3" y1="207.01" x2="370.84" y2="207.01" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="207.01" x2="370.84" y2="204.47" width="0.1524" layer="91"/>
 <pinref part="ANT2" gate="G$1" pin="GND2"/>
-<wire x1="370.84" y1="199.39" x2="370.84" y2="196.85" width="0.1524" layer="91"/>
-<wire x1="370.84" y1="196.85" x2="368.3" y2="196.85" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="204.47" x2="370.84" y2="201.93" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="201.93" x2="368.3" y2="201.93" width="0.1524" layer="91"/>
 <pinref part="G18" gate="G$1" pin="GND"/>
-<wire x1="373.38" y1="199.39" x2="370.84" y2="199.39" width="0.1524" layer="91"/>
-<junction x="370.84" y="199.39"/>
+<wire x1="373.38" y1="204.47" x2="370.84" y2="204.47" width="0.1524" layer="91"/>
+<junction x="370.84" y="204.47"/>
 </segment>
 <segment>
 <pinref part="G10" gate="G$1" pin="GND"/>
-<wire x1="321.31" y1="186.69" x2="321.31" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="321.31" y1="189.23" x2="321.31" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="C11" gate="C" pin="1"/>
 </segment>
 <segment>
 <pinref part="G14" gate="G$1" pin="GND"/>
-<wire x1="335.28" y1="186.69" x2="335.28" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="189.23" x2="335.28" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="C12" gate="C" pin="1"/>
-</segment>
-<segment>
-<pinref part="ANT1" gate="G$1" pin="5"/>
-<pinref part="G39" gate="G$1" pin="GND"/>
-<wire x1="339.09" y1="224.79" x2="334.01" y2="224.79" width="0.1524" layer="91"/>
-<pinref part="ANT1" gate="G$1" pin="4"/>
-<wire x1="334.01" y1="224.79" x2="331.47" y2="224.79" width="0.1524" layer="91"/>
-<wire x1="339.09" y1="222.25" x2="334.01" y2="222.25" width="0.1524" layer="91"/>
-<wire x1="334.01" y1="222.25" x2="334.01" y2="224.79" width="0.1524" layer="91"/>
-<junction x="334.01" y="224.79"/>
-<wire x1="334.01" y1="222.25" x2="334.01" y2="219.71" width="0.1524" layer="91"/>
-<junction x="334.01" y="222.25"/>
-<pinref part="ANT1" gate="G$1" pin="3"/>
-<wire x1="334.01" y1="219.71" x2="339.09" y2="219.71" width="0.1524" layer="91"/>
-<wire x1="334.01" y1="219.71" x2="334.01" y2="217.17" width="0.1524" layer="91"/>
-<junction x="334.01" y="219.71"/>
-<pinref part="ANT1" gate="G$1" pin="2"/>
-<wire x1="334.01" y1="217.17" x2="339.09" y2="217.17" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND72" gate="1" pin="GND"/>
@@ -19475,11 +19332,10 @@ Generic symbol for the battery input to a system.</description>
 </net>
 <net name="RF" class="0">
 <segment>
-<wire x1="321.31" y1="198.12" x2="321.31" y2="199.39" width="0.1524" layer="91"/>
-<wire x1="321.31" y1="199.39" x2="323.85" y2="199.39" width="0.1524" layer="91"/>
-<junction x="321.31" y="199.39"/>
+<wire x1="321.31" y1="200.66" x2="321.31" y2="204.47" width="0.1524" layer="91"/>
+<wire x1="321.31" y1="204.47" x2="323.85" y2="204.47" width="0.1524" layer="91"/>
+<junction x="321.31" y="204.47"/>
 <pinref part="LORA-E5" gate="G$1" pin="RFI0"/>
-<wire x1="321.31" y1="199.39" x2="321.31" y2="204.47" width="0.1524" layer="91"/>
 <wire x1="321.31" y1="204.47" x2="312.42" y2="204.47" width="0.1524" layer="91"/>
 <pinref part="R14" gate="R" pin="1"/>
 <pinref part="C11" gate="C" pin="2"/>
@@ -19487,15 +19343,12 @@ Generic symbol for the battery input to a system.</description>
 </net>
 <net name="N$28" class="0">
 <segment>
-<wire x1="331.47" y1="199.39" x2="335.28" y2="199.39" width="0.1524" layer="91"/>
-<wire x1="335.28" y1="198.12" x2="335.28" y2="199.39" width="0.1524" layer="91"/>
-<wire x1="335.28" y1="199.39" x2="335.28" y2="203.2" width="0.1524" layer="91"/>
-<junction x="335.28" y="199.39"/>
-<wire x1="340.36" y1="199.39" x2="335.28" y2="199.39" width="0.1524" layer="91"/>
+<wire x1="331.47" y1="204.47" x2="335.28" y2="204.47" width="0.1524" layer="91"/>
 <pinref part="R14" gate="R" pin="2"/>
-<pinref part="R15" gate="R" pin="1"/>
-<pinref part="R16" gate="R" pin="1"/>
 <pinref part="C12" gate="C" pin="2"/>
+<wire x1="335.28" y1="204.47" x2="335.28" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="R15" gate="R" pin="1"/>
+<wire x1="335.28" y1="204.47" x2="340.36" y2="204.47" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PA9/D9" class="0">
@@ -19508,21 +19361,6 @@ Generic symbol for the battery input to a system.</description>
 <wire x1="81.28" y1="86.36" x2="77.47" y2="86.36" width="0.1524" layer="91"/>
 <label x="77.47" y="86.36" size="0.889" layer="95" ratio="12" rot="R180" xref="yes"/>
 <pinref part="E5_EXTRA_PINS" gate="G$1" pin="15"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="ANT2" gate="G$1" pin="D"/>
-<wire x1="347.98" y1="199.39" x2="353.06" y2="199.39" width="0.1524" layer="91"/>
-<pinref part="R16" gate="R" pin="2"/>
-</segment>
-</net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="ANT1" gate="G$1" pin="ANT"/>
-<wire x1="339.09" y1="214.63" x2="335.28" y2="214.63" width="0.1524" layer="91"/>
-<wire x1="335.28" y1="210.82" x2="335.28" y2="214.63" width="0.1524" layer="91"/>
-<pinref part="R15" gate="R" pin="2"/>
 </segment>
 </net>
 <net name="PA15/SDA" class="2">
@@ -20100,6 +19938,13 @@ Generic symbol for the battery input to a system.</description>
 <wire x1="38.1" y1="38.1" x2="40.64" y2="38.1" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <pinref part="R34" gate="G$1" pin="2"/>
 <wire x1="40.64" y1="38.1" x2="40.64" y2="35.56" width="0.1524" layer="91" grouprefs="QWIIC"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="R15" gate="R" pin="2"/>
+<pinref part="ANT2" gate="G$1" pin="D"/>
+<wire x1="347.98" y1="204.47" x2="353.06" y2="204.47" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
