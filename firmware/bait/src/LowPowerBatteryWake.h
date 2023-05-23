@@ -2,8 +2,8 @@
 // Created by David Kadish on 11/12/2018.
 //
 
-#ifndef SBAT_LOWPOWERBATTERYWAKE_H
-#define SBAT_LOWPOWERBATTERYWAKE_H
+#ifndef BAIT_LOWPOWERBATTERYWAKE_H
+#define BAIT_LOWPOWERBATTERYWAKE_H
 
 
 #include <Snooze.h>
@@ -100,4 +100,4 @@ private:
 };
 
 
-#endif //SBAT_LOWPOWERBATTERYWAKE_H
+#endif //BAIT_LOWPOWERBATTERYWAKE_H

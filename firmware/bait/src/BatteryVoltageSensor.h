@@ -2,8 +2,8 @@
 // Created by David Kadish on 14/11/2018.
 //
 
-#ifndef SBAT_BATTERYVOLTAGESENSOR_H
-#define SBAT_BATTERYVOLTAGESENSOR_H
+#ifndef BAIT_BATTERYVOLTAGESENSOR_H
+#define BAIT_BATTERYVOLTAGESENSOR_H
 
 #include <Sensor.h>
 
@@ -37,4 +37,4 @@ private:
 };
 
 
-#endif //SBAT_BATTERYVOLTAGESENSOR_H
+#endif //BAIT_BATTERYVOLTAGESENSOR_H

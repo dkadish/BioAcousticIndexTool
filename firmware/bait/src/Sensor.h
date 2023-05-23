@@ -2,13 +2,13 @@
 // Created by David Kadish on 14/11/2018.
 //
 
-#ifndef SBAT_SENSOR_H
-#define SBAT_SENSOR_H
+#ifndef BAIT_SENSOR_H
+#define BAIT_SENSOR_H
 
 #include <TimeLib.h>
 #include <Metro.h>
 
-/** Base class for a sensor operating in the SBAT system.
+/** Base class for a sensor operating in the BAIT system.
  *
  */
 class Sensor {
@@ -53,4 +53,4 @@ private:
 };
 
 
-#endif //SBAT_SENSOR_H
+#endif //BAIT_SENSOR_H

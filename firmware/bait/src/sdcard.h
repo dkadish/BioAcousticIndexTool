@@ -2,8 +2,8 @@
 // Created by David Kadish on 14/11/2018.
 //
 
-#ifndef SBAT_SDCARD_H
-#define SBAT_SDCARD_H
+#ifndef BAIT_SDCARD_H
+#define BAIT_SDCARD_H
 
 // SD Card
 #define USE_SDIO 1
@@ -23,4 +23,4 @@ void sd_setup(){
     Serial.println("card initialized.");
 }
 
-#endif //SBAT_SDCARD_H
+#endif //BAIT_SDCARD_H

@@ -20,8 +20,8 @@
 // Created by David Kadish on 13/12/2018.
 //
 
-#ifndef SBAT_BATTERYMEASUREMENT_H
-#define SBAT_BATTERYMEASUREMENT_H
+#ifndef BAIT_BATTERYMEASUREMENT_H
+#define BAIT_BATTERYMEASUREMENT_H
 
 #include <Arduino.h>
 
@@ -49,4 +49,4 @@ public:
 };
 
 
-#endif //SBAT_BATTERYMEASUREMENT_H
+#endif //BAIT_BATTERYMEASUREMENT_H

@@ -2,8 +2,8 @@
 // Created by David Kadish on 14/11/2018.
 //
 
-#ifndef SBAT_FFTREADER_H
-#define SBAT_FFTREADER_H
+#ifndef BAIT_FFTREADER_H
+#define BAIT_FFTREADER_H
 
 #include <Audio.h>
 #include "Sensor.h"
@@ -44,4 +44,4 @@ public:
 };
 
 
-#endif //SBAT_FFTREADER_H
+#endif //BAIT_FFTREADER_H

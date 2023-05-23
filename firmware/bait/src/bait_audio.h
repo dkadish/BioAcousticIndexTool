@@ -6,8 +6,8 @@
  * (https://github.itu.dk/davk/ecosystem-soundscape/wiki/Standalone-Biodiversity-Assessment-Tool#sleep-mode)
  */
 
-#ifndef SBAT_AUDIO_H
-#define SBAT_AUDIO_H
+#ifndef BAIT_AUDIO_H
+#define BAIT_AUDIO_H
 
 #define USE_I2S
 
@@ -74,4 +74,4 @@ void audio_setup(){
 //    aa_fft.windowFunction(AudioWindowHanning1024);
 }
 
-#endif //SBAT_AUDIO_H
+#endif //BAIT_AUDIO_H

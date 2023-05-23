@@ -2,8 +2,8 @@
 // Created by David Kadish on 15/11/2018.
 //
 
-#ifndef SBAT_ACI_TEMPORALWINDOW_H
-#define SBAT_ACI_TEMPORALWINDOW_H
+#ifndef BAIT_ACI_TEMPORALWINDOW_H
+#define BAIT_ACI_TEMPORALWINDOW_H
 
 
 #include "Sensor.h"
@@ -58,4 +58,4 @@ private:
 };
 
 
-#endif //SBAT_ACI_TEMPORALWINDOW_H
+#endif //BAIT_ACI_TEMPORALWINDOW_H
