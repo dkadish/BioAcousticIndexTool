@@ -24,7 +24,7 @@ public:
     void record() override;
 
 private:
-    FFTReader & _fft;
+    FFTReader &_fft;
 
     float diff_freq[FFTReader::length];
     float diff_cumfreq[FFTReader::length];

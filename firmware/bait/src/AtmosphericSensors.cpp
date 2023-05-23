@@ -23,7 +23,7 @@ void AtmosphericSensors::setup() {
 void AtmosphericSensors::loop() {
     Sensor::loop();
 
-    if(measureTimer.check()){
+    if (measureTimer.check()) {
         float temp = si7021.readTemperature();
         float hum = si7021.readHumidity();
 

@@ -7,7 +7,7 @@
 #include "LowPowerBatteryWake.h"
 #include "BatteryVoltageSensor.h"
 
-LowPowerBatteryWake::LowPowerBatteryWake(int pin, LowPowerSetup setup, LowPowerLoop loop):
+LowPowerBatteryWake::LowPowerBatteryWake(int pin, LowPowerSetup setup, LowPowerLoop loop) :
 #ifdef USB_AUDIO
 #warning ("Warning: Compiling with USB_AUDIO. Snooze is disabled.")
         config(usb, spi, audio, alarm),
@@ -23,7 +23,7 @@ void LowPowerBatteryWake::setup() {
     // Set sensor pin
     pinMode(_pin, INPUT);
 
-    if( hasIndicatorLED() ){
+    if (hasIndicatorLED()) {
         pinMode(_led, OUTPUT);
         digitalWrite(_led, HIGH);
 
@@ -49,7 +49,7 @@ void LowPowerBatteryWake::loop() {
     int v = analogRead(_pin);
     _voltage = calculateVoltage(v);
 
-    if ( !inhibit_sleep && (_voltage < _threshold_L)) {
+    if (!inhibit_sleep && (_voltage < _threshold_L)) {
         sleep();
     }
 
@@ -71,18 +71,18 @@ void LowPowerBatteryWake::sleep() {
     _startSleep();
 
     // While sleep conditions remain
-    while(_voltage < _threshold_H){
+    while (_voltage < _threshold_H) {
         // Indicate Sleeping
-        if(hasIndicatorLED()){
+        if (hasIndicatorLED()) {
             digitalWrite(_led, HIGH);
             delay(10);
             digitalWrite(_led, LOW);
         }
 
-        if(hasIndicatorLED()){digitalWrite(_led, HIGH);}
+        if (hasIndicatorLED()) { digitalWrite(_led, HIGH); }
 #ifndef USB_AUDIO
         alarm.setRtcTimer(_hours, _minutes, _seconds); // Hour, minute, second
-        who = Snooze.sleep( config );
+        who = Snooze.sleep(config);
 
         // Sync the clock so that the time is correctly logged.
         setTime(Teensy3Clock.get());
@@ -99,7 +99,7 @@ void LowPowerBatteryWake::sleep() {
         _voltage = calculateVoltage(v);
     }
 
-    if(hasIndicatorLED()){digitalWrite(_led, LOW);}
+    if (hasIndicatorLED()) { digitalWrite(_led, LOW); }
 
 #ifndef USB_AUDIO
     delay(1000);
@@ -279,18 +279,18 @@ void LowPowerBatteryWake::sleepFor(int n) {
     _startSleep();
 
     // While sleep conditions remain
-    for(int i=0; i < n; i++){
+    for (int i = 0; i < n; i++) {
         // Indicate Sleeping
-        if(hasIndicatorLED()){
+        if (hasIndicatorLED()) {
             digitalWrite(_led, HIGH);
             delay(10);
             digitalWrite(_led, LOW);
         }
 
-        if(hasIndicatorLED()){digitalWrite(_led, HIGH);}
+        if (hasIndicatorLED()) { digitalWrite(_led, HIGH); }
 #ifndef USB_AUDIO
         alarm.setRtcTimer(_hours, _minutes, _seconds); // Hour, minute, second
-        who = Snooze.sleep( config );
+        who = Snooze.sleep(config);
 
         // Sync the clock so that the time is correctly logged.
         setTime(Teensy3Clock.get());
@@ -303,7 +303,7 @@ void LowPowerBatteryWake::sleepFor(int n) {
         _loop();
     }
 
-    if(hasIndicatorLED()){digitalWrite(_led, LOW);}
+    if (hasIndicatorLED()) { digitalWrite(_led, LOW); }
 
 #ifndef USB_AUDIO
     delay(1000);

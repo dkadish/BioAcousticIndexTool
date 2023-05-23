@@ -13,6 +13,7 @@
 class ACI_TemporalWindow : public Sensor {
 public:
     ACI_TemporalWindow(int interval, FFTReader &fft);
+
     ACI_TemporalWindow(int interval, FFTReader &fft, bool doFilter, bool doDiscardAdjacentZeros);
 
     void setup() override;
@@ -23,19 +24,23 @@ public:
 
     void process() override;
 
-    void zero(){ aci = 0.0; _count = 0; _fft.resetCount(); }
+    void zero() {
+        aci = 0.0;
+        _count = 0;
+        _fft.resetCount();
+    }
 
-    float getValue(){ return aci; }
+    float getValue() { return aci; }
 
-    int getCount(){ return _count; };
+    int getCount() { return _count; };
 
-    int getFFTCount(){ return _fft.getCount(); };
+    int getFFTCount() { return _fft.getCount(); };
 
-    void setFilter(bool doFilter){ _filter_fft = doFilter; };
+    void setFilter(bool doFilter) { _filter_fft = doFilter; };
 
-    void setFilterLimit(float filterLimit){ _filter_below = filterLimit; };
+    void setFilterLimit(float filterLimit) { _filter_below = filterLimit; };
 
-    void setDiscardAdjacentZeros(bool doDiscardAdjacentZeros){ _discard_adjacent_zeros = doDiscardAdjacentZeros; };
+    void setDiscardAdjacentZeros(bool doDiscardAdjacentZeros) { _discard_adjacent_zeros = doDiscardAdjacentZeros; };
 
 private:
 
@@ -45,7 +50,8 @@ private:
     bool _first = true;
 
     bool _filter_fft = false; // Should FFT values be set to zero when below a threshold? See Farina et. al. (2016). The Application of ...
-    float _filter_below = FLT_MIN + FLT_MIN; // Set the default filter value to be twice the Minimum normalized positive floating-point number
+    float _filter_below = FLT_MIN +
+                          FLT_MIN; // Set the default filter value to be twice the Minimum normalized positive floating-point number
 
     bool _discard_adjacent_zeros = false; // Ignore frame differences when one of the two frames is zero. See  Farina et. al. (2016).
 

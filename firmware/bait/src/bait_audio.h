@@ -9,8 +9,6 @@
 #ifndef BAIT_AUDIO_H
 #define BAIT_AUDIO_H
 
-#define USE_I2S
-
 #ifdef USE_ANALOG_16
 #define ANALOG_PIN 16
 #endif
@@ -45,14 +43,14 @@ AudioConnection     pcFilter(i2s, highpass);
 #ifdef USE_ANALOG_16
 AudioConnection     pcFilter(adc, highpass);
 #endif
-AudioConnection     pcAmp(highpass, amp);
-AudioConnection     pcFFT(amp, aa_fft);
+AudioConnection pcAmp(highpass, amp);
+AudioConnection pcFFT(amp, aa_fft);
 #ifdef USB_AUDIO // See [1]
 AudioConnection     pcUSB_L(amp, 0, usb, 0);
 AudioConnection     pcUSB_R(amp, 0, usb, 1);
 #endif
 
-void audio_setup(){
+void audio_setup() {
     // Audio connections require memory to work.  For more
     // detailed information, see the MemoryAndCpuUsage example
     AudioMemory(200);

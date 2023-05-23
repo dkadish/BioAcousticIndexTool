@@ -11,7 +11,7 @@
 #include <Metro.h>
 #include "BatteryMeasurement.h"
 
-class BatteryVoltageSensor: public Sensor, public BatteryMeasurement  {
+class BatteryVoltageSensor : public Sensor, public BatteryMeasurement {
 public:
     BatteryVoltageSensor(int interval, int batteryVoltagePin);
 

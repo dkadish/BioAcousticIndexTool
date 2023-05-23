@@ -11,8 +11,9 @@
 
 #define VREF 3.3
 
-typedef void (*LowPowerSetup) ();
-typedef void (*LowPowerLoop) ();
+typedef void (*LowPowerSetup)();
+
+typedef void (*LowPowerLoop)();
 
 class LowPowerBatteryWake : public BatteryMeasurement {
 public:
@@ -22,10 +23,12 @@ public:
      * Sets up low battery wake.
      */
     void setup();
+
     void loop();
 
-    int getIndicatorLED(){ return _led; };
-    bool hasIndicatorLED(){ return _led >= 0; };
+    int getIndicatorLED() { return _led; };
+
+    bool hasIndicatorLED() { return _led >= 0; };
 
     /**
      * Put the microcontroller to sleep
@@ -46,8 +49,8 @@ public:
     void sleepFor(int n);
 
     // Settings
-    void setThresholds(float lower, float upper){
-        if (lower > upper){
+    void setThresholds(float lower, float upper) {
+        if (lower > upper) {
             Serial.println("ERROR: Lower threshold cannot be higher than Upper threshold. Not set.");
             return;
         }
@@ -56,21 +59,24 @@ public:
         _threshold_H = upper;
     }
 
-    void setIndicatorLED(int led){
+    void setIndicatorLED(int led) {
         _led = led;
 
     }
-    void setSleepTime(int hours, int minutes, int seconds){
-        _hours = (long)hours;
-        _minutes = (long)minutes;
-        _seconds = (long)seconds;
+
+    void setSleepTime(int hours, int minutes, int seconds) {
+        _hours = (long) hours;
+        _minutes = (long) minutes;
+        _seconds = (long) seconds;
     }
 
     void writeBoot();
 
-    void inhibitSleep(){ inhibit_sleep = true; };
-    void allowSleep(){ inhibit_sleep = false; };
-    bool isInbihited(){ return inhibit_sleep; }
+    void inhibitSleep() { inhibit_sleep = true; };
+
+    void allowSleep() { inhibit_sleep = false; };
+
+    bool isInbihited() { return inhibit_sleep; }
 
 private:
     void _startSleep(); /// Called when sleep begins
@@ -78,11 +84,11 @@ private:
     void _writeSleep(); /// Called from _startSleep. Write
     void _writeWakeup();
 
-    float _threshold_L=3.7, _threshold_H=3.8; // Sleep at 3.7V re-wake at 3.8V
-    int _led=-1;
+    float _threshold_L = 3.7, _threshold_H = 3.8; // Sleep at 3.7V re-wake at 3.8V
+    int _led = -1;
     int _pin;
 
-    long _hours=0, _minutes=5, _seconds=0;
+    long _hours = 0, _minutes = 5, _seconds = 0;
 
     LowPowerSetup _setup;
     LowPowerLoop _loop;
@@ -90,7 +96,7 @@ private:
     bool isSleeping;
     bool inhibit_sleep;
 
-    SnoozeAlarm  alarm;
+    SnoozeAlarm alarm;
     SnoozeUSBSerial usb;
     SnoozeSPI spi;
 #ifdef USB_AUDIO

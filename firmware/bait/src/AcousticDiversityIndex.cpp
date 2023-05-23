@@ -6,7 +6,7 @@
 #include "parameters.h"
 
 AcousticDiversityIndex::AcousticDiversityIndex(int interval, FFTReader &fft) :
-    Sensor(interval), _fft(fft) {
+        Sensor(interval), _fft(fft) {
 
 }
 
@@ -18,7 +18,8 @@ void AcousticDiversityIndex::loop() {
         float band = 0.0;
         int start_bin = i * bins_per_band;
         for (int j = start_bin; j < start_bin + bins_per_band; j++) {
-            float dbfs = 20 * log10(_fft.get(j)); // Should be divided by MAX but MAX=1.0 (https://www.pjrc.com/teensy/gui/index.html?info=AudioAnalyzeFFT1024)
+            float dbfs = 20 * log10(_fft.get(
+                    j)); // Should be divided by MAX but MAX=1.0 (https://www.pjrc.com/teensy/gui/index.html?info=AudioAnalyzeFFT1024)
 
             // Using the default threshold from https://cran.r-project.org/web/packages/soundecology/vignettes/intro.html
             if (dbfs > -50.0) {
@@ -26,7 +27,7 @@ void AcousticDiversityIndex::loop() {
             }
         }
 
-        bands[i] += band / ((float)bins_per_band);
+        bands[i] += band / ((float) bins_per_band);
     }
     sample_count++;
 }
@@ -43,10 +44,11 @@ void AcousticDiversityIndex::reset() {
 void AcousticDiversityIndex::process() {
     Sensor::process();
     adi = 0.0;
-    for ( int i = 0; i < n_bands; i++) {
-        float b = bands[i] / ((float)sample_count);
-    //TODO This is incorrect in the prototype. Should be -=.
-        adi += b * log(b + 0.0000001); // Add to avoid log(0.0) https://cran.r-project.org/web/packages/soundecology/vignettes/changeADI.html
+    for (int i = 0; i < n_bands; i++) {
+        float b = bands[i] / ((float) sample_count);
+        //TODO This is incorrect in the prototype. Should be -=.
+        adi += b * log(b +
+                       0.0000001); // Add to avoid log(0.0) https://cran.r-project.org/web/packages/soundecology/vignettes/changeADI.html
     }
 
     record();

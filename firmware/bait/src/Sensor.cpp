@@ -4,6 +4,6 @@
 
 #include "Sensor.h"
 
-Sensor::Sensor(int interval): metro(interval*1000L) {
+Sensor::Sensor(int interval) : metro(interval * 1000L) {
     _interval = interval;
 }

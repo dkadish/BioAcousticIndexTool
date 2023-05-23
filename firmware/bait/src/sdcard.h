@@ -7,14 +7,16 @@
 
 // SD Card
 #define USE_SDIO 1
+
 #include <SD.h>
 #include <SPI.h>
+
 Sd2Card card;
 SdVolume volume;
 SdFile root;
 const int chipSelect = BUILTIN_SDCARD;
 
-void sd_setup(){
+void sd_setup() {
     if (!SD.begin(chipSelect)) {
         Serial.println("Card failed, or not present");
         // don't do anything more:

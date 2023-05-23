@@ -25,7 +25,7 @@ public:
 
 private:
 
-    FFTReader & _fft;
+    FFTReader &_fft;
     const int bins_per_band = 12; // Number of bins per 1000 Hz band, given 256 bins for 20kHz
     static const int n_bands = 10;
     float bands[n_bands];

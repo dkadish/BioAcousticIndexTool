@@ -12,7 +12,7 @@
 #endif
 
 BatteryVoltageSensor::BatteryVoltageSensor(int interval, int batteryVoltagePin) :
-    Sensor(interval), _pin(batteryVoltagePin), _counter(0) {}
+        Sensor(interval), _pin(batteryVoltagePin), _counter(0) {}
 
 void BatteryVoltageSensor::setup() {
     Sensor::setup();
@@ -67,11 +67,11 @@ void BatteryVoltageSensor::record() {
 void BatteryVoltageSensor::loop() {
     Sensor::loop();
 
-    if(measureTimer.check()){
+    if (measureTimer.check()) {
 #ifndef USE_ANALOG_16
         _value = analogRead(_pin);
 #endif
-        _voltage += calculateVoltage((float)_value); //map((float)_value, 0.0, 1023.0, 0.0, _vref * 2.0);
+        _voltage += calculateVoltage((float) _value); //map((float)_value, 0.0, 1023.0, 0.0, _vref * 2.0);
         _counter++;
 
         measureTimer.reset();
