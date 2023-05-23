@@ -34,7 +34,9 @@ long environmentSensingInterval = 5L * 60L; // in seconds
 long aciSubwindowInterval = 30L;
 long soundSensingInterval = 15L * 60L;
 
+#ifndef ARDUINO_TEENSY_MICROMOD
 BatteryVoltageSensor batt = BatteryVoltageSensor(environmentSensingInterval, A17);
+#endif
 
 const int averageTogether = 1; // Don't average FFT values
 FFTReader fft = FFTReader(aa_fft, averageTogether);
@@ -57,8 +59,9 @@ unsigned long processSyncMessage();
 
 void setup_lowpower();
 void loop_lowpower();
+#ifndef ARDUINO_TEENSY_MICROMOD
 LowPowerBatteryWake lowPowerBatteryWake = LowPowerBatteryWake(A17, setup_lowpower, loop_lowpower);
-
+#endif
 
 void setup() {
     delay(2000);
@@ -74,9 +77,11 @@ void setup() {
     sd_setup();
     audio_setup();
 
+#ifndef ARDUINO_TEENSY_MICROMOD
     batt.setVoltageDividers(22e3, 22e3);
     batt.setup();
     batt.loop();
+#endif
 
     fft.setup();
 
@@ -107,6 +112,7 @@ void setup() {
         Serial.print('0');
     Serial.println(second());
 
+#ifndef ARDUINO_TEENSY_MICROMOD
     lowPowerBatteryWake.setThresholds(3.7, 3.9);
     lowPowerBatteryWake.setVoltageDividers(22e3, 22e3);
     lowPowerBatteryWake.setSleepTime(0,5,0);
@@ -116,14 +122,18 @@ void setup() {
 
     // Testing
 //    lowPowerBatteryWake.inhibitSleep();
+#endif
 
     sleepTimer.reset();
 }
 
 void loop() {
+
+#ifndef ARDUINO_TEENSY_MICROMOD
     lowPowerBatteryWake.loop();
 
     batt.loop();
+#endif
     atm.loop();
 
     // FFT dependent loops
@@ -147,7 +157,9 @@ void loop() {
     if(sleepTimer.check()){
         Serial.println("Sleeping for 3...");
         delay(100);
+#ifndef ARDUINO_TEENSY_MICROMOD
         lowPowerBatteryWake.sleepFor(3);
+#endif
         sleepTimer.reset();
     }
 
@@ -159,7 +171,9 @@ void loop() {
  */
 void setup_lowpower(){
     // Reset all of the sensors/metronomes
+#ifndef ARDUINO_TEENSY_MICROMOD
     batt.reset();
+#endif
     atm.reset();
 
     aci_tw.reset();
@@ -171,13 +185,17 @@ void setup_lowpower(){
 void loop_lowpower(){
     // Loop to get averaged measurements
     for(int i=0; i < 10; i++){
+#ifndef ARDUINO_TEENSY_MICROMOD
         batt.loop();
+#endif
         atm.loop();
         delay(10);
     }
 
     // Process and write values
+#ifndef ARDUINO_TEENSY_MICROMOD
     batt.process();
+#endif
     atm.process();
 }
 
