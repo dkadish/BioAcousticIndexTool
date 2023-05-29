@@ -1,0 +1,21 @@
+{
+  "name": "Sensor",
+  "keywords": "sensor",
+  "description": "Arduino Library for Non-Blocking Sensors",
+  "authors":
+  [
+    {
+      "name": "David Kadish",
+      "email": "david@small-things.xyz",
+      "url": "https://small-things.xyz",
+      "maintainer": true
+    }
+  ],
+  "dependencies":{
+    "PaulStoffregen/Time": "^1.6.1",
+    "thomasfredericks/Chrono": "^1.2.0"
+  },
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "teensy"
+}

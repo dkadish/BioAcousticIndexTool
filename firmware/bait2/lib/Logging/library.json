@@ -1,0 +1,17 @@
+{
+  "name": "Logging",
+  "keywords": "Logging",
+  "description": "Arduino Library for Logging via preprocessor directives",
+  "authors":
+  [
+    {
+      "name": "David Kadish",
+      "email": "david@small-things.xyz",
+      "url": "https://small-things.xyz",
+      "maintainer": true
+    }
+  ],
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "teensy"
+}
