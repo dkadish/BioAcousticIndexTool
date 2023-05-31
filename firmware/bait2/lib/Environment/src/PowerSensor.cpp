@@ -59,6 +59,9 @@ void PowerSensor::record() {
             digitalWrite(LED_BUILTIN, LOW); delay(200);
             digitalWrite(LED_BUILTIN, HIGH); delay(500);
         }
+        m_status = 1; // Error
+    } else {
+        m_status = 0;
     }
 
     digitalWrite(LED_BUILTIN, LOW);

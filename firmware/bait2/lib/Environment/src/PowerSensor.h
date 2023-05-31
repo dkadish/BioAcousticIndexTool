@@ -18,7 +18,7 @@ public:
 
     void record() override;
 
-private:
+//private:
     int initialCapacity;
     float soc=0.0, // Read state-of-charge (in %)
           volts=0.0, // Read voltage (in mV)

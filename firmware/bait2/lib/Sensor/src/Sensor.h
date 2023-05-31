@@ -49,8 +49,14 @@ public:
 
     void writeTimestamp(File f);
 
+    int getStatus(){ return m_status; };
+
+protected:
+    int m_status=0;
+
 private:
     int _interval; /**< Time between measurements in seconds. */
+
     const char * m_filepath;
 
     Chrono chrono;

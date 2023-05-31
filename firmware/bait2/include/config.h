@@ -6,7 +6,7 @@
 #define BAIT2_CONFIG_H
 
 // Debug definitions
-#define VERBOSITY 0
+#define VERBOSITY 4
 #define USE_STATUS_LED
 
 
