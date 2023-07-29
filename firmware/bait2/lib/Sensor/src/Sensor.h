@@ -47,7 +47,7 @@ public:
 
     const char * getFilePath(){ return m_filepath; };
 
-    void writeTimestamp(File f);
+    void writeTimestamp(stream_t* f);
 
     int getStatus(){ return m_status; };
 

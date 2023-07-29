@@ -47,22 +47,14 @@ void PowerSensor::record() {
 
     digitalWrite(LED_BUILTIN, HIGH);
 
-    File f = SD.open(getFilePath(), FILE_WRITE);
-    Sensor::writeTimestamp(f);
+//    File f = SD.open(getFilePath(), FILE_WRITE);
+    FsFile f;
+    f.open(getFilePath(), O_CREAT | O_APPEND);
+    Sensor::writeTimestamp(&f);
 
     int charsWritten = f.printf("%d, %d, %d, %d, %d, %d, %d", (int)soc, (int)volts, (int)current, (int)capacity, (int)power, (int)health, initialCapacity);
     f.println();
     f.close();
-
-    if(charsWritten == 0){
-        for(int i=0; i<5; i++){
-            digitalWrite(LED_BUILTIN, LOW); delay(200);
-            digitalWrite(LED_BUILTIN, HIGH); delay(500);
-        }
-        m_status = 1; // Error
-    } else {
-        m_status = 0;
-    }
 
     digitalWrite(LED_BUILTIN, LOW);
 }

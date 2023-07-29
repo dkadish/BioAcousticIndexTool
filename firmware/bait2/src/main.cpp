@@ -5,7 +5,7 @@
 #include "PowerSensor.h"
 #include "OLEDDisplay.h"
 
-PowerSensor powerSensor = PowerSensor(10, "power.csv", 4400);
+PowerSensor powerSensor = PowerSensor(10, "power.csv", 6600);
 
 OLEDDisplay  display = OLEDDisplay();
 

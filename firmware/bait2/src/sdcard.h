@@ -8,21 +8,22 @@
 // SD Card
 #define USE_SDIO 1
 
-#include <SD.h>
-#include <SPI.h>
+#include "SdFat.h"
+#include "logging.h"
 
-//Sd2Card card;
-//SdVolume volume;
-//SdFile root;
-const int chipSelect = BUILTIN_SDCARD;
+// Use Teensy SDIO
+#define SD_CONFIG  SdioConfig(FIFO_SDIO)
+
+SdFs sd;
+FsFile file;
 
 void sd_setup() {
-    if (!SD.begin(chipSelect)) {
-        Serial.println("Card failed, or not present");
-        // don't do anything more:
-        return;
+    if (!sd.begin(SD_CONFIG)) {
+        WARNING("SD Card Failed to Initilise.")
+#ifdef WAIT_FOR_SERIAL
+        sd.initErrorHalt(&Serial);
+#endif
     }
-    Serial.println("card initialized.");
 }
 
 #endif //BAIT_SDCARD_H

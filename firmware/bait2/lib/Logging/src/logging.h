@@ -2,6 +2,8 @@
 // Created by David Kadish on 25/05/2023.
 //
 
+// Would this work with an ArrayList of sinks
+
 #ifndef BAIT2_LOGGING_H
 #define BAIT2_LOGGING_H
 
