@@ -19929,11 +19929,6 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="J7" gate="J1" pin="TX1"/>
 </segment>
 <segment>
-<pinref part="U7" gate="G$1" pin="PB6"/>
-<wire x1="284.48" y1="186.69" x2="284.48" y2="180.34" width="0.1524" layer="91" grouprefs="WIRELESS"/>
-<label x="284.48" y="180.34" size="0.889" layer="95" ratio="12" rot="R270" xref="yes" grouprefs="WIRELESS"/>
-</segment>
-<segment>
 <pinref part="D5" gate="G$1" pin="C"/>
 <wire x1="340.36" y1="124.46" x2="340.36" y2="127" width="0.1524" layer="91" grouprefs="WIRELESS"/>
 <label x="340.36" y="124.46" size="1.27" layer="95" rot="R270" xref="yes" grouprefs="WIRELESS"/>
@@ -19943,17 +19938,17 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="J3" gate="G$1" pin="DIN"/>
 <wire x1="264.16" y1="142.24" x2="274.32" y2="142.24" width="0.1524" layer="91" grouprefs="WIRELESS"/>
 </segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="PB7"/>
+<wire x1="281.94" y1="186.69" x2="281.94" y2="180.34" width="0.1524" layer="91" grouprefs="WIRELESS"/>
+<label x="281.94" y="180.34" size="0.889" layer="95" ratio="12" rot="R270" xref="yes" grouprefs="WIRELESS"/>
+</segment>
 </net>
 <net name="RX" class="2">
 <segment>
 <wire x1="71.12" y1="182.88" x2="73.66" y2="182.88" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="182.88" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 <pinref part="J7" gate="J1" pin="RX1"/>
-</segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="PB7"/>
-<wire x1="281.94" y1="186.69" x2="281.94" y2="180.34" width="0.1524" layer="91" grouprefs="WIRELESS"/>
-<label x="281.94" y="180.34" size="0.889" layer="95" ratio="12" rot="R270" xref="yes" grouprefs="WIRELESS"/>
 </segment>
 <segment>
 <pinref part="D4" gate="G$1" pin="C"/>
@@ -19964,6 +19959,11 @@ uses different pins for SDIO than teensy does.</text>
 <label x="264.16" y="144.78" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="WIRELESS"/>
 <pinref part="J3" gate="G$1" pin="DOUT"/>
 <wire x1="264.16" y1="144.78" x2="274.32" y2="144.78" width="0.1524" layer="91" grouprefs="WIRELESS"/>
+</segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="PB6"/>
+<wire x1="284.48" y1="186.69" x2="284.48" y2="180.34" width="0.1524" layer="91" grouprefs="WIRELESS"/>
+<label x="284.48" y="180.34" size="0.889" layer="95" ratio="12" rot="R270" xref="yes" grouprefs="WIRELESS"/>
 </segment>
 </net>
 <net name="RTC_3V" class="1">
