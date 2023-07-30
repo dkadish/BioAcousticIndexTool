@@ -22164,10 +22164,16 @@ ground) at a single point.</text>
 <wire x1="15.24" y1="222.25" x2="15.24" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="U8" gate="A" pin="VIN"/>
 <wire x1="15.24" y1="223.52" x2="15.24" y2="226.06" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="223.52" x2="50.8" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="223.52" x2="48.26" y2="223.52" width="0.1524" layer="91"/>
 <junction x="15.24" y="223.52"/>
 <junction x="22.86" y="223.52"/>
 <junction x="33.02" y="223.52"/>
+<wire x1="48.26" y1="223.52" x2="50.8" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="223.52" x2="48.26" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="231.14" x2="91.44" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="231.14" x2="91.44" y2="218.44" width="0.1524" layer="91"/>
+<pinref part="U8" gate="A" pin="ON/OFF"/>
+<wire x1="91.44" y1="218.44" x2="86.36" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="1">
