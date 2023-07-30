@@ -5718,8 +5718,7 @@ design rules under a new name.</description>
 <wire x1="25.1406125" y1="65.405" x2="4.826" y2="65.405" width="0.2032" layer="16"/>
 <wire x1="4.826" y1="65.405" x2="1.778" y2="62.357" width="0.2032" layer="16"/>
 </signal>
-<signal name="PWM0">
-<contactref element="R1" pad="1"/>
+<signal name="I2S2_WS">
 <wire x1="33.25" y1="56.885" x2="33.25" y2="55.6302" width="0.2032" layer="1"/>
 <via x="33.25" y="55.6302" extent="1-16" drill="0.35"/>
 <wire x1="33.25" y1="55.6302" x2="33.25" y2="54.9297125" width="0.2032" layer="16"/>
@@ -5737,51 +5736,9 @@ design rules under a new name.</description>
 <wire x1="52.2078" y1="45.72" x2="52.2078" y2="38.0891625" width="0.2032" layer="16"/>
 <wire x1="52.2078" y1="38.0891625" x2="58.48348125" y2="31.81348125" width="0.2032" layer="16"/>
 <via x="58.48348125" y="31.81348125" extent="1-16" drill="0.35"/>
-<wire x1="58.48348125" y1="31.81348125" x2="58.48348125" y2="30.12348125" width="0.2032" layer="1"/>
-<wire x1="58.48348125" y1="30.12348125" x2="58.42" y2="29.972" width="0.2032" layer="1"/>
 <contactref element="J7" pad="32"/>
-</signal>
-<signal name="PWM1">
-<contactref element="MICROMOD_EXTRA_PINS" pad="5"/>
-<contactref element="J7" pad="47"/>
-<wire x1="12.7" y1="46.99" x2="27.94" y2="46.99" width="0.2032" layer="1"/>
-<wire x1="28.43808125" y1="45.66969375" x2="28.77865625" y2="45.32911875" width="0.2032" layer="1"/>
-<wire x1="28.77865625" y1="45.32911875" x2="29.26030625" y2="45.32911875" width="0.2032" layer="1"/>
-<wire x1="29.26030625" y1="45.32911875" x2="29.60088125" y2="45.66969375" width="0.2032" layer="1"/>
-<wire x1="29.60088125" y1="45.66969375" x2="29.60088125" y2="46.15134375" width="0.2032" layer="1"/>
-<wire x1="29.60088125" y1="46.15134375" x2="29.5" y2="46.252225" width="0.2032" layer="1"/>
-<wire x1="29.5" y1="46.252225" x2="29.5" y2="49.335" width="0.2032" layer="1"/>
-<wire x1="27.94" y1="46.99" x2="28.43808125" y2="46.49191875" width="0.2032" layer="1"/>
-<wire x1="28.43808125" y1="46.49191875" x2="28.43808125" y2="45.66969375" width="0.2032" layer="1"/>
-<wire x1="0.5842" y1="49.16250625" x2="1.28350625" y2="48.4632" width="0.2032" layer="1"/>
-<wire x1="1.28350625" y1="48.4632" x2="2.27249375" y2="48.4632" width="0.2032" layer="1"/>
-<wire x1="1.778" y1="59.817" x2="1.778" y2="58.96529375" width="0.2032" layer="1"/>
-<wire x1="1.778" y1="58.96529375" x2="0.5842" y2="57.77149375" width="0.2032" layer="1"/>
-<wire x1="2.97829375" y1="49.169" x2="10.521" y2="49.169" width="0.2032" layer="1"/>
-<wire x1="10.521" y1="49.169" x2="12.7" y2="46.99" width="0.2032" layer="1"/>
-<wire x1="2.27249375" y1="48.4632" x2="2.97829375" y2="49.169" width="0.2032" layer="1"/>
-<wire x1="0.5842" y1="57.77149375" x2="0.5842" y2="49.16250625" width="0.2032" layer="1"/>
-</signal>
-<signal name="D0">
-<contactref element="MICROMOD_EXTRA_PINS" pad="4"/>
-<wire x1="38.75" y1="56.885" x2="38.75" y2="58.1398" width="0.2032" layer="1"/>
-<contactref element="J7" pad="10"/>
-<wire x1="38.75" y1="58.1398" x2="30.04518125" y2="66.84461875" width="0.2032" layer="1"/>
-<wire x1="30.04518125" y1="66.84461875" x2="7.15461875" y2="66.84461875" width="0.2032" layer="1"/>
-<wire x1="7.15461875" y1="66.84461875" x2="3.81" y2="63.5" width="0.2032" layer="1"/>
-<wire x1="3.81" y1="63.5" x2="3.81" y2="59.309" width="0.2032" layer="1"/>
-<wire x1="3.81" y1="59.309" x2="1.778" y2="57.277" width="0.2032" layer="1"/>
-</signal>
-<signal name="D1">
-<contactref element="MICROMOD_EXTRA_PINS" pad="3"/>
-<contactref element="J7" pad="18"/>
-<wire x1="4.445" y1="57.404" x2="1.778" y2="54.737" width="0.2032" layer="1"/>
-<wire x1="36.75" y1="56.885" x2="36.654" y2="56.981" width="0.2032" layer="1"/>
-<wire x1="36.654" y1="56.981" x2="36.654" y2="58.058025" width="0.2032" layer="1"/>
-<wire x1="36.654" y1="58.058025" x2="28.672025" y2="66.04" width="0.2032" layer="1"/>
-<wire x1="4.445" y1="62.865" x2="4.445" y2="57.404" width="0.2032" layer="1"/>
-<wire x1="28.672025" y1="66.04" x2="7.62" y2="66.04" width="0.2032" layer="1"/>
-<wire x1="7.62" y1="66.04" x2="4.445" y2="62.865" width="0.2032" layer="1"/>
+<contactref element="U1" pad="23"/>
+<wire x1="24.11" y1="34.58" x2="33.25" y2="55.6302" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_COPI" class="2">
 <contactref element="JP_COPI" pad="1"/>
@@ -7567,6 +7524,26 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$74">
 <via x="83.83" y="7.03" extent="1-16" drill="0.3048"/>
+</signal>
+<signal name="I2S2_TX">
+<contactref element="J7" pad="47"/>
+<contactref element="U1" pad="26"/>
+<wire x1="25.11" y1="35.58" x2="29.5" y2="49.335" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="I2S2_SCK">
+<contactref element="J7" pad="10"/>
+<contactref element="U1" pad="24"/>
+<wire x1="24.61" y1="34.53" x2="38.75" y2="56.885" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="I2S2_RX">
+<contactref element="J7" pad="18"/>
+<contactref element="U1" pad="25"/>
+<wire x1="25.16" y1="35.08" x2="36.75" y2="56.885" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="I2S2_MCLK">
+<contactref element="J7" pad="63"/>
+<contactref element="U1" pad="21"/>
+<wire x1="23.11" y1="34.58" x2="25.5" y2="49.335" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

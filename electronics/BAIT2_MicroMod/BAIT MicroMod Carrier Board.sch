@@ -20093,52 +20093,11 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="MICROMOD_EXTRA_PINS" gate="G$1" pin="6"/>
 </segment>
 </net>
-<net name="PWM0" class="0">
+<net name="I2S2_WS" class="0">
 <segment>
 <wire x1="71.12" y1="198.12" x2="73.66" y2="198.12" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="198.12" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 <pinref part="J7" gate="J1" pin="PWM0"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="341.63" y1="55.88" x2="337.82" y2="55.88" width="0.1524" layer="91" grouprefs="TESTING"/>
-<label x="337.82" y="55.88" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="TESTING"/>
-</segment>
-</net>
-<net name="PWM1" class="0">
-<segment>
-<wire x1="71.12" y1="195.58" x2="73.66" y2="195.58" width="0.1524" layer="91" grouprefs="MICROMOD"/>
-<label x="73.66" y="195.58" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
-<pinref part="J7" gate="J1" pin="PWM1"/>
-</segment>
-<segment>
-<wire x1="152.4" y1="195.58" x2="149.86" y2="195.58" width="0.1524" layer="91" grouprefs="PORTS"/>
-<label x="149.86" y="195.58" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="PORTS"/>
-<pinref part="MICROMOD_EXTRA_PINS" gate="G$1" pin="5"/>
-</segment>
-</net>
-<net name="D0" class="0">
-<segment>
-<wire x1="71.12" y1="193.04" x2="73.66" y2="193.04" width="0.1524" layer="91" grouprefs="MICROMOD"/>
-<label x="73.66" y="193.04" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
-<pinref part="J7" gate="J1" pin="D0"/>
-</segment>
-<segment>
-<wire x1="152.4" y1="198.12" x2="149.86" y2="198.12" width="0.1524" layer="91" grouprefs="PORTS"/>
-<label x="149.86" y="198.12" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="PORTS"/>
-<pinref part="MICROMOD_EXTRA_PINS" gate="G$1" pin="4"/>
-</segment>
-</net>
-<net name="D1" class="0">
-<segment>
-<wire x1="71.12" y1="190.5" x2="73.66" y2="190.5" width="0.1524" layer="91" grouprefs="MICROMOD"/>
-<label x="73.66" y="190.5" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
-<pinref part="J7" gate="J1" pin="D1/CAM_TRIG"/>
-</segment>
-<segment>
-<wire x1="152.4" y1="200.66" x2="149.86" y2="200.66" width="0.1524" layer="91" grouprefs="PORTS"/>
-<label x="149.86" y="200.66" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="PORTS"/>
-<pinref part="MICROMOD_EXTRA_PINS" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SPI_COPI" class="2">
@@ -20865,6 +20824,34 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="J7" gate="J1" pin="G6/BUS6"/>
 <wire x1="71.12" y1="152.4" x2="73.66" y2="152.4" width="0.1524" layer="91"/>
 <label x="73.66" y="152.4" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="I2S2_TX" class="0">
+<segment>
+<wire x1="71.12" y1="195.58" x2="73.66" y2="195.58" width="0.1524" layer="91" grouprefs="MICROMOD"/>
+<label x="73.66" y="195.58" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
+<pinref part="J7" gate="J1" pin="PWM1"/>
+</segment>
+</net>
+<net name="I2S2_SCK" class="0">
+<segment>
+<wire x1="71.12" y1="193.04" x2="73.66" y2="193.04" width="0.1524" layer="91" grouprefs="MICROMOD"/>
+<label x="73.66" y="193.04" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
+<pinref part="J7" gate="J1" pin="D0"/>
+</segment>
+</net>
+<net name="I2S2_RX" class="0">
+<segment>
+<wire x1="71.12" y1="190.5" x2="73.66" y2="190.5" width="0.1524" layer="91" grouprefs="MICROMOD"/>
+<label x="73.66" y="190.5" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
+<pinref part="J7" gate="J1" pin="D1/CAM_TRIG"/>
+</segment>
+</net>
+<net name="I2S2_MCLK" class="0">
+<segment>
+<pinref part="J7" gate="J1" pin="G10/ADC_D+/CAM_VSYNC"/>
+<wire x1="71.12" y1="142.24" x2="73.66" y2="142.24" width="0.1524" layer="91"/>
+<label x="73.66" y="142.24" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -22857,6 +22844,41 @@ ground) at a single point.</text>
 <pinref part="C38" gate="G$1" pin="1"/>
 <label x="162.56" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 <junction x="165.1" y="101.6"/>
+</segment>
+</net>
+<net name="I2S2_MCLK" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="SYS_MCLK"/>
+<wire x1="342.9" y1="198.12" x2="347.98" y2="198.12" width="0.1524" layer="91"/>
+<label x="347.98" y="198.12" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="I2S2_WS" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="I2S_LRCLK"/>
+<wire x1="342.9" y1="194.31" x2="347.98" y2="194.31" width="0.1524" layer="91"/>
+<label x="347.98" y="194.31" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="I2S2_SCK" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="I2S_SCLK"/>
+<wire x1="342.9" y1="191.77" x2="347.98" y2="191.77" width="0.1524" layer="91"/>
+<label x="347.98" y="191.77" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="I2S2_RX" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="I2S_DOUT"/>
+<wire x1="342.9" y1="189.23" x2="347.98" y2="189.23" width="0.1524" layer="91"/>
+<label x="347.98" y="189.23" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="I2S2_TX" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="I2S_DIN"/>
+<wire x1="342.9" y1="186.69" x2="347.98" y2="186.69" width="0.1524" layer="91"/>
+<label x="347.98" y="186.69" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
