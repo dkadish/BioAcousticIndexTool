@@ -668,6 +668,12 @@ Mkfile.old
 dkms.conf
 
 
+electronics/Examples/
+
+electronics/BAIT2_MicroMod/Production/
+
+electronics/BAIT2_MicroMod/dxfimp.scr
+
 firmware/bait/CMakeListsPrivate.txt
 
 firmware/bait/.pio/
