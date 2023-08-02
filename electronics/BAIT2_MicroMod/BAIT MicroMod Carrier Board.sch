@@ -1343,90 +1343,6 @@ Fits 4-40 Screws.
 <vertex x="4.618" y="-5.4" curve="-90"/>
 </polygon>
 </package>
-<package name="JST04_1MM_RA">
-<description>&lt;h3&gt;SMD- 4 Pin Right Angle &lt;/h3&gt;
-&lt;p&gt;Specifications:
-&lt;ul&gt;&lt;li&gt;Pin count:4&lt;/li&gt;
-&lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;CONN_04&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<wire x1="-1.5" y1="-4.6" x2="1.5" y2="-4.6" width="0.2032" layer="21"/>
-<wire x1="-3" y1="-2" x2="-3" y2="-0.35" width="0.2032" layer="21"/>
-<wire x1="2.25" y1="-0.35" x2="3" y2="-0.35" width="0.2032" layer="21"/>
-<wire x1="3" y1="-0.35" x2="3" y2="-2" width="0.2032" layer="21"/>
-<wire x1="-3" y1="-0.35" x2="-2.25" y2="-0.35" width="0.2032" layer="21"/>
-<circle x="-2.5" y="0.3" radius="0.1016" width="0.2032" layer="21"/>
-<smd name="NC2" x="-2.8" y="-3.675" dx="1.2" dy="2" layer="1"/>
-<smd name="NC1" x="2.8" y="-3.675" dx="1.2" dy="2" layer="1"/>
-<smd name="1" x="-1.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="2" x="-0.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="3" x="0.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="4" x="1.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<text x="-1.397" y="-2.159" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
-<text x="-1.651" y="-3.302" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
-</package>
-<package name="JST04_1MM_RA_STRESSRELIEF">
-<description>Qwiic connector with milled cutout. Sliding the cable into this slot prevents the cable from coming unplugged.</description>
-<wire x1="-1.5" y1="-4.6" x2="1.5" y2="-4.6" width="0.254" layer="21"/>
-<wire x1="-3" y1="-2" x2="-3" y2="-0.35" width="0.254" layer="21"/>
-<wire x1="2.25" y1="-0.35" x2="3" y2="-0.35" width="0.254" layer="21"/>
-<wire x1="3" y1="-0.35" x2="3" y2="-2" width="0.254" layer="21"/>
-<wire x1="-3" y1="-0.35" x2="-2.25" y2="-0.35" width="0.254" layer="21"/>
-<circle x="-2.5" y="0.3" radius="0.1414" width="0.4" layer="21"/>
-<smd name="NC2" x="-2.8" y="-3.675" dx="1.2" dy="2" layer="1"/>
-<smd name="NC1" x="2.8" y="-3.675" dx="1.2" dy="2" layer="1"/>
-<smd name="1" x="-1.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="2" x="-0.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="3" x="0.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<smd name="4" x="1.5" y="0" dx="0.6" dy="1.35" layer="1"/>
-<text x="-1.397" y="-2.159" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
-<text x="-1.651" y="-3.302" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
-<rectangle x1="-4" y1="-8" x2="4" y2="-6" layer="46"/>
-<rectangle x1="-4" y1="-10" x2="-2" y2="-8" layer="46"/>
-<wire x1="-2" y1="-10.16" x2="-2" y2="-8" width="0.3048" layer="20"/>
-<wire x1="-2" y1="-8" x2="4" y2="-8" width="0.3048" layer="20"/>
-<wire x1="4" y1="-8" x2="4" y2="-6" width="0.3048" layer="20"/>
-<wire x1="4" y1="-6" x2="-4" y2="-6" width="0.3048" layer="20"/>
-<wire x1="-4" y1="-6" x2="-4" y2="-10.16" width="0.3048" layer="20"/>
-</package>
-<package name="JST04_1MM_VERT">
-<description>&lt;h3&gt;Vertical Qwiic Connector&lt;/h3&gt;
-
-&lt;p&gt;Physical and Electrical Charactersistics&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Voltage Rating: 50V&lt;/li&gt;
-&lt;li&gt;Current Rating 1.0A&lt;/li&gt;
-&lt;li&gt;Contact Resistance: 20 milliohms&lt;/li&gt;
-&lt;li&gt;ROHS Compliant&lt;/li&gt;
-&lt;li&gt;SMD Pitch: 1mm&lt;/li&gt;
-&lt;li&gt;Small pad size: .6mm x 1.55mm&lt;/li&gt;
-&lt;li&gt;Large pad size: 1.2mm x 2.0mm&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-<text x="0.016" y="4.56633125" size="0.6096" layer="25">&gt;NAME</text>
-<text x="0.016" y="-1.29633125" size="0.6096" layer="27">&gt;VALUE</text>
-<smd name="1" x="-1.478" y="0.775" dx="0.6" dy="1.55" layer="1"/>
-<smd name="2" x="-0.478" y="0.775" dx="0.6" dy="1.55" layer="1"/>
-<smd name="3" x="0.522" y="0.775" dx="0.6" dy="1.55" layer="1"/>
-<smd name="4" x="1.522" y="0.775" dx="0.6" dy="1.55" layer="1"/>
-<smd name="NC1" x="-2.778" y="3.2" dx="1.2" dy="2" layer="1"/>
-<smd name="NC2" x="2.822" y="3.2" dx="1.2" dy="2" layer="1"/>
-<wire x1="1.912" y1="3.87" x2="-1.878" y2="3.87" width="0.2032" layer="21"/>
-<wire x1="-3.218" y1="1.33" x2="-3.218" y2="0.68" width="0.2032" layer="21"/>
-<wire x1="-3.218" y1="0.68" x2="-2.458" y2="0.68" width="0.2032" layer="21"/>
-<wire x1="3.272" y1="1.35" x2="3.272" y2="0.66" width="0.2032" layer="21"/>
-<wire x1="3.272" y1="0.66" x2="2.542" y2="0.66" width="0.2032" layer="21"/>
-<circle x="-1.948" y="-0.43" radius="0.2032" width="0" layer="21"/>
-<wire x1="-2.921" y1="3.556" x2="-3.302" y2="3.556" width="0.1" layer="51"/>
-<wire x1="-3.302" y1="3.556" x2="-3.302" y2="3.175" width="0.1" layer="51"/>
-<wire x1="-3.302" y1="3.175" x2="-2.921" y2="3.175" width="0.1" layer="51"/>
-<wire x1="2.945" y1="3.154" x2="3.326" y2="3.154" width="0.1" layer="51"/>
-<wire x1="3.326" y1="3.154" x2="3.326" y2="3.535" width="0.1" layer="51"/>
-<wire x1="3.326" y1="3.535" x2="2.945" y2="3.535" width="0.1" layer="51"/>
-</package>
 </packages>
 <symbols>
 <symbol name="CONN_01">
@@ -1471,28 +1387,6 @@ Exposes the minimal pins needed to implement a USB 2.x legacy device.</descripti
 <pin name="D-" x="12.7" y="2.54" visible="pin" length="short" rot="R180"/>
 <pin name="CC2" x="12.7" y="-2.54" visible="pin" length="short" rot="R180"/>
 <pin name="SHLD" x="12.7" y="-5.08" visible="pin" length="short" rot="R180"/>
-</symbol>
-<symbol name="I2C_STANDARD">
-<description>&lt;h3&gt;SparkFun I&lt;sup&gt;2&lt;/sup&gt;C Standard Pinout Header&lt;/h3&gt;
-&lt;p&gt;SparkFun has standardized on a pinout for all I&lt;sup&gt;2&lt;/sup&gt;C based sensor breakouts.&lt;br&gt;</description>
-<wire x1="3.81" y1="-5.08" x2="-5.08" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.6096" layer="94"/>
-<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.6096" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="2.54" y2="-2.54" width="0.6096" layer="94"/>
-<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="3.81" y1="-5.08" x2="3.81" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="-5.08" y1="7.62" x2="3.81" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="5.08" x2="2.54" y2="5.08" width="0.6096" layer="94"/>
-<text x="-5.08" y="-5.334" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
-<text x="-5.08" y="7.874" size="1.778" layer="95" font="vector">&gt;NAME</text>
-<pin name="1" x="7.62" y="-2.54" visible="pad" length="middle" direction="pwr" swaplevel="1" rot="R180"/>
-<pin name="2" x="7.62" y="0" visible="pad" length="middle" direction="pwr" swaplevel="1" rot="R180"/>
-<pin name="3" x="7.62" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="4" x="7.62" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-<text x="-4.572" y="2.54" size="1.778" layer="94" font="vector" align="center-left">SDA</text>
-<text x="-4.572" y="0" size="1.778" layer="94" font="vector" align="center-left">VCC</text>
-<text x="-4.572" y="-2.54" size="1.778" layer="94" font="vector" align="center-left">GND</text>
-<text x="-4.572" y="5.08" size="1.778" layer="94" font="vector" align="center-left">SCL</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1772,58 +1666,6 @@ Super Speed pins not available on the 16-pin purely SMD connector so this part i
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="CONN-14122"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="QWIIC_CONNECTOR" prefix="J" uservalue="yes">
-<description>&lt;h3&gt;SparkFun I&lt;sup&gt;2&lt;/sup&gt;C Standard Qwiic Connector&lt;/h3&gt;
-An SMD 1mm pitch JST connector makes it easy and quick (get it? Qwiic?) to connect I&lt;sup&gt;2&lt;/sup&gt;C devices to each other. The &lt;a href=”http://www.sparkfun.com/qwiic”&gt;Qwiic system&lt;/a&gt; enables fast and solderless connection between popular platforms and various sensors and actuators.
-
-&lt;br&gt;&lt;br&gt;
-
-We carry &lt;a href=”https://www.sparkfun.com/products/14204”&gt;200mm&lt;/a&gt;, &lt;a href=”https://www.sparkfun.com/products/14205”&gt;100mm&lt;/a&gt;, &lt;a href=”https://www.sparkfun.com/products/14206”&gt;50mm&lt;/a&gt;, and &lt;a href=”https://www.sparkfun.com/products/14207”&gt;breadboard friendly&lt;/a&gt; Qwiic cables. We also offer &lt;a href=”https://www.sparkfun.com/products/14323”&gt;10 pcs strips&lt;/a&gt; the SMD connectors.</description>
-<gates>
-<gate name="G$1" symbol="I2C_STANDARD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="JS-1MM" package="JST04_1MM_RA">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="CONN-13694" constant="no"/>
-<attribute name="VALUE" value="QWIIC_RIGHT_ANGLE" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="SR" package="JST04_1MM_RA_STRESSRELIEF">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="" package="JST04_1MM_VERT">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="CONN-14483" constant="no"/>
-<attribute name="VALUE" value="Vertical Qwiic Connector" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4586,33 +4428,6 @@ part number 2062-2P from STA</description>
 <pad name="2" x="-1.27" y="-5.85" drill="0.8"/>
 <pad name="1" x="1.27" y="-5.85" drill="0.8"/>
 </package>
-<package name="JST-6-SMD-VERT-1.0MM" urn="urn:adsk.eagle:footprint:37938/1" library_version="1">
-<description>&lt;h3&gt;JST SH Vertical 6-Pin SMT&lt;/h3&gt;
-&lt;p&gt;Specifications:
-&lt;ul&gt;&lt;li&gt;Pin count:6&lt;/li&gt;
-&lt;li&gt;Pin pitch: 1 mm&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=”https://www.sparkfun.com/datasheets/GPS/EM406-SMDConnector-eSH.pdf”&gt;Datasheet referenced for footprint&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;JST_6PIN_VERTICAL&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<circle x="-2.54" y="2.54" radius="0.1047" width="0.4064" layer="21"/>
-<wire x1="-2.54" y1="-1.651" x2="2.54" y2="-1.651" width="0.254" layer="21"/>
-<wire x1="-4.318" y1="0.508" x2="-4.318" y2="1.905" width="0.254" layer="21"/>
-<wire x1="3.302" y1="1.905" x2="4.318" y2="1.905" width="0.254" layer="21"/>
-<wire x1="4.318" y1="1.905" x2="4.318" y2="0.508" width="0.254" layer="21"/>
-<wire x1="-4.318" y1="1.905" x2="-3.302" y2="1.905" width="0.254" layer="21"/>
-<smd name="1" x="-2.54" y="1.27" dx="0.6" dy="1.55" layer="1"/>
-<smd name="2" x="-1.54" y="1.27" dx="0.6" dy="1.55" layer="1"/>
-<smd name="3" x="-0.54" y="1.27" dx="0.6" dy="1.55" layer="1"/>
-<smd name="4" x="0.46" y="1.27" dx="0.6" dy="1.55" layer="1"/>
-<smd name="5" x="1.46" y="1.27" dx="0.6" dy="1.55" layer="1"/>
-<smd name="6" x="2.46" y="1.27" dx="0.6" dy="1.55" layer="1"/>
-<smd name="P$1" x="-3.84" y="-0.955" dx="1.2" dy="1.8" layer="1"/>
-<smd name="P$2" x="3.76" y="-0.955" dx="1.2" dy="1.8" layer="1"/>
-<text x="-1.524" y="2.54" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
-<text x="-1.905" y="-2.667" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
-</package>
 <package name="1X08" urn="urn:adsk.eagle:footprint:37760/1" library_version="1">
 <description>&lt;h3&gt;Plated Through Hole -8 Pin&lt;/h3&gt;
 &lt;p&gt;Specifications:
@@ -6886,20 +6701,6 @@ part number 2062-2P from STA</description>
 <packageinstance name="1X02_RA_PTH_FEMALE"/>
 </packageinstances>
 </package3d>
-<package3d name="JST-6-SMD-VERT-1.0MM" urn="urn:adsk.eagle:package:38270/1" type="box" library_version="1">
-<description>JST SH Vertical 6-Pin SMT
-Specifications:
-Pin count:6
-Pin pitch: 1 mm
-
-Datasheet referenced for footprint
-Example device(s):
-JST_6PIN_VERTICAL
-</description>
-<packageinstances>
-<packageinstance name="JST-6-SMD-VERT-1.0MM"/>
-</packageinstances>
-</package3d>
 <package3d name="1X08" urn="urn:adsk.eagle:package:38138/1" type="box" library_version="1">
 <description>Plated Through Hole -8 Pin
 Specifications:
@@ -7610,20 +7411,6 @@ CONN_03
 <pin name="1" x="7.62" y="0" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="2" x="7.62" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 </symbol>
-<symbol name="JST_6_1MM_VERT" urn="urn:adsk.eagle:symbol:37937/1" library_version="1">
-<wire x1="-7.62" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
-<wire x1="2.54" y1="7.62" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-10.16" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
-<pin name="1" x="-12.7" y="5.08" length="middle"/>
-<pin name="2" x="-12.7" y="2.54" length="middle"/>
-<pin name="3" x="-12.7" y="0" length="middle"/>
-<pin name="4" x="-12.7" y="-2.54" length="middle"/>
-<pin name="5" x="-12.7" y="-5.08" length="middle"/>
-<pin name="6" x="-12.7" y="-7.62" length="middle"/>
-<text x="-7.62" y="8.89" size="1.778" layer="95">&gt;NAME</text>
-<text x="-7.62" y="-13.97" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
 <symbol name="CONN_08" urn="urn:adsk.eagle:symbol:37759/1" library_version="1">
 <description>&lt;h3&gt; 8 Pin Connection&lt;/h3&gt;</description>
 <wire x1="1.27" y1="-10.16" x2="-5.08" y2="-10.16" width="0.4064" layer="94"/>
@@ -8060,49 +7847,6 @@ CONN_03
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="CONN-13700"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="JST_6_PIN_VERTICAL" urn="urn:adsk.eagle:component:38377/1" prefix="J" library_version="1">
-<description>&lt;h3&gt;JST 6 pin vertical connector&lt;/h3&gt;
-Here is a six pin vertical 1.0mm pitch connector. It is useful if you need something very tiny as a connection. These are not the standard JST type connectors we use on most of our boards, but are actually the much smaller JST-SH type.
-
-&lt;p&gt;&lt;/p&gt;
-&lt;b&gt;Here is the connector we sell at SparkFun:&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/579"&gt;JST SH Vertical 6-Pin Connector - SMD&lt;/a&gt; (GPS-00579)&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.sparkfun.com/datasheets/GPS/EM406-SMDConnector-eSH.pdf"&gt;Datasheet&lt;/a&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;
-&lt;b&gt;It was used on these SparkFun products:&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/11818"&gt;SparkFun GPS Breakout&lt;/a&gt; (BOB-11818)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/12081"&gt;SparkFun Weather Shield&lt;/a&gt; (DEV-12081)&lt;/li&gt;
-&lt;li&gt;And many, many other GPS related products.&lt;/li&gt;
-&lt;/ul&gt;</description>
-<gates>
-<gate name="G$1" symbol="JST_6_1MM_VERT" x="2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="JST-6-SMD-VERT-1.0MM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:38270/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="CONN-08249" constant="no"/>
-<attribute name="SF_ID" value="GPS-00579" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -16070,160 +15814,6 @@ Created by Upverter.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SM04B-SRSS-TB_LF__SN_">
-<packages>
-<package name="JST_SM04B-SRSS-TB(LF)(SN)">
-<circle x="-2.45" y="0.385" radius="0.1" width="0.3" layer="21"/>
-<text x="-3.72381875" y="1.131940625" size="1.271490625" layer="25">&gt;NAME</text>
-<text x="-3.713609375" y="-6.375909375" size="1.27071875" layer="27">&gt;VALUE</text>
-<wire x1="-3" y1="-0.325" x2="3" y2="-0.325" width="0.127" layer="51"/>
-<wire x1="3" y1="-0.325" x2="3" y2="-4.575" width="0.127" layer="51"/>
-<wire x1="3" y1="-4.575" x2="-3" y2="-4.575" width="0.127" layer="51"/>
-<wire x1="-3" y1="-4.575" x2="-3" y2="-0.325" width="0.127" layer="51"/>
-<wire x1="-2.2" y1="-0.325" x2="-3" y2="-0.325" width="0.127" layer="21"/>
-<wire x1="-3" y1="-0.325" x2="-3" y2="-2.6" width="0.127" layer="21"/>
-<wire x1="2.2" y1="-0.325" x2="3" y2="-0.325" width="0.127" layer="21"/>
-<wire x1="3" y1="-0.325" x2="3" y2="-2.6" width="0.127" layer="21"/>
-<wire x1="-1.8" y1="-4.575" x2="1.8" y2="-4.575" width="0.127" layer="21"/>
-<circle x="-2.45" y="0.385" radius="0.1" width="0.3" layer="51"/>
-<wire x1="-3.65" y1="1.025" x2="3.65" y2="1.025" width="0.05" layer="39"/>
-<wire x1="3.65" y1="1.025" x2="3.65" y2="-5.025" width="0.05" layer="39"/>
-<wire x1="3.65" y1="-5.025" x2="-3.65" y2="-5.025" width="0.05" layer="39"/>
-<wire x1="-3.65" y1="-5.025" x2="-3.65" y2="1.025" width="0.05" layer="39"/>
-<smd name="S2" x="2.8" y="-3.875" dx="1.2" dy="1.8" layer="1" rot="R180"/>
-<smd name="S1" x="-2.8" y="-3.875" dx="1.2" dy="1.8" layer="1" rot="R180"/>
-<smd name="1" x="-1.5" y="0" dx="0.6" dy="1.55" layer="1"/>
-<smd name="2" x="-0.5" y="0" dx="0.6" dy="1.55" layer="1"/>
-<smd name="3" x="0.5" y="0" dx="0.6" dy="1.55" layer="1"/>
-<smd name="4" x="1.5" y="0" dx="0.6" dy="1.55" layer="1"/>
-</package>
-</packages>
-<symbols>
-<symbol name="SM04B-SRSS-TB(LF)(SN)">
-<wire x1="-5.08" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
-<text x="-5.083059375" y="8.1433" size="1.27153125" layer="95">&gt;NAME</text>
-<text x="-5.083540625" y="-11.9557" size="1.27176875" layer="96">&gt;VALUE</text>
-<wire x1="-5.08" y1="-10.16" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-10.16" x2="5.08" y2="7.62" width="0.254" layer="94"/>
-<pin name="1" x="-7.62" y="5.08" visible="pin" length="short" direction="pas"/>
-<pin name="2" x="-7.62" y="2.54" visible="pin" length="short" direction="pas"/>
-<pin name="3" x="-7.62" y="0" visible="pin" length="short" direction="pas"/>
-<pin name="4" x="-7.62" y="-2.54" visible="pin" length="short" direction="pas"/>
-<pin name="SHIELD" x="-7.62" y="-7.62" visible="pin" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SM04B-SRSS-TB(LF)(SN)" prefix="J">
-<description>SH Series 1.0 mm Pitch 2 Position Single Row Side Entry Shrouded Header &lt;a href="https://pricing.snapeda.com/parts/SM04B-SRSS-TB%28LF%29%28SN%29/JST%20Sales/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
-<gates>
-<gate name="G$2" symbol="SM04B-SRSS-TB(LF)(SN)" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JST_SM04B-SRSS-TB(LF)(SN)">
-<connects>
-<connect gate="G$2" pin="1" pad="1"/>
-<connect gate="G$2" pin="2" pad="2"/>
-<connect gate="G$2" pin="3" pad="3"/>
-<connect gate="G$2" pin="4" pad="4"/>
-<connect gate="G$2" pin="SHIELD" pad="S1 S2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="In Stock"/>
-<attribute name="DESCRIPTION" value=" Connector Header Surface Mount, Right Angle 4 position 0.039 (1.00mm) "/>
-<attribute name="MF" value="JST Sales"/>
-<attribute name="MP" value="SM04B-SRSS-TB(LF)(SN)"/>
-<attribute name="PACKAGE" value="None"/>
-<attribute name="PRICE" value="None"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/SM04B-SRSS-TB(LF)(SN)/?ref=eda"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="SM06B-SRSS-TB_LF__SN_">
-<packages>
-<package name="JST_SM06B-SRSS-TB(LF)(SN)">
-<wire x1="-4" y1="-0.325" x2="4" y2="-0.325" width="0.127" layer="51"/>
-<wire x1="4" y1="-0.325" x2="4" y2="-4.575" width="0.127" layer="51"/>
-<wire x1="4" y1="-4.575" x2="-4" y2="-4.575" width="0.127" layer="51"/>
-<wire x1="-4" y1="-4.575" x2="-4" y2="-0.325" width="0.127" layer="51"/>
-<wire x1="-3.2" y1="-0.325" x2="-4" y2="-0.325" width="0.127" layer="21"/>
-<wire x1="-4" y1="-0.325" x2="-4" y2="-2.6" width="0.127" layer="21"/>
-<wire x1="3.2" y1="-0.325" x2="4" y2="-0.325" width="0.127" layer="21"/>
-<wire x1="4" y1="-0.325" x2="4" y2="-2.6" width="0.127" layer="21"/>
-<wire x1="-2.8" y1="-4.575" x2="2.8" y2="-4.575" width="0.127" layer="21"/>
-<circle x="-3.3" y="0.5" radius="0.1" width="0.2" layer="21"/>
-<circle x="-3.3" y="0.5" radius="0.1" width="0.2" layer="51"/>
-<wire x1="-4.65" y1="1.025" x2="4.65" y2="1.025" width="0.05" layer="39"/>
-<wire x1="4.65" y1="1.025" x2="4.65" y2="-5.025" width="0.05" layer="39"/>
-<wire x1="4.65" y1="-5.025" x2="-4.65" y2="-5.025" width="0.05" layer="39"/>
-<wire x1="-4.65" y1="-5.025" x2="-4.65" y2="1.025" width="0.05" layer="39"/>
-<text x="-4" y="1.24" size="1.27" layer="25">&gt;NAME</text>
-<text x="-4" y="-6.4" size="1.27" layer="27">&gt;VALUE</text>
-<smd name="6" x="2.5" y="0" dx="0.6" dy="1.55" layer="1" rot="R180"/>
-<smd name="1" x="-2.5" y="0" dx="0.6" dy="1.55" layer="1" rot="R180"/>
-<smd name="2" x="-1.5" y="0" dx="0.6" dy="1.55" layer="1" rot="R180"/>
-<smd name="3" x="-0.5" y="0" dx="0.6" dy="1.55" layer="1" rot="R180"/>
-<smd name="4" x="0.5" y="0" dx="0.6" dy="1.55" layer="1" rot="R180"/>
-<smd name="5" x="1.5" y="0" dx="0.6" dy="1.55" layer="1" rot="R180"/>
-<smd name="S1" x="-3.8" y="-3.875" dx="1.2" dy="1.8" layer="1"/>
-<smd name="S2" x="3.8" y="-3.875" dx="1.2" dy="1.8" layer="1"/>
-</package>
-</packages>
-<symbols>
-<symbol name="SM06B-SRSS-TB(LF)(SN)">
-<wire x1="-5.08" y1="12.7" x2="5.08" y2="12.7" width="0.254" layer="94"/>
-<wire x1="5.08" y1="12.7" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-10.16" x2="-5.08" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-10.16" x2="-5.08" y2="12.7" width="0.254" layer="94"/>
-<text x="-5.08" y="13.335" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-10.16" y="10.16" length="middle" direction="pas"/>
-<pin name="2" x="-10.16" y="7.62" length="middle" direction="pas"/>
-<pin name="3" x="-10.16" y="5.08" length="middle" direction="pas"/>
-<pin name="4" x="-10.16" y="2.54" length="middle" direction="pas"/>
-<pin name="5" x="-10.16" y="0" length="middle" direction="pas"/>
-<pin name="6" x="-10.16" y="-2.54" length="middle" direction="pas"/>
-<pin name="SHIELD" x="-10.16" y="-7.62" length="middle" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SM06B-SRSS-TB(LF)(SN)" prefix="J">
-<description>SH Series 6 Position 1 mm Surface Mount Right Angle Side Entry Shrouded Header &lt;a href="https://pricing.snapeda.com/parts/SM06B-SRSS-TB%28LF%29%28SN%29/JST%20Sales%20America%20Inc./view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="SM06B-SRSS-TB(LF)(SN)" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JST_SM06B-SRSS-TB(LF)(SN)">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="SHIELD" pad="S1 S2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="In Stock"/>
-<attribute name="DESCRIPTION" value=" Connector Header Surface Mount, Right Angle 6 position 0.039 (1.00mm) "/>
-<attribute name="MF" value="JST Sales America Inc."/>
-<attribute name="MP" value="SM06B-SRSS-TB(LF)(SN)"/>
-<attribute name="PACKAGE" value="None"/>
-<attribute name="PRICE" value="None"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/SM06B-SRSS-TB(LF)(SN)/?ref=eda"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="Capacitor" urn="urn:adsk.eagle:library:16290819">
 <description>&lt;B&gt;Capacitors - Fixed, Variable, Trimmers</description>
 <packages>
@@ -17974,6 +17564,167 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="JST SH Connectors" urn="urn:adsk.eagle:library:41161668">
+<packages>
+<package name="JST_BM04B-SRSS-TB(LF)(SN)" urn="urn:adsk.eagle:footprint:41161642/1" library_version="2">
+<wire x1="3" y1="0.7" x2="3" y2="-2.2" width="0.127" layer="51"/>
+<wire x1="3" y1="-2.2" x2="-3" y2="-2.2" width="0.127" layer="51"/>
+<wire x1="-3" y1="-2.2" x2="-3" y2="0.7" width="0.127" layer="51"/>
+<wire x1="-3" y1="0.7" x2="3" y2="0.7" width="0.127" layer="51"/>
+<wire x1="3" y1="-2.2" x2="3" y2="-1.22" width="0.127" layer="21"/>
+<wire x1="-2.12" y1="-2.2" x2="-3" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="3" y1="-2.2" x2="2.12" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="-3" y1="-2.2" x2="-3" y2="-1.22" width="0.127" layer="21"/>
+<wire x1="-1.88" y1="0.7" x2="1.88" y2="0.7" width="0.127" layer="21"/>
+<wire x1="-3.65" y1="1.15" x2="-3.65" y2="-3.55" width="0.05" layer="39"/>
+<wire x1="-3.65" y1="-3.55" x2="3.65" y2="-3.55" width="0.05" layer="39"/>
+<wire x1="3.65" y1="-3.55" x2="3.65" y2="1.15" width="0.05" layer="39"/>
+<wire x1="3.65" y1="1.15" x2="-3.65" y2="1.15" width="0.05" layer="39"/>
+<circle x="-1.5" y="-4" radius="0.1" width="0.2" layer="21"/>
+<circle x="-1.5" y="-4" radius="0.1" width="0.2" layer="51"/>
+<text x="-3.65" y="2.15" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.65" y="-4.55" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<smd name="S2" x="2.8" y="0" dx="1.2" dy="1.8" layer="1"/>
+<smd name="S1" x="-2.8" y="0" dx="1.2" dy="1.8" layer="1"/>
+<smd name="4" x="1.5" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+<smd name="3" x="0.5" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+<smd name="2" x="-0.5" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+<smd name="1" x="-1.5" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+</package>
+<package name="JST_BM05B-SRSS-TB(LF)(SN)" urn="urn:adsk.eagle:footprint:41161661/1" library_version="2">
+<wire x1="3.5" y1="0.7" x2="3.5" y2="-2.2" width="0.127" layer="51"/>
+<wire x1="3.5" y1="-2.2" x2="-3.5" y2="-2.2" width="0.127" layer="51"/>
+<wire x1="-3.5" y1="-2.2" x2="-3.5" y2="0.7" width="0.127" layer="51"/>
+<wire x1="-3.5" y1="0.7" x2="3.5" y2="0.7" width="0.127" layer="51"/>
+<wire x1="3.5" y1="-2.2" x2="3.5" y2="-1.22" width="0.127" layer="21"/>
+<wire x1="-2.62" y1="-2.2" x2="-3.5" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="3.5" y1="-2.2" x2="2.62" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="-3.5" y1="-2.2" x2="-3.5" y2="-1.22" width="0.127" layer="21"/>
+<wire x1="-2.38" y1="0.7" x2="2.38" y2="0.7" width="0.127" layer="21"/>
+<wire x1="-4.15" y1="1.15" x2="-4.15" y2="-3.55" width="0.05" layer="39"/>
+<wire x1="-4.15" y1="-3.55" x2="4.15" y2="-3.55" width="0.05" layer="39"/>
+<wire x1="4.15" y1="-3.55" x2="4.15" y2="1.15" width="0.05" layer="39"/>
+<wire x1="4.15" y1="1.15" x2="-4.15" y2="1.15" width="0.05" layer="39"/>
+<circle x="-2" y="-4" radius="0.1" width="0.2" layer="21"/>
+<circle x="-2" y="-4" radius="0.1" width="0.2" layer="51"/>
+<text x="-4.15" y="2.15" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.15" y="-4.55" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<smd name="S2" x="3.3" y="0" dx="1.2" dy="1.8" layer="1"/>
+<smd name="S1" x="-3.3" y="0" dx="1.2" dy="1.8" layer="1"/>
+<smd name="5" x="2" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+<smd name="4" x="1" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+<smd name="3" x="0" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+<smd name="2" x="-1" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+<smd name="1" x="-2" y="-2.525" dx="0.6" dy="1.55" layer="1"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="JST_BM04B-SRSS-TB(LF)(SN)" urn="urn:adsk.eagle:package:41161644/2" type="model" library_version="2">
+<packageinstances>
+<packageinstance name="JST_BM04B-SRSS-TB(LF)(SN)"/>
+</packageinstances>
+</package3d>
+<package3d name="JST_BM05B-SRSS-TB(LF)(SN)" urn="urn:adsk.eagle:package:41161663/2" type="model" library_version="2">
+<packageinstances>
+<packageinstance name="JST_BM05B-SRSS-TB(LF)(SN)"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="BM04B-SRSS-TB(LF)(SN)" urn="urn:adsk.eagle:symbol:41161670/1" library_version="2">
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+<text x="-5.08" y="10.922" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-10.16" y="7.62" length="middle" direction="pas"/>
+<pin name="2" x="-10.16" y="5.08" length="middle" direction="pas"/>
+<pin name="3" x="-10.16" y="2.54" length="middle" direction="pas"/>
+<pin name="4" x="-10.16" y="0" length="middle" direction="pas"/>
+<pin name="SHIELD" x="-10.16" y="-5.08" length="middle" direction="pas"/>
+</symbol>
+<symbol name="BM05B-SRSS-TB(LF)(SN)" urn="urn:adsk.eagle:symbol:41161669/1" library_version="2">
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-10.16" x2="5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+<text x="-5.08" y="10.922" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-10.16" y="7.62" length="middle" direction="pas"/>
+<pin name="2" x="-10.16" y="5.08" length="middle" direction="pas"/>
+<pin name="3" x="-10.16" y="2.54" length="middle" direction="pas"/>
+<pin name="4" x="-10.16" y="0" length="middle" direction="pas"/>
+<pin name="5" x="-10.16" y="-2.54" length="middle" direction="pas"/>
+<pin name="SHIELD" x="-10.16" y="-7.62" length="middle" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BM04B-SRSS-TB(LF)(SN)" urn="urn:adsk.eagle:component:41161672/1" prefix="J" library_version="2">
+<description> &lt;a href="https://pricing.snapeda.com/parts/BM04B-SRSS-TB%28LF%29%28SN%29/JST%20Sales/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="BM04B-SRSS-TB(LF)(SN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JST_BM04B-SRSS-TB(LF)(SN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="SHIELD" pad="S1 S2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:41161644/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="In Stock"/>
+<attribute name="DESCRIPTION" value=" Connector Header Surface Mount 4 position 0.039 (1.00mm) "/>
+<attribute name="MF" value="JST Sales"/>
+<attribute name="MP" value="BM04B-SRSS-TB(LF)(SN)"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search?q=BM04B-SRSS-TB(LF)(SN)&amp;ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BM05B-SRSS-TB(LF)(SN)" urn="urn:adsk.eagle:component:41161671/1" prefix="J" library_version="2">
+<description> &lt;a href="https://pricing.snapeda.com/parts/BM05B-SRSS-TB%28LF%29%28SN%29/JST%20Sales/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="BM05B-SRSS-TB(LF)(SN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JST_BM05B-SRSS-TB(LF)(SN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="SHIELD" pad="S1 S2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:41161663/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="In Stock"/>
+<attribute name="DESCRIPTION" value=" Connector Header Surface Mount 5 position 0.039 (1.00mm) "/>
+<attribute name="MF" value="JST Sales"/>
+<attribute name="MP" value="BM05B-SRSS-TB(LF)(SN)"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search?q=BM05B-SRSS-TB(LF)(SN)&amp;ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -18039,7 +17790,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="R15" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-0R-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="0R"/>
 <part name="C11" library="Discrete-new" deviceset="CAP" device="-0402" value="DNP"/>
 <part name="C12" library="Discrete-new" deviceset="CAP" device="-0402" value="DNP"/>
-<part name="J4" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="JST_6_PIN_VERTICAL" device="" package3d_urn="urn:adsk.eagle:package:38270/1">
+<part name="J4" library="JST SH Connectors" library_urn="urn:adsk.eagle:library:41161668" deviceset="BM05B-SRSS-TB(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:41161663/2">
 <attribute name="MPN" value="BM06B-SRSS-TB(LF)(SN)"/>
 </part>
 <part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
@@ -18112,7 +17863,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="D19" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY-DUAL" device="" value="BAS70-05">
 <attribute name="MPN" value="BAS70-05-7-F"/>
 </part>
-<part name="J5" library="SparkFun-Connectors" deviceset="QWIIC_CONNECTOR" device="JS-1MM" value="QWIIC_RIGHT_ANGLE">
+<part name="J5" library="JST SH Connectors" library_urn="urn:adsk.eagle:library:41161668" deviceset="BM04B-SRSS-TB(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:41161644/2" value="QWIIC_RIGHT_ANGLE">
 <attribute name="MPN" value="BM04B-SRSS-TB(LF)(SN)"/>
 </part>
 <part name="GND52" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -18342,10 +18093,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="MPN" value="06033G104ZAT2A"/>
 <attribute name="PROD_ID" value="CAP-13216"/>
 </part>
-<part name="J15" library="SM06B-SRSS-TB_LF__SN_" deviceset="SM06B-SRSS-TB(LF)(SN)" device="">
+<part name="J15" library="JST SH Connectors" library_urn="urn:adsk.eagle:library:41161668" deviceset="BM05B-SRSS-TB(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:41161663/2">
 <attribute name="MPN" value="BM06B-SRSS-TB(LF)(SN)"/>
 </part>
-<part name="J10" library="SM04B-SRSS-TB_LF__SN_" deviceset="SM04B-SRSS-TB(LF)(SN)" device="" value="QWIIC_RIGHT_ANGLE">
+<part name="J10" library="JST SH Connectors" library_urn="urn:adsk.eagle:library:41161668" deviceset="BM04B-SRSS-TB(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:41161644/2" value="QWIIC_RIGHT_ANGLE">
 <attribute name="MPN" value="BM04B-SRSS-TB(LF)(SN)"/>
 </part>
 <part name="MIC_3V3" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_2-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39289/1" value=""/>
@@ -18485,10 +18236,10 @@ uses different pins for SDIO than teensy does.</text>
 <attribute name="NAME" x="328.93" y="189.23" size="1.27" layer="95" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="328.93" y="193.04" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
-<instance part="J4" gate="G$1" x="167.64" y="231.14" smashed="yes" grouprefs="PORTS">
-<attribute name="NAME" x="160.02" y="240.03" size="1.778" layer="95"/>
-<attribute name="VALUE" x="160.02" y="217.17" size="1.778" layer="96"/>
-<attribute name="MPN" x="167.64" y="231.14" size="1.27" layer="96" display="off"/>
+<instance part="J4" gate="G$1" x="167.64" y="228.6" smashed="yes" grouprefs="PORTS">
+<attribute name="NAME" x="160.02" y="237.49" size="1.778" layer="95"/>
+<attribute name="VALUE" x="160.02" y="214.63" size="1.778" layer="96"/>
+<attribute name="MPN" x="167.64" y="228.6" size="1.27" layer="96" display="off"/>
 </instance>
 <instance part="G1" gate="G$1" x="264.16" y="121.92" smashed="yes" grouprefs="WIRELESS"/>
 <instance part="J_ASC" gate="G$1" x="373.38" y="154.94" smashed="yes" rot="R90" grouprefs="WIRELESS">
@@ -18619,13 +18370,12 @@ uses different pins for SDIO than teensy does.</text>
 <attribute name="VALUE" x="188.214" y="55.88" size="1.778" layer="96" font="vector" rot="MR90" align="top-left"/>
 <attribute name="MPN" x="193.04" y="66.04" size="1.27" layer="96" rot="R270" display="off"/>
 </instance>
-<instance part="J5" gate="G$1" x="203.2" y="104.14" smashed="yes" rot="MR0" grouprefs="QWIIC">
-<attribute name="VALUE" x="196.342" y="96.52" size="1.778" layer="96" font="vector" rot="MR180" align="top-left"/>
-<attribute name="NAME" x="208.28" y="112.014" size="1.778" layer="95" font="vector" rot="MR0"/>
-<attribute name="MPN" x="203.2" y="104.14" size="1.27" layer="96" rot="MR0" display="off"/>
+<instance part="J5" gate="G$1" x="208.28" y="109.22" smashed="yes" rot="MR180" grouprefs="QWIIC">
+<attribute name="NAME" x="203.2" y="101.346" size="1.778" layer="95" font="vector" rot="MR180"/>
+<attribute name="MPN" x="208.28" y="109.22" size="1.27" layer="96" rot="MR180" display="off"/>
 </instance>
-<instance part="GND52" gate="1" x="193.04" y="96.52" smashed="yes" grouprefs="QWIIC">
-<attribute name="VALUE" x="193.04" y="96.266" size="1.778" layer="96" align="top-center"/>
+<instance part="GND52" gate="1" x="195.58" y="96.52" smashed="yes" grouprefs="QWIIC">
+<attribute name="VALUE" x="195.58" y="96.266" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="QWIIC_PWR" gate="G$1" x="157.48" y="124.46" smashed="yes" rot="R270" grouprefs="QWIIC">
 <attribute name="NAME" x="155.702" y="120.396" size="1.778" layer="95" font="vector"/>
@@ -18812,7 +18562,7 @@ uses different pins for SDIO than teensy does.</text>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="233.68" x2="152.4" y2="233.68" width="0.1524" layer="91" grouprefs="PORTS"/>
+<wire x1="157.48" y1="233.68" x2="152.4" y2="233.68" width="0.1524" layer="91" grouprefs="PORTS"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="152.4" y1="233.68" x2="152.4" y2="220.98" width="0.1524" layer="91" grouprefs="PORTS"/>
 </segment>
@@ -18830,12 +18580,6 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="BT1" gate="G$1" pin="-"/>
 <wire x1="193.04" y1="30.48" x2="193.04" y2="27.94" width="0.1524" layer="91" grouprefs="RTC"/>
 <pinref part="GND20" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="J5" gate="G$1" pin="1"/>
-<wire x1="195.58" y1="101.6" x2="193.04" y2="101.6" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="193.04" y1="101.6" x2="193.04" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<pinref part="GND52" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C13" gate="G$1" pin="2"/>
@@ -18868,6 +18612,15 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="GND27" gate="1" pin="GND"/>
 <wire x1="292.1" y1="43.18" x2="292.1" y2="40.64" width="0.1524" layer="91" grouprefs="USD"/>
 <junction x="292.1" y="43.18"/>
+</segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="1"/>
+<pinref part="GND52" gate="1" pin="GND"/>
+<wire x1="198.12" y1="101.6" x2="195.58" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="101.6" x2="195.58" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="99.06" x2="195.58" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="J5" gate="G$1" pin="SHIELD"/>
+<wire x1="195.58" y1="114.3" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3.3V" class="1">
@@ -18906,7 +18659,7 @@ uses different pins for SDIO than teensy does.</text>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="236.22" x2="152.4" y2="236.22" width="0.1524" layer="91" grouprefs="PORTS"/>
+<wire x1="157.48" y1="236.22" x2="152.4" y2="236.22" width="0.1524" layer="91" grouprefs="PORTS"/>
 <pinref part="SUPPLY23" gate="G$1" pin="3.3V"/>
 <wire x1="152.4" y1="236.22" x2="152.4" y2="238.76" width="0.1524" layer="91" grouprefs="PORTS"/>
 </segment>
@@ -18975,7 +18728,7 @@ uses different pins for SDIO than teensy does.</text>
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="4"/>
-<wire x1="195.58" y1="109.22" x2="149.86" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="198.12" y1="109.22" x2="149.86" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <label x="147.32" y="109.22" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 <pinref part="R35" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="109.22" x2="147.32" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
@@ -18991,7 +18744,7 @@ uses different pins for SDIO than teensy does.</text>
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="3"/>
-<wire x1="195.58" y1="106.68" x2="165.1" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="198.12" y1="106.68" x2="165.1" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <label x="147.32" y="106.68" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 <pinref part="R34" gate="G$1" pin="1"/>
 <wire x1="165.1" y1="106.68" x2="147.32" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
@@ -19499,18 +19252,17 @@ uses different pins for SDIO than teensy does.</text>
 <label x="154.94" y="132.08" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 </segment>
 <segment>
-<pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="195.58" y1="104.14" x2="193.04" y2="104.14" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <pinref part="U3" gate="G$1" pin="OUT"/>
 <wire x1="190.5" y1="142.24" x2="193.04" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="193.04" y1="142.24" x2="193.04" y2="104.14" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="193.04" y1="142.24" x2="198.12" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<junction x="193.04" y="142.24" grouprefs="QWIIC"/>
 <label x="200.66" y="142.24" size="1.27" layer="95" xref="yes" grouprefs="QWIIC"/>
 <pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="193.04" y1="142.24" x2="198.12" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <wire x1="198.12" y1="142.24" x2="200.66" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <wire x1="198.12" y1="138.43" x2="198.12" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <junction x="198.12" y="142.24" grouprefs="QWIIC"/>
+<pinref part="J5" gate="G$1" pin="2"/>
+<wire x1="193.04" y1="142.24" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="104.14" x2="198.12" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SD_CLK" class="2">
@@ -19660,11 +19412,6 @@ uses different pins for SDIO than teensy does.</text>
 </net>
 <net name="LR_SEL" class="0">
 <segment>
-<pinref part="J4" gate="G$1" pin="6"/>
-<wire x1="154.94" y1="223.52" x2="149.86" y2="223.52" width="0.1524" layer="91" grouprefs="PORTS"/>
-<label x="149.86" y="223.52" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="PORTS"/>
-</segment>
-<segment>
 <pinref part="J7" gate="J1" pin="G5/BUS5"/>
 <wire x1="71.12" y1="154.94" x2="73.66" y2="154.94" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="154.94" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
@@ -19678,14 +19425,14 @@ uses different pins for SDIO than teensy does.</text>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="3"/>
-<wire x1="154.94" y1="231.14" x2="149.86" y2="231.14" width="0.1524" layer="91" grouprefs="PORTS"/>
+<wire x1="157.48" y1="231.14" x2="149.86" y2="231.14" width="0.1524" layer="91" grouprefs="PORTS"/>
 <label x="149.86" y="231.14" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="PORTS"/>
 </segment>
 </net>
 <net name="I2S_SD" class="0">
 <segment>
 <pinref part="J4" gate="G$1" pin="4"/>
-<wire x1="154.94" y1="228.6" x2="149.86" y2="228.6" width="0.1524" layer="91" grouprefs="PORTS"/>
+<wire x1="157.48" y1="228.6" x2="149.86" y2="228.6" width="0.1524" layer="91" grouprefs="PORTS"/>
 <label x="149.86" y="228.6" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="PORTS"/>
 </segment>
 <segment>
@@ -19697,7 +19444,7 @@ uses different pins for SDIO than teensy does.</text>
 <net name="I2S_WS" class="0">
 <segment>
 <pinref part="J4" gate="G$1" pin="5"/>
-<wire x1="154.94" y1="226.06" x2="149.86" y2="226.06" width="0.1524" layer="91" grouprefs="PORTS"/>
+<wire x1="157.48" y1="226.06" x2="149.86" y2="226.06" width="0.1524" layer="91" grouprefs="PORTS"/>
 <label x="149.86" y="226.06" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="PORTS"/>
 </segment>
 <segment>
@@ -20522,14 +20269,14 @@ ground) at a single point.</text>
 <attribute name="VALUE" x="119.761" y="28.956" size="1.778" layer="96" rot="R270"/>
 <attribute name="MPN" x="121.92" y="30.48" size="1.27" layer="96" rot="R270" display="off"/>
 </instance>
-<instance part="J15" gate="G$1" x="228.6" y="71.12" smashed="yes">
-<attribute name="NAME" x="220.98" y="80.01" size="1.778" layer="95"/>
-<attribute name="VALUE" x="220.98" y="57.15" size="1.778" layer="96"/>
-<attribute name="MPN" x="228.6" y="71.12" size="1.27" layer="96" display="off"/>
+<instance part="J15" gate="G$1" x="228.6" y="73.66" smashed="yes">
+<attribute name="NAME" x="220.98" y="82.55" size="1.778" layer="95"/>
+<attribute name="VALUE" x="220.98" y="59.69" size="1.778" layer="96"/>
+<attribute name="MPN" x="228.6" y="73.66" size="1.27" layer="96" display="off"/>
 </instance>
-<instance part="J10" gate="G$2" x="215.9" y="40.64" smashed="yes" rot="MR180">
-<attribute name="NAME" x="210.82" y="32.766" size="1.778" layer="95" font="vector" rot="MR180"/>
-<attribute name="MPN" x="215.9" y="40.64" size="1.27" layer="96" rot="MR180" display="off"/>
+<instance part="J10" gate="G$1" x="220.98" y="38.1" smashed="yes" rot="MR180">
+<attribute name="NAME" x="215.9" y="30.226" size="1.778" layer="95" font="vector" rot="MR180"/>
+<attribute name="MPN" x="220.98" y="38.1" size="1.27" layer="96" rot="MR180" display="off"/>
 </instance>
 <instance part="MIC_3V3" gate="G$1" x="116.84" y="83.82" smashed="yes" rot="R180">
 <attribute name="NAME" x="112.776" y="85.598" size="1.778" layer="95" font="vector" rot="R270"/>
@@ -21510,9 +21257,9 @@ ground) at a single point.</text>
 <label x="76.2" y="76.2" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$2" pin="3"/>
-<wire x1="208.28" y1="40.64" x2="203.2" y2="40.64" width="0.1524" layer="91"/>
-<label x="203.2" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J10" gate="G$1" pin="3"/>
+<wire x1="210.82" y1="35.56" x2="208.28" y2="35.56" width="0.1524" layer="91"/>
+<label x="208.28" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GND_B" class="0">
@@ -21555,14 +21302,14 @@ ground) at a single point.</text>
 <label x="215.9" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$2" pin="1"/>
-<wire x1="208.28" y1="35.56" x2="205.74" y2="35.56" width="0.1524" layer="91"/>
-<label x="203.2" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="J10" gate="G$2" pin="SHIELD"/>
-<wire x1="205.74" y1="35.56" x2="203.2" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="48.26" x2="205.74" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="48.26" x2="205.74" y2="35.56" width="0.1524" layer="91"/>
-<junction x="205.74" y="35.56"/>
+<pinref part="J10" gate="G$1" pin="1"/>
+<label x="208.28" y="30.48" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="210.82" y1="30.48" x2="208.28" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="SHIELD"/>
+<wire x1="210.82" y1="43.18" x2="195.58" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="43.18" x2="195.58" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="25.4" x2="208.28" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="25.4" x2="208.28" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="MIC_GND" gate="G$1" pin="2"/>
@@ -21585,7 +21332,7 @@ ground) at a single point.</text>
 <label x="198.12" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="R18" gate="G$1" pin="1"/>
 <pinref part="J15" gate="G$1" pin="SHIELD"/>
-<wire x1="218.44" y1="63.5" x2="218.44" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="66.04" x2="218.44" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="58.42" x2="200.66" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="TP3" gate="G$1" pin="TP"/>
 <junction x="218.44" y="58.42"/>
@@ -21611,9 +21358,9 @@ ground) at a single point.</text>
 <label x="38.1" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$2" pin="4"/>
-<wire x1="208.28" y1="43.18" x2="203.2" y2="43.18" width="0.1524" layer="91"/>
-<label x="203.2" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J10" gate="G$1" pin="4"/>
+<wire x1="210.82" y1="38.1" x2="208.28" y2="38.1" width="0.1524" layer="91"/>
+<label x="208.28" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="3V3_B" class="0">
@@ -21634,9 +21381,9 @@ ground) at a single point.</text>
 <pinref part="TP1" gate="G$1" pin="TP"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$2" pin="2"/>
-<wire x1="208.28" y1="38.1" x2="203.2" y2="38.1" width="0.1524" layer="91"/>
-<label x="203.2" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J10" gate="G$1" pin="2"/>
+<wire x1="210.82" y1="33.02" x2="208.28" y2="33.02" width="0.1524" layer="91"/>
+<label x="208.28" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="MIC_3V3" gate="G$1" pin="2"/>
