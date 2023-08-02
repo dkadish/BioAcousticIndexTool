@@ -5987,14 +5987,6 @@ design rules under a new name.</description>
 <wire x1="62.23" y1="51.308" x2="63.107" y2="50.431" width="0.2032" layer="1"/>
 <wire x1="63.107" y1="50.431" x2="63.107" y2="48.26" width="0.2032" layer="1"/>
 </signal>
-<signal name="LR_SEL">
-<contactref element="J7" pad="73"/>
-<wire x1="23" y1="49.335" x2="22.904" y2="49.239" width="0.2032" layer="1"/>
-<wire x1="22.904" y1="49.239" x2="22.904" y2="48.4547875" width="0.2032" layer="1"/>
-<wire x1="22.1278125" y1="47.6786" x2="22.904" y2="48.4547875" width="0.2032" layer="1"/>
-<wire x1="12.145" y1="48.801" x2="13.2674" y2="47.6786" width="0.2032" layer="1"/>
-<wire x1="13.2674" y1="47.6786" x2="22.1278125" y2="47.6786" width="0.2032" layer="1"/>
-</signal>
 <signal name="I2S_SCK">
 <contactref element="J4" pad="3"/>
 <via x="29.21" y="58.1398" extent="1-16" drill="0.35"/>

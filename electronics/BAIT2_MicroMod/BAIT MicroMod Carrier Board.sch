@@ -19410,13 +19410,6 @@ uses different pins for SDIO than teensy does.</text>
 <wire x1="340.36" y1="134.62" x2="340.36" y2="138.43" width="0.1524" layer="91" grouprefs="WIRELESS"/>
 </segment>
 </net>
-<net name="LR_SEL" class="0">
-<segment>
-<pinref part="J7" gate="J1" pin="G5/BUS5"/>
-<wire x1="71.12" y1="154.94" x2="73.66" y2="154.94" width="0.1524" layer="91" grouprefs="MICROMOD"/>
-<label x="73.66" y="154.94" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
-</segment>
-</net>
 <net name="I2S_SCK" class="0">
 <segment>
 <pinref part="J7" gate="J1" pin="AUD_BCLK"/>
