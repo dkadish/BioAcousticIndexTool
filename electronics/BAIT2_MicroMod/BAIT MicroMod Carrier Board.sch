@@ -18882,11 +18882,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="D1" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="DIODE" device="-BAS16J" package3d_urn="urn:adsk.eagle:package:38441/1" value="250mA/100V">
 <attribute name="MPN" value="BAS16J,115"/>
 </part>
-<part name="JP_CS" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value=""/>
-<part name="JP_COPI" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value=""/>
-<part name="JP_SCK" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value=""/>
-<part name="JP_CIPO" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value=""/>
-<part name="R3" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-100K-1%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="100K"/>
 <part name="G1" library="Power or GND " deviceset="GND_POWER" device=""/>
 <part name="J_ASC" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>
 <part name="R5" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-4.7K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="4.7K"/>
@@ -19353,26 +19348,6 @@ uses different pins for SDIO than teensy does.</text>
 <attribute name="VALUE" x="347.472" y="73.66" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 <attribute name="MPN" x="345.44" y="76.2" size="1.27" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="JP_CS" gate="G$1" x="256.54" y="78.74" smashed="yes" rot="R90" grouprefs="USD">
-<attribute name="NAME" x="256.159" y="81.28" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="256.921" y="81.28" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
-</instance>
-<instance part="JP_COPI" gate="G$1" x="256.54" y="66.04" smashed="yes" rot="R90" grouprefs="USD">
-<attribute name="NAME" x="256.159" y="68.58" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="256.921" y="68.58" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
-</instance>
-<instance part="JP_SCK" gate="G$1" x="256.54" y="53.34" smashed="yes" rot="R90" grouprefs="USD">
-<attribute name="NAME" x="256.159" y="55.88" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="256.921" y="55.88" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
-</instance>
-<instance part="JP_CIPO" gate="G$1" x="256.54" y="40.64" smashed="yes" rot="R90" grouprefs="USD">
-<attribute name="NAME" x="256.159" y="43.18" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="256.921" y="43.18" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
-</instance>
-<instance part="R3" gate="G$1" x="248.92" y="82.55" smashed="yes" rot="R90" grouprefs="USD">
-<attribute name="NAME" x="247.396" y="82.55" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="250.444" y="82.55" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
 <instance part="G1" gate="G$1" x="264.16" y="121.92" smashed="yes" grouprefs="WIRELESS"/>
 <instance part="J_ASC" gate="G$1" x="373.38" y="154.94" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="371.094" y="149.86" size="1.778" layer="95" font="vector" rot="R90"/>
@@ -19593,25 +19568,12 @@ uses different pins for SDIO than teensy does.</text>
 <wire x1="71.12" y1="215.9" x2="73.66" y2="215.9" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="215.9" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 </segment>
-<segment>
-<pinref part="JP_SCK" gate="G$1" pin="1"/>
-<wire x1="251.46" y1="53.34" x2="248.92" y2="53.34" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="248.92" y="53.34" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
 </net>
 <net name="SD_!CS!" class="2">
 <segment>
 <pinref part="J7" gate="J1" pin="SPI_!CS!"/>
 <wire x1="71.12" y1="208.28" x2="73.66" y2="208.28" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="208.28" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
-</segment>
-<segment>
-<pinref part="JP_CS" gate="G$1" pin="1"/>
-<wire x1="248.92" y1="78.74" x2="246.38" y2="78.74" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="246.38" y="78.74" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<junction x="248.92" y="78.74" grouprefs="USD"/>
-<wire x1="248.92" y1="78.74" x2="251.46" y2="78.74" width="0.1524" layer="91" grouprefs="USD"/>
 </segment>
 </net>
 <net name="GND" class="1">
@@ -20106,22 +20068,12 @@ uses different pins for SDIO than teensy does.</text>
 <wire x1="71.12" y1="213.36" x2="73.66" y2="213.36" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="213.36" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 </segment>
-<segment>
-<pinref part="JP_COPI" gate="G$1" pin="1"/>
-<wire x1="251.46" y1="66.04" x2="248.92" y2="66.04" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="248.92" y="66.04" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
 </net>
 <net name="SPI_CIPO" class="2">
 <segment>
 <pinref part="J7" gate="J1" pin="SPI_SDI"/>
 <wire x1="71.12" y1="210.82" x2="73.66" y2="210.82" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="210.82" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
-</segment>
-<segment>
-<pinref part="JP_CIPO" gate="G$1" pin="1"/>
-<wire x1="251.46" y1="40.64" x2="248.92" y2="40.64" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="248.92" y="40.64" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
 </segment>
 </net>
 <net name="HEADER_!CS!" class="0">
@@ -20414,11 +20366,6 @@ uses different pins for SDIO than teensy does.</text>
 </net>
 <net name="3.3V_LP" class="1">
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="248.92" y1="86.36" x2="248.92" y2="91.44" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="248.92" y="91.44" size="1.27" layer="95" rot="R90" xref="yes" grouprefs="USD"/>
-</segment>
-<segment>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="314.96" y1="62.23" x2="314.96" y2="66.04" width="0.1524" layer="91" grouprefs="USD"/>
 <label x="314.96" y="66.04" size="1.27" layer="95" rot="R90" xref="yes" grouprefs="USD"/>
@@ -20477,9 +20424,9 @@ uses different pins for SDIO than teensy does.</text>
 <label x="73.66" y="233.68" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 </segment>
 <segment>
-<pinref part="JP_SCK" gate="G$1" pin="3"/>
-<wire x1="261.62" y1="53.34" x2="264.16" y2="53.34" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="264.16" y="53.34" size="1.27" layer="95" xref="yes" grouprefs="USD"/>
+<pinref part="J2" gate="G$1" pin="CLK"/>
+<wire x1="294.64" y1="66.04" x2="292.1" y2="66.04" width="0.1524" layer="91" grouprefs="USD"/>
+<label x="292.1" y="66.04" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
 </segment>
 </net>
 <net name="SD_CMD" class="2">
@@ -20489,9 +20436,9 @@ uses different pins for SDIO than teensy does.</text>
 <label x="73.66" y="231.14" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 </segment>
 <segment>
-<pinref part="JP_CIPO" gate="G$1" pin="3"/>
-<wire x1="261.62" y1="40.64" x2="264.16" y2="40.64" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="264.16" y="40.64" size="1.27" layer="95" xref="yes" grouprefs="USD"/>
+<pinref part="J2" gate="G$1" pin="CMD"/>
+<wire x1="294.64" y1="60.96" x2="292.1" y2="60.96" width="0.1524" layer="91" grouprefs="USD"/>
+<label x="292.1" y="60.96" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
 </segment>
 </net>
 <net name="SD_DATA0" class="2">
@@ -20501,9 +20448,9 @@ uses different pins for SDIO than teensy does.</text>
 <label x="73.66" y="228.6" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 </segment>
 <segment>
-<pinref part="JP_COPI" gate="G$1" pin="3"/>
-<wire x1="261.62" y1="66.04" x2="264.16" y2="66.04" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="264.16" y="66.04" size="1.27" layer="95" xref="yes" grouprefs="USD"/>
+<pinref part="J2" gate="G$1" pin="DAT0"/>
+<wire x1="294.64" y1="58.42" x2="292.1" y2="58.42" width="0.1524" layer="91" grouprefs="USD"/>
+<label x="292.1" y="58.42" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
 </segment>
 </net>
 <net name="SD_DATA1" class="2">
@@ -20537,57 +20484,9 @@ uses different pins for SDIO than teensy does.</text>
 <label x="73.66" y="220.98" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 </segment>
 <segment>
-<pinref part="JP_CS" gate="G$1" pin="3"/>
-<wire x1="261.62" y1="78.74" x2="264.16" y2="78.74" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="264.16" y="78.74" size="1.27" layer="95" xref="yes" grouprefs="USD"/>
-</segment>
-</net>
-<net name="DAT3/!CS!" class="2">
-<segment>
-<pinref part="JP_CS" gate="G$1" pin="2"/>
-<wire x1="256.54" y1="73.66" x2="251.46" y2="73.66" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="251.46" y="73.66" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
-<segment>
 <pinref part="J2" gate="G$1" pin="DAT3"/>
 <wire x1="294.64" y1="50.8" x2="292.1" y2="50.8" width="0.1524" layer="91" grouprefs="USD"/>
 <label x="292.1" y="50.8" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
-</net>
-<net name="CMD/CIPO" class="2">
-<segment>
-<pinref part="JP_CIPO" gate="G$1" pin="2"/>
-<wire x1="256.54" y1="35.56" x2="254" y2="35.56" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="254" y="35.56" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
-<segment>
-<pinref part="J2" gate="G$1" pin="CMD"/>
-<wire x1="294.64" y1="60.96" x2="292.1" y2="60.96" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="292.1" y="60.96" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
-</net>
-<net name="CLK/SCK" class="2">
-<segment>
-<pinref part="JP_SCK" gate="G$1" pin="2"/>
-<wire x1="256.54" y1="48.26" x2="254" y2="48.26" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="254" y="48.26" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
-<segment>
-<pinref part="J2" gate="G$1" pin="CLK"/>
-<wire x1="294.64" y1="66.04" x2="292.1" y2="66.04" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="292.1" y="66.04" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
-</net>
-<net name="DAT0/COPI" class="2">
-<segment>
-<pinref part="JP_COPI" gate="G$1" pin="2"/>
-<wire x1="256.54" y1="60.96" x2="254" y2="60.96" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="254" y="60.96" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
-</segment>
-<segment>
-<pinref part="J2" gate="G$1" pin="DAT0"/>
-<wire x1="294.64" y1="58.42" x2="292.1" y2="58.42" width="0.1524" layer="91" grouprefs="USD"/>
-<label x="292.1" y="58.42" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
 </segment>
 </net>
 <net name="RSSI" class="0">
