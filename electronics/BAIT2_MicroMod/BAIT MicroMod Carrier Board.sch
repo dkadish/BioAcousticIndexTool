@@ -18128,6 +18128,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="3V_CODEC_JP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR"/>
 <part name="SUPPLY15" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="J11" library="JST SH Connectors" library_urn="urn:adsk.eagle:library:41161668" deviceset="BM04B-SRSS-TB(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:41161644/2" value="QWIIC_RIGHT_ANGLE">
+<attribute name="MPN" value="BM04B-SRSS-TB(LF)(SN)"/>
+</part>
+<part name="GND42" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="QWIIC2_PU" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_2-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39289/1" value=""/>
+<part name="R3" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-2.2K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="2.2K"/>
+<part name="R16" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-2.2K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="2.2K"/>
+<part name="C40" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" deviceset="CERAMIC-1UF-25V-10%-X7R(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004287/1" value="1uf"/>
+<part name="GND43" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="R19" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-100K-1%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="100K"/>
+<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="U12" library="SparkFun-IC-Power" deviceset="V_REG_AP2112" device="K-3.3V" value="3.3V"/>
+<part name="GND44" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
+<part name="3V_QWIIC2_JP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR"/>
+<part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18391,24 +18407,24 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="VALUE" x="188.214" y="55.88" size="1.778" layer="96" font="vector" rot="MR90" align="top-left"/>
 <attribute name="MPN" x="193.04" y="66.04" size="1.27" layer="96" rot="R270" display="off"/>
 </instance>
-<instance part="J5" gate="G$1" x="83.82" y="93.98" smashed="yes" rot="MR180" grouprefs="QWIIC">
-<attribute name="NAME" x="78.74" y="86.106" size="1.778" layer="95" font="vector" rot="MR180"/>
-<attribute name="MPN" x="83.82" y="93.98" size="1.27" layer="96" rot="MR180" display="off"/>
+<instance part="J5" gate="G$1" x="58.42" y="93.98" smashed="yes" rot="MR180" grouprefs="QWIIC">
+<attribute name="NAME" x="53.34" y="86.106" size="1.778" layer="95" font="vector" rot="MR180"/>
+<attribute name="MPN" x="58.42" y="93.98" size="1.27" layer="96" rot="MR180" display="off"/>
 </instance>
-<instance part="GND52" gate="1" x="71.12" y="81.28" smashed="yes" grouprefs="QWIIC">
-<attribute name="VALUE" x="71.12" y="81.026" size="1.778" layer="96" align="top-center"/>
+<instance part="GND52" gate="1" x="45.72" y="83.82" smashed="yes" grouprefs="QWIIC">
+<attribute name="VALUE" x="45.72" y="83.566" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="QWIIC_PU" gate="G$1" x="33.02" y="109.22" smashed="yes" rot="R270" grouprefs="QWIIC">
-<attribute name="NAME" x="31.242" y="105.156" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="32.639" y="106.68" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
+<instance part="QWIIC_PU" gate="G$1" x="33.02" y="106.68" smashed="yes" rot="R270" grouprefs="QWIIC">
+<attribute name="NAME" x="28.702" y="102.616" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="32.639" y="104.14" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
 </instance>
-<instance part="R34" gate="G$1" x="40.64" y="101.6" smashed="yes" rot="R90" grouprefs="QWIIC">
-<attribute name="NAME" x="39.116" y="101.6" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="42.164" y="101.6" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R34" gate="G$1" x="40.64" y="99.06" smashed="yes" rot="R90" grouprefs="QWIIC">
+<attribute name="NAME" x="39.116" y="99.06" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="42.164" y="99.06" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="R35" gate="G$1" x="25.4" y="101.6" smashed="yes" rot="R90" grouprefs="QWIIC">
-<attribute name="NAME" x="23.876" y="101.6" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="26.924" y="101.6" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R35" gate="G$1" x="25.4" y="99.06" smashed="yes" rot="R90" grouprefs="QWIIC">
+<attribute name="NAME" x="23.876" y="99.06" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="26.924" y="99.06" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="C13" gate="G$1" x="48.26" y="50.8" smashed="yes" rot="R270" grouprefs="REGS_3V">
 <attribute name="NAME" x="49.53" y="54.61" size="1.27" layer="95" ratio="10" rot="R270"/>
@@ -18503,34 +18519,83 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="SUPPLY12" gate="G$1" x="55.88" y="30.48" smashed="yes">
 <attribute name="VALUE" x="50.8" y="30.734" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="C36" gate="G$1" x="111.76" y="50.8" smashed="yes" rot="R270" grouprefs="REGS_3V">
+<instance part="C36" gate="G$1" x="111.76" y="17.78" smashed="yes" rot="R270" grouprefs="REGS_3V">
+<attribute name="NAME" x="113.03" y="21.59" size="1.27" layer="95" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="109.22" y="21.59" size="1.27" layer="96" ratio="10" rot="R270"/>
+</instance>
+<instance part="GND2" gate="1" x="111.76" y="10.16" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="111.76" y="9.906" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="R1" gate="G$1" x="81.28" y="22.86" smashed="yes" rot="R90" grouprefs="REGS_3V">
+<attribute name="NAME" x="80.01" y="19.05" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="83.82" y="19.05" size="1.27" layer="96" ratio="10" rot="R90"/>
+</instance>
+<instance part="SUPPLY14" gate="G$1" x="81.28" y="30.48" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="76.2" y="30.734" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="U11" gate="G$1" x="99.06" y="17.78" smashed="yes" grouprefs="REGS_3V">
+<attribute name="NAME" x="91.44" y="25.654" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="91.44" y="9.906" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
+<instance part="GND28" gate="1" x="86.36" y="10.16" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="86.36" y="9.906" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="P+5" gate="1" x="86.36" y="33.02" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="91.44" y="33.02" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="3V_CODEC_JP" gate="G$1" x="119.38" y="22.86" smashed="yes" grouprefs="REGS_3V">
+<attribute name="NAME" x="121.92" y="23.241" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="SUPPLY15" gate="G$1" x="119.38" y="30.48" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="114.3" y="30.734" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="J11" gate="G$1" x="121.92" y="93.98" smashed="yes" rot="MR180" grouprefs="QWIIC">
+<attribute name="NAME" x="116.84" y="86.106" size="1.778" layer="95" font="vector" rot="MR180"/>
+<attribute name="MPN" x="121.92" y="93.98" size="1.27" layer="96" rot="MR180" display="off"/>
+</instance>
+<instance part="GND42" gate="1" x="109.22" y="83.82" smashed="yes" grouprefs="QWIIC">
+<attribute name="VALUE" x="109.22" y="83.566" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="QWIIC2_PU" gate="G$1" x="96.52" y="106.68" smashed="yes" rot="R270" grouprefs="QWIIC">
+<attribute name="NAME" x="92.202" y="102.616" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="96.139" y="104.14" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
+</instance>
+<instance part="R3" gate="G$1" x="104.14" y="99.06" smashed="yes" rot="R90" grouprefs="QWIIC">
+<attribute name="NAME" x="102.616" y="99.06" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="105.664" y="99.06" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="R16" gate="G$1" x="88.9" y="99.06" smashed="yes" rot="R90" grouprefs="QWIIC">
+<attribute name="NAME" x="87.376" y="99.06" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="90.424" y="99.06" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="C40" gate="G$1" x="111.76" y="50.8" smashed="yes" rot="R270">
 <attribute name="NAME" x="113.03" y="54.61" size="1.27" layer="95" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="109.22" y="54.61" size="1.27" layer="96" ratio="10" rot="R270"/>
 </instance>
-<instance part="GND2" gate="1" x="111.76" y="43.18" smashed="yes" grouprefs="REGS_3V">
+<instance part="GND43" gate="1" x="111.76" y="43.18" smashed="yes">
 <attribute name="VALUE" x="111.76" y="42.926" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R1" gate="G$1" x="81.28" y="55.88" smashed="yes" rot="R90" grouprefs="REGS_3V">
+<instance part="R19" gate="G$1" x="81.28" y="55.88" smashed="yes" rot="R90">
 <attribute name="NAME" x="80.01" y="52.07" size="1.27" layer="95" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="83.82" y="52.07" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
-<instance part="SUPPLY14" gate="G$1" x="81.28" y="63.5" smashed="yes" grouprefs="REGS_3V">
+<instance part="SUPPLY4" gate="G$1" x="81.28" y="63.5" smashed="yes">
 <attribute name="VALUE" x="76.2" y="63.754" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="U11" gate="G$1" x="99.06" y="50.8" smashed="yes" grouprefs="REGS_3V">
+<instance part="U12" gate="G$1" x="99.06" y="50.8" smashed="yes">
 <attribute name="NAME" x="91.44" y="58.674" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="91.44" y="42.926" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="GND28" gate="1" x="86.36" y="43.18" smashed="yes" grouprefs="REGS_3V">
+<instance part="GND44" gate="1" x="86.36" y="43.18" smashed="yes">
 <attribute name="VALUE" x="86.36" y="42.926" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="P+5" gate="1" x="86.36" y="66.04" smashed="yes" grouprefs="REGS_3V">
+<instance part="P+6" gate="1" x="86.36" y="66.04" smashed="yes">
 <attribute name="VALUE" x="91.44" y="66.04" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="3V_CODEC_JP" gate="G$1" x="119.38" y="55.88" smashed="yes" grouprefs="REGS_3V">
+<instance part="3V_QWIIC2_JP" gate="G$1" x="119.38" y="55.88" smashed="yes">
 <attribute name="NAME" x="121.92" y="56.261" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="SUPPLY15" gate="G$1" x="119.38" y="63.5" smashed="yes" grouprefs="REGS_3V">
+<instance part="SUPPLY8" gate="G$1" x="119.38" y="63.5" smashed="yes">
 <attribute name="VALUE" x="114.3" y="63.754" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 </instances>
@@ -18702,11 +18767,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="J5" gate="G$1" pin="1"/>
 <pinref part="GND52" gate="1" pin="GND"/>
-<wire x1="73.66" y1="86.36" x2="71.12" y2="86.36" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="71.12" y1="86.36" x2="71.12" y2="83.82" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="71.12" y1="83.82" x2="71.12" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="48.26" y1="86.36" x2="45.72" y2="86.36" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="45.72" y1="86.36" x2="45.72" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <pinref part="J5" gate="G$1" pin="SHIELD"/>
-<wire x1="71.12" y1="99.06" x2="73.66" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="45.72" y1="99.06" x2="48.26" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="GND"/>
@@ -18721,12 +18785,30 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="C36" gate="G$1" pin="2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="111.76" y1="45.72" x2="111.76" y2="46.99" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="111.76" y1="12.7" x2="111.76" y2="13.97" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 </segment>
 <segment>
 <pinref part="U11" gate="G$1" pin="GND"/>
-<wire x1="88.9" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="88.9" y1="12.7" x2="86.36" y2="12.7" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 <pinref part="GND28" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="J11" gate="G$1" pin="1"/>
+<pinref part="GND42" gate="1" pin="GND"/>
+<wire x1="111.76" y1="86.36" x2="109.22" y2="86.36" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="109.22" y1="86.36" x2="109.22" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<pinref part="J11" gate="G$1" pin="SHIELD"/>
+<wire x1="109.22" y1="99.06" x2="111.76" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
+</segment>
+<segment>
+<pinref part="C40" gate="G$1" pin="2"/>
+<pinref part="GND43" gate="1" pin="GND"/>
+<wire x1="111.76" y1="45.72" x2="111.76" y2="46.99" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U12" gate="G$1" pin="GND"/>
+<wire x1="88.9" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="GND44" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="3.3V" class="1">
@@ -18817,12 +18899,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="SUPPLY14" gate="G$1" pin="3.3V"/>
-<wire x1="81.28" y1="63.5" x2="81.28" y2="59.69" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="81.28" y1="30.48" x2="81.28" y2="26.67" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 </segment>
 <segment>
 <pinref part="3V_CODEC_JP" gate="G$1" pin="1"/>
 <pinref part="SUPPLY15" gate="G$1" pin="3.3V"/>
-<wire x1="119.38" y1="60.96" x2="119.38" y2="63.5" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="119.38" y1="27.94" x2="119.38" y2="30.48" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+</segment>
+<segment>
+<pinref part="R19" gate="G$1" pin="2"/>
+<pinref part="SUPPLY4" gate="G$1" pin="3.3V"/>
+<wire x1="81.28" y1="63.5" x2="81.28" y2="59.69" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="3V_QWIIC2_JP" gate="G$1" pin="1"/>
+<pinref part="SUPPLY8" gate="G$1" pin="3.3V"/>
+<wire x1="119.38" y1="60.96" x2="119.38" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="USB_D-" class="0">
@@ -18859,11 +18951,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="4"/>
-<wire x1="73.66" y1="93.98" x2="25.4" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="48.26" y1="93.98" x2="25.4" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <label x="22.86" y="93.98" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 <pinref part="R35" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="25.4" y1="97.79" x2="25.4" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="95.25" x2="25.4" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <junction x="25.4" y="93.98" grouprefs="QWIIC"/>
 </segment>
 </net>
@@ -18875,11 +18967,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="3"/>
-<wire x1="73.66" y1="91.44" x2="40.64" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="48.26" y1="91.44" x2="40.64" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <label x="22.86" y="91.44" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 <pinref part="R34" gate="G$1" pin="1"/>
 <wire x1="40.64" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="40.64" y1="97.79" x2="40.64" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="40.64" y1="95.25" x2="40.64" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <junction x="40.64" y="91.44" grouprefs="QWIIC"/>
 </segment>
 </net>
@@ -19392,14 +19484,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <net name="3V_QWIIC" class="1">
 <segment>
 <pinref part="QWIIC_PU" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="116.84" x2="33.02" y2="114.3" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="33.02" y1="116.84" x2="30.48" y2="116.84" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<label x="30.48" y="116.84" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+<wire x1="33.02" y1="111.76" x2="20.32" y2="111.76" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="20.32" y="111.76" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="68.58" y1="88.9" x2="73.66" y2="88.9" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<label x="68.58" y="88.9" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+<wire x1="22.86" y1="88.9" x2="48.26" y2="88.9" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="22.86" y="88.9" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 </segment>
 <segment>
 <pinref part="3V_QWIIC_JP" gate="G$1" pin="3"/>
@@ -19646,9 +19737,15 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U11" gate="G$1" pin="IN"/>
-<wire x1="88.9" y1="55.88" x2="86.36" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
-<wire x1="86.36" y1="55.88" x2="86.36" y2="63.5" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="88.9" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="86.36" y1="22.86" x2="86.36" y2="30.48" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 <pinref part="P+5" gate="1" pin="V+"/>
+</segment>
+<segment>
+<pinref part="U12" gate="G$1" pin="IN"/>
+<wire x1="88.9" y1="55.88" x2="86.36" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="55.88" x2="86.36" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="P+6" gate="1" pin="V+"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -19666,17 +19763,17 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <net name="N$24" class="0">
 <segment>
 <pinref part="R35" gate="G$1" pin="2"/>
-<wire x1="25.4" y1="105.41" x2="25.4" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="102.87" x2="25.4" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <pinref part="QWIIC_PU" gate="G$1" pin="3"/>
-<wire x1="25.4" y1="109.22" x2="27.94" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="106.68" x2="27.94" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
 </segment>
 </net>
 <net name="N$26" class="0">
 <segment>
 <pinref part="QWIIC_PU" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="109.22" x2="40.64" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="38.1" y1="106.68" x2="40.64" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <pinref part="R34" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="109.22" x2="40.64" y2="105.41" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="40.64" y1="106.68" x2="40.64" y2="102.87" width="0.1524" layer="91" grouprefs="QWIIC"/>
 </segment>
 </net>
 <net name="N$7" class="3">
@@ -19768,22 +19865,116 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="U11" gate="G$1" pin="OUT"/>
 <pinref part="C36" gate="G$1" pin="1"/>
-<wire x1="106.68" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
-<wire x1="111.76" y1="54.61" x2="111.76" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
-<junction x="111.76" y="55.88" grouprefs="REGS_3V"/>
-<wire x1="111.76" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="106.68" y1="22.86" x2="111.76" y2="22.86" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="111.76" y1="21.59" x2="111.76" y2="22.86" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<junction x="111.76" y="22.86" grouprefs="REGS_3V"/>
+<wire x1="111.76" y1="22.86" x2="114.3" y2="22.86" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 <pinref part="3V_CODEC_JP" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="CODEC_EN" class="0">
 <segment>
-<wire x1="88.9" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
-<label x="76.2" y="50.8" size="1.27" layer="95" rot="MR270" xref="yes" grouprefs="REGS_3V"/>
+<wire x1="88.9" y1="17.78" x2="81.28" y2="17.78" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<label x="76.2" y="17.78" size="1.27" layer="95" rot="MR270" xref="yes" grouprefs="REGS_3V"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="81.28" y1="50.8" x2="76.2" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
-<wire x1="81.28" y1="52.07" x2="81.28" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
-<junction x="81.28" y="50.8" grouprefs="REGS_3V"/>
+<wire x1="81.28" y1="17.78" x2="76.2" y2="17.78" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="81.28" y1="19.05" x2="81.28" y2="17.78" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<junction x="81.28" y="17.78" grouprefs="REGS_3V"/>
 <pinref part="U11" gate="G$1" pin="EN"/>
+</segment>
+<segment>
+<pinref part="J7" gate="J1" pin="G4/BUS4"/>
+<wire x1="71.12" y1="157.48" x2="73.66" y2="157.48" width="0.1524" layer="91"/>
+<label x="73.66" y="157.48" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="3V_CODEC" class="1">
+<segment>
+<pinref part="3V_CODEC_JP" gate="G$1" pin="3"/>
+<wire x1="119.38" y1="17.78" x2="121.92" y2="17.78" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<label x="121.92" y="17.78" size="1.27" layer="95" xref="yes" grouprefs="REGS_3V"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="88.9" y1="102.87" x2="88.9" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<pinref part="QWIIC2_PU" gate="G$1" pin="3"/>
+<wire x1="88.9" y1="106.68" x2="91.44" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="QWIIC2_PU" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="106.68" x2="104.14" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="106.68" x2="104.14" y2="102.87" width="0.1524" layer="91" grouprefs="QWIIC"/>
+</segment>
+</net>
+<net name="I2C1_SCL" class="0">
+<segment>
+<pinref part="J7" gate="J1" pin="I2C_SCL1"/>
+<wire x1="25.4" y1="160.02" x2="22.86" y2="160.02" width="0.1524" layer="91"/>
+<label x="22.86" y="160.02" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J11" gate="G$1" pin="4"/>
+<wire x1="111.76" y1="93.98" x2="88.9" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="86.36" y="93.98" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+<pinref part="R16" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="88.9" y1="95.25" x2="88.9" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<junction x="88.9" y="93.98" grouprefs="QWIIC"/>
+</segment>
+</net>
+<net name="I2C2_SDA" class="0">
+<segment>
+<pinref part="J11" gate="G$1" pin="3"/>
+<wire x1="111.76" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="86.36" y="91.44" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="104.14" y1="95.25" x2="104.14" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<junction x="104.14" y="91.44" grouprefs="QWIIC"/>
+</segment>
+</net>
+<net name="3V_QWIIC2" class="1">
+<segment>
+<pinref part="QWIIC2_PU" gate="G$1" pin="2"/>
+<wire x1="96.52" y1="111.76" x2="83.82" y2="111.76" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="83.82" y="111.76" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+</segment>
+<segment>
+<pinref part="3V_QWIIC2_JP" gate="G$1" pin="3"/>
+<wire x1="119.38" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
+<label x="121.92" y="50.8" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J11" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="88.9" x2="111.76" y2="88.9" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="86.36" y="88.9" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+</segment>
+</net>
+<net name="3V_QWIIC_OUT2" class="1">
+<segment>
+<pinref part="U12" gate="G$1" pin="OUT"/>
+<pinref part="C40" gate="G$1" pin="1"/>
+<wire x1="106.68" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="54.61" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
+<junction x="111.76" y="55.88"/>
+<wire x1="111.76" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="3V_QWIIC2_JP" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="QWIIC2_EN" class="0">
+<segment>
+<wire x1="88.9" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
+<label x="76.2" y="50.8" size="1.27" layer="95" rot="MR270" xref="yes"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="50.8" x2="76.2" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="52.07" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
+<junction x="81.28" y="50.8"/>
+<pinref part="U12" gate="G$1" pin="EN"/>
 </segment>
 <segment>
 <pinref part="J7" gate="J1" pin="G3/BUS3"/>
@@ -19791,11 +19982,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="73.66" y="160.02" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="3V_CODEC" class="1">
+<net name="I2C1_SDA" class="0">
 <segment>
-<pinref part="3V_CODEC_JP" gate="G$1" pin="3"/>
-<wire x1="119.38" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
-<label x="121.92" y="50.8" size="1.27" layer="95" xref="yes" grouprefs="REGS_3V"/>
+<pinref part="J7" gate="J1" pin="I2C_SDA1"/>
+<wire x1="25.4" y1="157.48" x2="22.86" y2="157.48" width="0.1524" layer="91"/>
+<label x="22.86" y="157.48" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

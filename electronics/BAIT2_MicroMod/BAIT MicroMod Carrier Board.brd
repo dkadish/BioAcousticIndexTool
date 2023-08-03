@@ -4465,6 +4465,52 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-13.679" y="-7.473" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="-13.679" y="-9.759" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
+<element name="J11" library="JST SH Connectors" library_urn="urn:adsk.eagle:library:41161668" package="JST_BM04B-SRSS-TB(LF)(SN)" package3d_urn="urn:adsk.eagle:package:41161644/2" value="QWIIC_RIGHT_ANGLE" x="-12.564" y="-18.425" smashed="yes">
+<attribute name="AVAILABILITY" value="In Stock" x="-20.398" y="-8.202" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value=" Connector Header Surface Mount 4 position 0.039 (1.00mm) " x="-20.398" y="-8.202" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="JST Sales" x="-20.398" y="-8.202" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="BM04B-SRSS-TB(LF)(SN)" x="-20.398" y="-8.202" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="BM04B-SRSS-TB(LF)(SN)" x="-20.398" y="-8.202" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-16.214" y="-16.275" size="1.27" layer="25"/>
+<attribute name="PACKAGE" value="None" x="-20.398" y="-8.202" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="-20.398" y="-8.202" size="1.778" layer="27" display="off"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search?q=BM04B-SRSS-TB(LF)(SN)&amp;ref=eda" x="-20.398" y="-8.202" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-16.214" y="-22.975" size="1.27" layer="27" align="top-left"/>
+</element>
+<element name="QWIIC2_PU" library="SparkFun-Jumpers" package="SMT-JUMPER_3_2-NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39289/1" value="" x="-5.896" y="-26.716" smashed="yes">
+<attribute name="NAME" x="-5.896" y="-25.573" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="VALUE" x="-5.896" y="-27.859" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+</element>
+<element name="R3" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" package="R0603" package3d_urn="urn:adsk.eagle:package:8004941/1" value="2.2K" x="-14.426" y="-26.129" smashed="yes">
+<attribute name="MPN" value="RC0603JR-072K2L" x="-30.675" y="-12.033" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-15.442" y="-28.034" size="0.889" layer="25" ratio="11" rot="R90"/>
+<attribute name="VALUE" x="-12.991" y="-27.734" size="0.635" layer="27" ratio="10" rot="R90"/>
+</element>
+<element name="R16" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" package="R0603" package3d_urn="urn:adsk.eagle:package:8004941/1" value="2.2K" x="-10.186" y="-26.129" smashed="yes">
+<attribute name="MPN" value="RC0603JR-072K2L" x="-34.915" y="-12.033" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-11.202" y="-28.034" size="0.889" layer="25" ratio="11" rot="R90"/>
+<attribute name="VALUE" x="-8.751" y="-27.734" size="0.635" layer="27" ratio="10" rot="R90"/>
+</element>
+<element name="C40" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" package="C0603" package3d_urn="urn:adsk.eagle:package:8004287/1" value="1uf" x="-10.387" y="-40.69" smashed="yes">
+<attribute name="MPN" value="CC0603KRX7R8BB105" x="-18.892" y="-25.524" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-10.641" y="-39.42" size="0.635" layer="33" ratio="10" rot="R270"/>
+<attribute name="NAME" x="-9.498" y="-39.42" size="0.889" layer="25" ratio="11" rot="R270"/>
+<attribute name="VALUE" x="-11.9745" y="-39.42" size="0.635" layer="27" ratio="10" rot="R270"/>
+</element>
+<element name="R19" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" package="R0603" package3d_urn="urn:adsk.eagle:package:8004941/1" value="100K" x="-14.426" y="-40.373" smashed="yes">
+<attribute name="MPN" value="RC0603FR-07100KL" x="-22.931" y="-26.129" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-15.442" y="-42.278" size="0.889" layer="25" ratio="11" rot="R90"/>
+<attribute name="VALUE" x="-12.991" y="-41.978" size="0.635" layer="27" ratio="10" rot="R90"/>
+</element>
+<element name="U12" library="SparkFun-IC-Power" package="SOT23-5" value="3.3V" x="-14.436" y="-31.606" smashed="yes">
+<attribute name="NAME" x="-16.214" y="-29.447" size="0.6096" layer="25" ratio="20"/>
+<attribute name="PROD_ID" value="VREG-12457" x="-26.785" y="-25.24" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-16.214" y="-34.4" size="0.6096" layer="27" ratio="20"/>
+</element>
+<element name="3V_QWIIC2_JP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR" x="-13.679" y="-36.956" smashed="yes">
+<attribute name="NAME" x="-13.679" y="-35.813" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="VALUE" x="-13.679" y="-38.099" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+</element>
 </elements>
 <signals>
 <signal name="SPI_SCK" class="2">
@@ -4774,6 +4820,11 @@ design rules under a new name.</description>
 <contactref element="J5" pad="S2"/>
 <contactref element="C36" pad="2"/>
 <contactref element="U11" pad="2"/>
+<contactref element="J11" pad="1"/>
+<contactref element="J11" pad="S1"/>
+<contactref element="J11" pad="S2"/>
+<contactref element="C40" pad="2"/>
+<contactref element="U12" pad="2"/>
 <wire x1="69.5" y1="63.54" x2="67.25" y2="72.04" width="0" layer="19" extent="1-1"/>
 <wire x1="57.912" y1="73.66" x2="67.25" y2="72.04" width="0" layer="19" extent="1-1"/>
 <wire x1="57.5" y1="68.54" x2="57.912" y2="73.66" width="0" layer="19" extent="1-1"/>
@@ -4851,6 +4902,11 @@ design rules under a new name.</description>
 <wire x1="21.59" y1="6.858" x2="19.05" y2="6.858" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.436" y1="-4.5661" x2="8.55" y2="3.125" width="0" layer="19" extent="1-1"/>
 <wire x1="-10.387" y1="-13.112" x2="-14.436" y2="-4.5661" width="0" layer="19" extent="1-1"/>
+<wire x1="-9.764" y1="-18.425" x2="-10.387" y2="-13.112" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.064" y1="-20.95" x2="-9.764" y2="-18.425" width="0" layer="19" extent="1-1"/>
+<wire x1="-15.364" y1="-18.425" x2="-14.064" y2="-20.95" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.436" y1="-32.9061" x2="-14.064" y2="-20.95" width="0" layer="19" extent="1-1"/>
+<wire x1="-10.387" y1="-41.452" x2="-14.436" y2="-32.9061" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3.3V" class="1">
 <contactref element="J_TX" pad="2"/>
@@ -4971,10 +5027,14 @@ design rules under a new name.</description>
 <contactref element="3V_SD_JP" pad="1"/>
 <contactref element="R1" pad="2"/>
 <contactref element="3V_CODEC_JP" pad="1"/>
+<contactref element="R19" pad="2"/>
+<contactref element="3V_QWIIC2_JP" pad="1"/>
 <wire x1="-11.004" y1="1.755" x2="22.61" y2="33.782" width="0" layer="19" extent="1-1"/>
 <wire x1="-15.593" y1="1.755" x2="-11.004" y2="1.755" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.695" y1="-8.616" x2="-15.593" y2="1.755" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.426" y1="-12.795" x2="-14.695" y2="-8.616" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.695" y1="-36.956" x2="-14.426" y2="-12.795" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.426" y1="-41.135" x2="-14.695" y2="-36.956" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="USB_D-">
 <contactref element="J9" pad="A7"/>
@@ -6205,7 +6265,9 @@ design rules under a new name.</description>
 <wire x1="45.08" y1="35.7124" x2="45.08" y2="34.158" width="0.508" layer="1"/>
 <wire x1="45.08" y1="34.158" x2="43.18" y2="32.258" width="0.508" layer="1"/>
 <contactref element="U11" pad="1"/>
+<contactref element="U12" pad="1"/>
 <wire x1="-15.386" y1="-4.5661" x2="36.8601" y2="29.53" width="0" layer="19" extent="1-1"/>
+<wire x1="-15.386" y1="-32.9061" x2="-15.386" y2="-4.5661" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="1.8V" class="1">
 <contactref element="C7" pad="1"/>
@@ -7215,8 +7277,8 @@ design rules under a new name.</description>
 <signal name="CODEC_EN">
 <contactref element="R1" pad="1"/>
 <contactref element="U11" pad="3"/>
-<contactref element="J7" pad="46"/>
-<wire x1="-13.486" y1="-4.5661" x2="29.75" y2="56.885" width="0" layer="19" extent="1-1"/>
+<contactref element="J7" pad="48"/>
+<wire x1="-13.486" y1="-4.5661" x2="29.25" y2="56.885" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.426" y1="-11.271" x2="-13.486" y2="-4.5661" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3V_CODEC" class="1">
@@ -7234,6 +7296,52 @@ design rules under a new name.</description>
 <wire x1="27.81" y1="34.59" x2="26.995" y2="42.935" width="0" layer="19" extent="1-1"/>
 <wire x1="22.61" y1="34.58" x2="27.81" y2="34.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.663" y1="-8.616" x2="22.61" y2="34.58" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$1">
+<contactref element="R16" pad="2"/>
+<contactref element="QWIIC2_PU" pad="3"/>
+<wire x1="-4.8546" y1="-26.716" x2="-10.186" y2="-26.891" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$2">
+<contactref element="QWIIC2_PU" pad="1"/>
+<contactref element="R3" pad="2"/>
+<wire x1="-6.9374" y1="-26.716" x2="-14.426" y2="-26.891" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="I2C1_SCL">
+<contactref element="J7" pad="53"/>
+<contactref element="J11" pad="4"/>
+<contactref element="R16" pad="1"/>
+<wire x1="-11.064" y1="-20.95" x2="28" y2="49.335" width="0" layer="19" extent="1-1"/>
+<wire x1="-10.186" y1="-25.367" x2="-11.064" y2="-20.95" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="I2C2_SDA">
+<contactref element="J11" pad="3"/>
+<contactref element="R3" pad="1"/>
+<wire x1="-12.064" y1="-20.95" x2="-14.426" y2="-25.367" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="3V_QWIIC2" class="1">
+<contactref element="QWIIC2_PU" pad="2"/>
+<contactref element="3V_QWIIC2_JP" pad="3"/>
+<contactref element="J11" pad="2"/>
+<wire x1="-5.896" y1="-26.716" x2="-12.663" y2="-36.956" width="0" layer="19" extent="1-1"/>
+<wire x1="-13.064" y1="-20.95" x2="-5.896" y2="-26.716" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="3V_QWIIC_OUT2" class="1">
+<contactref element="U12" pad="5"/>
+<contactref element="C40" pad="1"/>
+<contactref element="3V_QWIIC2_JP" pad="2"/>
+<wire x1="-13.679" y1="-36.956" x2="-10.387" y2="-39.928" width="0" layer="19" extent="1-1"/>
+<wire x1="-15.386" y1="-30.3059" x2="-13.679" y2="-36.956" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="QWIIC2_EN">
+<contactref element="R19" pad="1"/>
+<contactref element="U12" pad="3"/>
+<contactref element="J7" pad="46"/>
+<wire x1="-13.486" y1="-32.9061" x2="29.75" y2="56.885" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.426" y1="-39.611" x2="-13.486" y2="-32.9061" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="I2C1_SDA">
+<contactref element="J7" pad="51"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
