@@ -17743,7 +17743,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <groups>
 <schematic_group name="RTC"/>
 <schematic_group name="QWIIC"/>
-<schematic_group name="PERIPHERAL_POWER_CONTROL"/>
+<schematic_group name="PERIPHERAL_POWER_CONTROL" grouprefs="REGS_3V"/>
 <schematic_group name="USB"/>
 <schematic_group name="SOLARCHARGER"/>
 <schematic_group name="FUELGAUGE"/>
@@ -17753,6 +17753,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <schematic_group name="WIRELESS"/>
 <schematic_group name="PORTS"/>
 <schematic_group name="CODEC"/>
+<schematic_group name="REGS_3V"/>
 </groups>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
@@ -17867,7 +17868,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="MPN" value="BM04B-SRSS-TB(LF)(SN)"/>
 </part>
 <part name="GND52" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="QWIIC_PWR" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_2-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39289/1" value=""/>
+<part name="QWIIC_PU" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_2-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39289/1" value=""/>
 <part name="R34" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-2.2K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="2.2K"/>
 <part name="R35" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-2.2K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="2.2K"/>
 <part name="C13" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" deviceset="CERAMIC-1UF-25V-10%-X7R(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004287/1" value="1uf"/>
@@ -18038,11 +18039,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND33" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND38" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND34" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="FB1" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" deviceset="FERRITE_BEAD" device="-0603" package3d_urn="urn:adsk.eagle:package:37574/1" value="600Ω/1.8A"/>
 <part name="U2" library="2022-08-05_10-01-44_Library" library_urn="urn:adsk.eagle:library:36785196" deviceset="AP7313" device=""/>
 <part name="GND35" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="U$2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="AGND" device=""/>
 <part name="F1" library="Circuit-Protection" library_urn="urn:adsk.eagle:library:16378135" deviceset="FUSE" device="CHIP-1206(3216-METRIC)" package3d_urn="urn:adsk.eagle:package:16378157/1" technology="_" value="6V/2A"/>
 <part name="J3" library="SparkFun-RF" library_urn="urn:adsk.eagle:library:531" deviceset="XBEE" device="SMD" package3d_urn="urn:adsk.eagle:package:39570/1"/>
@@ -18116,6 +18115,19 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="TP1" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="PTR1TP06R"/>
 <part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="PTR1TP06R"/>
+<part name="3V_QWIIC_JP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR"/>
+<part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="3V_SD_JP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR"/>
+<part name="SUPPLY12" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="C36" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" deviceset="CERAMIC-1UF-25V-10%-X7R(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004287/1" value="1uf"/>
+<part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="R1" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-100K-1%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="100K"/>
+<part name="SUPPLY14" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="U11" library="SparkFun-IC-Power" deviceset="V_REG_AP2112" device="K-3.3V" value="3.3V"/>
+<part name="GND28" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
+<part name="3V_CODEC_JP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR"/>
+<part name="SUPPLY15" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18136,8 +18148,17 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <text x="185.42" y="55.88" size="1.778" layer="97" rot="R90" grouprefs="RTC">0.100uA Leakage
 0.410V drop at 1mA
 1.0V drop at 15mA</text>
-<text x="10.16" y="121.92" size="1.27" layer="148">Could be a problem that the micromod pinout
-uses different pins for SDIO than teensy does.</text>
+<attribute name="NAME" x="115.316" y="35.56" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="118.364" y="35.56" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<attribute name="VALUE" x="116.84" y="45.974" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="NAME" x="127" y="35.814" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="127" y="20.066" size="1.778" layer="96" font="vector" align="top-left"/>
+<attribute name="MPN" x="134.62" y="27.94" size="1.27" layer="96" display="off"/>
+<attribute name="VALUE" x="121.92" y="17.526" size="1.778" layer="96" align="top-center"/>
+<attribute name="NAME" x="150.241" y="21.336" size="1.778" layer="95" font="vector" rot="R270"/>
+<attribute name="VALUE" x="145.161" y="21.336" size="1.778" layer="96" font="vector" rot="R270"/>
+<attribute name="VALUE" x="147.32" y="14.986" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="119.38" y="40.64" size="1.778" layer="96" rot="R90"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
@@ -18370,48 +18391,48 @@ uses different pins for SDIO than teensy does.</text>
 <attribute name="VALUE" x="188.214" y="55.88" size="1.778" layer="96" font="vector" rot="MR90" align="top-left"/>
 <attribute name="MPN" x="193.04" y="66.04" size="1.27" layer="96" rot="R270" display="off"/>
 </instance>
-<instance part="J5" gate="G$1" x="208.28" y="109.22" smashed="yes" rot="MR180" grouprefs="QWIIC">
-<attribute name="NAME" x="203.2" y="101.346" size="1.778" layer="95" font="vector" rot="MR180"/>
-<attribute name="MPN" x="208.28" y="109.22" size="1.27" layer="96" rot="MR180" display="off"/>
+<instance part="J5" gate="G$1" x="83.82" y="93.98" smashed="yes" rot="MR180" grouprefs="QWIIC">
+<attribute name="NAME" x="78.74" y="86.106" size="1.778" layer="95" font="vector" rot="MR180"/>
+<attribute name="MPN" x="83.82" y="93.98" size="1.27" layer="96" rot="MR180" display="off"/>
 </instance>
-<instance part="GND52" gate="1" x="195.58" y="96.52" smashed="yes" grouprefs="QWIIC">
-<attribute name="VALUE" x="195.58" y="96.266" size="1.778" layer="96" align="top-center"/>
+<instance part="GND52" gate="1" x="71.12" y="81.28" smashed="yes" grouprefs="QWIIC">
+<attribute name="VALUE" x="71.12" y="81.026" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="QWIIC_PWR" gate="G$1" x="157.48" y="124.46" smashed="yes" rot="R270" grouprefs="QWIIC">
-<attribute name="NAME" x="155.702" y="120.396" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="157.099" y="121.92" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
+<instance part="QWIIC_PU" gate="G$1" x="33.02" y="109.22" smashed="yes" rot="R270" grouprefs="QWIIC">
+<attribute name="NAME" x="31.242" y="105.156" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="32.639" y="106.68" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
 </instance>
-<instance part="R34" gate="G$1" x="165.1" y="116.84" smashed="yes" rot="R90" grouprefs="QWIIC">
-<attribute name="NAME" x="163.576" y="116.84" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="166.624" y="116.84" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R34" gate="G$1" x="40.64" y="101.6" smashed="yes" rot="R90" grouprefs="QWIIC">
+<attribute name="NAME" x="39.116" y="101.6" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="42.164" y="101.6" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="R35" gate="G$1" x="149.86" y="116.84" smashed="yes" rot="R90" grouprefs="QWIIC">
-<attribute name="NAME" x="148.336" y="116.84" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="151.384" y="116.84" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R35" gate="G$1" x="25.4" y="101.6" smashed="yes" rot="R90" grouprefs="QWIIC">
+<attribute name="NAME" x="23.876" y="101.6" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="26.924" y="101.6" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="C13" gate="G$1" x="198.12" y="134.62" smashed="yes" rot="R270" grouprefs="QWIIC">
-<attribute name="NAME" x="201.041" y="133.096" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="195.961" y="133.096" size="1.778" layer="96" font="vector" rot="R270"/>
+<instance part="C13" gate="G$1" x="48.26" y="50.8" smashed="yes" rot="R270" grouprefs="REGS_3V">
+<attribute name="NAME" x="49.53" y="54.61" size="1.27" layer="95" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="45.72" y="54.61" size="1.27" layer="96" ratio="10" rot="R270"/>
 </instance>
-<instance part="GND53" gate="1" x="198.12" y="127" smashed="yes" grouprefs="QWIIC">
-<attribute name="VALUE" x="198.12" y="126.746" size="1.778" layer="96" align="top-center"/>
+<instance part="GND53" gate="1" x="48.26" y="43.18" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="48.26" y="42.926" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R36" gate="G$1" x="165.1" y="144.78" smashed="yes" rot="R90" grouprefs="QWIIC">
-<attribute name="NAME" x="163.576" y="144.78" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="166.624" y="144.78" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R36" gate="G$1" x="17.78" y="55.88" smashed="yes" rot="R90" grouprefs="REGS_3V">
+<attribute name="NAME" x="16.51" y="52.07" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="20.32" y="52.07" size="1.27" layer="96" ratio="10" rot="R90"/>
 </instance>
-<instance part="SUPPLY25" gate="G$1" x="165.1" y="152.4" smashed="yes" grouprefs="QWIIC">
-<attribute name="VALUE" x="165.1" y="155.194" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY25" gate="G$1" x="17.78" y="63.5" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="12.7" y="63.754" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="U3" gate="G$1" x="182.88" y="137.16" smashed="yes" grouprefs="QWIIC">
-<attribute name="NAME" x="175.26" y="145.034" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="175.26" y="129.286" size="1.778" layer="96" font="vector" align="top-left"/>
+<instance part="U3" gate="G$1" x="35.56" y="50.8" smashed="yes" grouprefs="REGS_3V">
+<attribute name="NAME" x="27.94" y="58.674" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="27.94" y="42.926" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="GND54" gate="1" x="170.18" y="127" smashed="yes" grouprefs="QWIIC">
-<attribute name="VALUE" x="170.18" y="126.746" size="1.778" layer="96" align="top-center"/>
+<instance part="GND54" gate="1" x="22.86" y="43.18" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="22.86" y="42.926" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="P+9" gate="1" x="170.18" y="152.4" smashed="yes" grouprefs="QWIIC">
-<attribute name="VALUE" x="167.64" y="149.86" size="1.778" layer="96" rot="R90"/>
+<instance part="P+9" gate="1" x="22.86" y="66.04" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="27.94" y="66.04" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="J3" gate="G$1" x="292.1" y="137.16" smashed="yes" grouprefs="WIRELESS">
 <attribute name="NAME" x="276.86" y="150.114" size="1.778" layer="95" font="vector"/>
@@ -18445,6 +18466,72 @@ uses different pins for SDIO than teensy does.</text>
 <instance part="R4" gate="G$1" x="330.2" y="213.614" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="328.93" y="211.074" size="1.27" layer="95" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="328.93" y="216.154" size="1.27" layer="96" ratio="10" rot="R90"/>
+</instance>
+<instance part="R21" gate="G$1" x="17.78" y="25.4" smashed="yes" rot="R90" grouprefs="REGS_3V">
+<attribute name="NAME" x="16.51" y="21.59" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="20.32" y="21.59" size="1.27" layer="96" ratio="10" rot="R90"/>
+</instance>
+<instance part="SUPPLY13" gate="G$1" x="17.78" y="30.48" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="12.7" y="30.734" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="U4" gate="G$1" x="35.56" y="17.78" smashed="yes" grouprefs="REGS_3V">
+<attribute name="NAME" x="27.94" y="25.654" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="27.94" y="9.906" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
+<instance part="GND36" gate="1" x="22.86" y="10.16" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="22.86" y="9.906" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="C14" gate="G$1" x="48.26" y="15.24" smashed="yes" rot="R270" grouprefs="REGS_3V">
+<attribute name="NAME" x="49.53" y="19.05" size="1.27" layer="95" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="45.72" y="19.05" size="1.27" layer="96" ratio="10" rot="R270"/>
+</instance>
+<instance part="GND37" gate="1" x="48.26" y="10.16" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="48.26" y="9.906" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="P+10" gate="1" x="22.86" y="33.02" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="27.94" y="33.02" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="3V_QWIIC_JP" gate="G$1" x="55.88" y="55.88" smashed="yes" grouprefs="REGS_3V">
+<attribute name="NAME" x="58.42" y="56.261" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="SUPPLY10" gate="G$1" x="55.88" y="63.5" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="50.8" y="63.754" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="3V_SD_JP" gate="G$1" x="55.88" y="22.86" smashed="yes">
+<attribute name="NAME" x="58.42" y="23.241" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="SUPPLY12" gate="G$1" x="55.88" y="30.48" smashed="yes">
+<attribute name="VALUE" x="50.8" y="30.734" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="C36" gate="G$1" x="111.76" y="50.8" smashed="yes" rot="R270" grouprefs="REGS_3V">
+<attribute name="NAME" x="113.03" y="54.61" size="1.27" layer="95" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="109.22" y="54.61" size="1.27" layer="96" ratio="10" rot="R270"/>
+</instance>
+<instance part="GND2" gate="1" x="111.76" y="43.18" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="111.76" y="42.926" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="R1" gate="G$1" x="81.28" y="55.88" smashed="yes" rot="R90" grouprefs="REGS_3V">
+<attribute name="NAME" x="80.01" y="52.07" size="1.27" layer="95" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="83.82" y="52.07" size="1.27" layer="96" ratio="10" rot="R90"/>
+</instance>
+<instance part="SUPPLY14" gate="G$1" x="81.28" y="63.5" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="76.2" y="63.754" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="U11" gate="G$1" x="99.06" y="50.8" smashed="yes" grouprefs="REGS_3V">
+<attribute name="NAME" x="91.44" y="58.674" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="91.44" y="42.926" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
+<instance part="GND28" gate="1" x="86.36" y="43.18" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="86.36" y="42.926" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="P+5" gate="1" x="86.36" y="66.04" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="91.44" y="66.04" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="3V_CODEC_JP" gate="G$1" x="119.38" y="55.88" smashed="yes" grouprefs="REGS_3V">
+<attribute name="NAME" x="121.92" y="56.261" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="SUPPLY15" gate="G$1" x="119.38" y="63.5" smashed="yes" grouprefs="REGS_3V">
+<attribute name="VALUE" x="114.3" y="63.754" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 </instances>
 <busses>
@@ -18584,12 +18671,11 @@ uses different pins for SDIO than teensy does.</text>
 <segment>
 <pinref part="C13" gate="G$1" pin="2"/>
 <pinref part="GND53" gate="1" pin="GND"/>
-<wire x1="198.12" y1="129.54" x2="198.12" y2="130.81" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="48.26" y1="45.72" x2="48.26" y2="46.99" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="GND"/>
-<wire x1="172.72" y1="132.08" x2="170.18" y2="132.08" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="170.18" y1="132.08" x2="170.18" y2="129.54" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="45.72" x2="22.86" y2="45.72" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 <pinref part="GND54" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -18616,11 +18702,31 @@ uses different pins for SDIO than teensy does.</text>
 <segment>
 <pinref part="J5" gate="G$1" pin="1"/>
 <pinref part="GND52" gate="1" pin="GND"/>
-<wire x1="198.12" y1="101.6" x2="195.58" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="101.6" x2="195.58" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="99.06" x2="195.58" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="86.36" x2="71.12" y2="86.36" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="71.12" y1="86.36" x2="71.12" y2="83.82" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="71.12" y1="83.82" x2="71.12" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <pinref part="J5" gate="G$1" pin="SHIELD"/>
-<wire x1="195.58" y1="114.3" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="99.06" x2="73.66" y2="99.06" width="0.1524" layer="91" grouprefs="QWIIC"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="GND"/>
+<wire x1="25.4" y1="12.7" x2="22.86" y2="12.7" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<pinref part="GND36" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C14" gate="G$1" pin="2"/>
+<pinref part="GND37" gate="1" pin="GND"/>
+<wire x1="48.26" y1="12.7" x2="48.26" y2="11.43" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+</segment>
+<segment>
+<pinref part="C36" gate="G$1" pin="2"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="111.76" y1="45.72" x2="111.76" y2="46.99" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+</segment>
+<segment>
+<pinref part="U11" gate="G$1" pin="GND"/>
+<wire x1="88.9" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<pinref part="GND28" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="3.3V" class="1">
@@ -18676,7 +18782,7 @@ uses different pins for SDIO than teensy does.</text>
 <segment>
 <pinref part="R36" gate="G$1" pin="2"/>
 <pinref part="SUPPLY25" gate="G$1" pin="3.3V"/>
-<wire x1="165.1" y1="152.4" x2="165.1" y2="148.59" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="17.78" y1="63.5" x2="17.78" y2="59.69" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 </segment>
 <segment>
 <pinref part="J_RX" gate="G$1" pin="1"/>
@@ -18692,6 +18798,31 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="C33" gate="C" pin="2"/>
 <wire x1="248.92" y1="142.24" x2="248.92" y2="147.32" width="0.1524" layer="91" grouprefs="WIRELESS"/>
 <label x="248.92" y="147.32" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="WIRELESS"/>
+</segment>
+<segment>
+<pinref part="R21" gate="G$1" pin="2"/>
+<pinref part="SUPPLY13" gate="G$1" pin="3.3V"/>
+<wire x1="17.78" y1="30.48" x2="17.78" y2="29.21" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+</segment>
+<segment>
+<pinref part="3V_QWIIC_JP" gate="G$1" pin="1"/>
+<pinref part="SUPPLY10" gate="G$1" pin="3.3V"/>
+<wire x1="55.88" y1="60.96" x2="55.88" y2="63.5" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+</segment>
+<segment>
+<pinref part="3V_SD_JP" gate="G$1" pin="1"/>
+<wire x1="55.88" y1="27.94" x2="55.88" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="SUPPLY12" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="SUPPLY14" gate="G$1" pin="3.3V"/>
+<wire x1="81.28" y1="63.5" x2="81.28" y2="59.69" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+</segment>
+<segment>
+<pinref part="3V_CODEC_JP" gate="G$1" pin="1"/>
+<pinref part="SUPPLY15" gate="G$1" pin="3.3V"/>
+<wire x1="119.38" y1="60.96" x2="119.38" y2="63.5" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 </segment>
 </net>
 <net name="USB_D-" class="0">
@@ -18728,12 +18859,12 @@ uses different pins for SDIO than teensy does.</text>
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="4"/>
-<wire x1="198.12" y1="109.22" x2="149.86" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<label x="147.32" y="109.22" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+<wire x1="73.66" y1="93.98" x2="25.4" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="22.86" y="93.98" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 <pinref part="R35" gate="G$1" pin="1"/>
-<wire x1="149.86" y1="109.22" x2="147.32" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="149.86" y1="113.03" x2="149.86" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<junction x="149.86" y="109.22" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="97.79" x2="25.4" y2="93.98" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<junction x="25.4" y="93.98" grouprefs="QWIIC"/>
 </segment>
 </net>
 <net name="I2C_SDA" class="2">
@@ -18744,12 +18875,12 @@ uses different pins for SDIO than teensy does.</text>
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="3"/>
-<wire x1="198.12" y1="106.68" x2="165.1" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<label x="147.32" y="106.68" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+<wire x1="73.66" y1="91.44" x2="40.64" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="22.86" y="91.44" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 <pinref part="R34" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="106.68" x2="147.32" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="165.1" y1="113.03" x2="165.1" y2="106.68" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<junction x="165.1" y="106.68" grouprefs="QWIIC"/>
+<wire x1="40.64" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="40.64" y1="97.79" x2="40.64" y2="91.44" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<junction x="40.64" y="91.44" grouprefs="QWIIC"/>
 </segment>
 </net>
 <net name="TX" class="2">
@@ -18968,26 +19099,35 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="MICROMOD_EXTRA_PINS" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="PERIPHERAL_PWR_CTRL" class="0">
+<net name="SD_EN" class="0">
 <segment>
 <pinref part="J7" gate="J1" pin="G1/BUS1"/>
 <wire x1="71.12" y1="165.1" x2="73.66" y2="165.1" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="165.1" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 </segment>
+<segment>
+<wire x1="25.4" y1="17.78" x2="17.78" y2="17.78" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<label x="12.7" y="17.78" size="1.27" layer="95" rot="R270" xref="yes" grouprefs="REGS_3V"/>
+<pinref part="R21" gate="G$1" pin="1"/>
+<wire x1="17.78" y1="17.78" x2="12.7" y2="17.78" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="17.78" y1="21.59" x2="17.78" y2="17.78" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<junction x="17.78" y="17.78" grouprefs="REGS_3V"/>
+<pinref part="U4" gate="G$1" pin="EN"/>
+</segment>
 </net>
-<net name="QWIIC_PWR_CTRL" class="0">
+<net name="QWIIC_EN" class="0">
 <segment>
 <pinref part="J7" gate="J1" pin="G2/BUS2"/>
 <wire x1="73.66" y1="162.56" x2="71.12" y2="162.56" width="0.1524" layer="91" grouprefs="MICROMOD"/>
 <label x="73.66" y="162.56" size="1.27" layer="95" xref="yes" grouprefs="MICROMOD"/>
 </segment>
 <segment>
-<wire x1="172.72" y1="137.16" x2="165.1" y2="137.16" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<label x="162.56" y="137.16" size="1.27" layer="95" rot="MR0" xref="yes" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="50.8" x2="17.78" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<label x="12.7" y="50.8" size="1.27" layer="95" rot="MR270" xref="yes" grouprefs="REGS_3V"/>
 <pinref part="R36" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="137.16" x2="162.56" y2="137.16" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="165.1" y1="140.97" x2="165.1" y2="137.16" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<junction x="165.1" y="137.16" grouprefs="QWIIC"/>
+<wire x1="17.78" y1="50.8" x2="12.7" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="17.78" y1="52.07" x2="17.78" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<junction x="17.78" y="50.8" grouprefs="REGS_3V"/>
 <pinref part="U3" gate="G$1" pin="EN"/>
 </segment>
 </net>
@@ -19232,7 +19372,7 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="E5_EXTRA_PINS" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="3.3V_LP" class="1">
+<net name="3V_SD" class="1">
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="314.96" y1="62.23" x2="314.96" y2="66.04" width="0.1524" layer="91" grouprefs="USD"/>
@@ -19243,26 +19383,28 @@ uses different pins for SDIO than teensy does.</text>
 <wire x1="294.64" y1="73.66" x2="292.1" y2="73.66" width="0.1524" layer="91" grouprefs="USD"/>
 <label x="292.1" y="73.66" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="USD"/>
 </segment>
-</net>
-<net name="QWIIC_PWR" class="1">
 <segment>
-<pinref part="QWIIC_PWR" gate="G$1" pin="2"/>
-<wire x1="157.48" y1="132.08" x2="157.48" y2="129.54" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="157.48" y1="132.08" x2="154.94" y2="132.08" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<label x="154.94" y="132.08" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+<pinref part="3V_SD_JP" gate="G$1" pin="3"/>
+<wire x1="55.88" y1="17.78" x2="58.42" y2="17.78" width="0.1524" layer="91"/>
+<label x="58.42" y="17.78" size="1.27" layer="95" xref="yes" grouprefs="REGS_3V"/>
+</segment>
+</net>
+<net name="3V_QWIIC" class="1">
+<segment>
+<pinref part="QWIIC_PU" gate="G$1" pin="2"/>
+<wire x1="33.02" y1="116.84" x2="33.02" y2="114.3" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="33.02" y1="116.84" x2="30.48" y2="116.84" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="30.48" y="116.84" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
 </segment>
 <segment>
-<pinref part="U3" gate="G$1" pin="OUT"/>
-<wire x1="190.5" y1="142.24" x2="193.04" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<label x="200.66" y="142.24" size="1.27" layer="95" xref="yes" grouprefs="QWIIC"/>
-<pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="193.04" y1="142.24" x2="198.12" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="198.12" y1="142.24" x2="200.66" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="198.12" y1="138.43" x2="198.12" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<junction x="198.12" y="142.24" grouprefs="QWIIC"/>
 <pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="142.24" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="104.14" x2="198.12" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="88.9" x2="73.66" y2="88.9" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<label x="68.58" y="88.9" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="QWIIC"/>
+</segment>
+<segment>
+<pinref part="3V_QWIIC_JP" gate="G$1" pin="3"/>
+<wire x1="55.88" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<label x="58.42" y="50.8" size="1.27" layer="95" xref="yes" grouprefs="REGS_3V"/>
 </segment>
 </net>
 <net name="SD_CLK" class="2">
@@ -19492,9 +19634,21 @@ uses different pins for SDIO than teensy does.</text>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="IN"/>
-<wire x1="172.72" y1="142.24" x2="170.18" y2="142.24" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<wire x1="170.18" y1="142.24" x2="170.18" y2="149.86" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="55.88" x2="22.86" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="22.86" y1="55.88" x2="22.86" y2="63.5" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 <pinref part="P+9" gate="1" pin="V+"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="IN"/>
+<wire x1="25.4" y1="22.86" x2="22.86" y2="22.86" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="22.86" y1="22.86" x2="22.86" y2="30.48" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<pinref part="P+10" gate="1" pin="V+"/>
+</segment>
+<segment>
+<pinref part="U11" gate="G$1" pin="IN"/>
+<wire x1="88.9" y1="55.88" x2="86.36" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="86.36" y1="55.88" x2="86.36" y2="63.5" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<pinref part="P+5" gate="1" pin="V+"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -19512,17 +19666,17 @@ uses different pins for SDIO than teensy does.</text>
 <net name="N$24" class="0">
 <segment>
 <pinref part="R35" gate="G$1" pin="2"/>
-<wire x1="149.86" y1="120.65" x2="149.86" y2="124.46" width="0.1524" layer="91" grouprefs="QWIIC"/>
-<pinref part="QWIIC_PWR" gate="G$1" pin="3"/>
-<wire x1="149.86" y1="124.46" x2="152.4" y2="124.46" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="25.4" y1="105.41" x2="25.4" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<pinref part="QWIIC_PU" gate="G$1" pin="3"/>
+<wire x1="25.4" y1="109.22" x2="27.94" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
 </segment>
 </net>
 <net name="N$26" class="0">
 <segment>
-<pinref part="QWIIC_PWR" gate="G$1" pin="1"/>
-<wire x1="162.56" y1="124.46" x2="165.1" y2="124.46" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<pinref part="QWIIC_PU" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="109.22" x2="40.64" y2="109.22" width="0.1524" layer="91" grouprefs="QWIIC"/>
 <pinref part="R34" gate="G$1" pin="2"/>
-<wire x1="165.1" y1="124.46" x2="165.1" y2="120.65" width="0.1524" layer="91" grouprefs="QWIIC"/>
+<wire x1="40.64" y1="109.22" x2="40.64" y2="105.41" width="0.1524" layer="91" grouprefs="QWIIC"/>
 </segment>
 </net>
 <net name="N$7" class="3">
@@ -19587,6 +19741,61 @@ uses different pins for SDIO than teensy does.</text>
 <pinref part="J7" gate="J1" pin="G10/ADC_D+/CAM_VSYNC"/>
 <wire x1="71.12" y1="142.24" x2="73.66" y2="142.24" width="0.1524" layer="91"/>
 <label x="73.66" y="142.24" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="3V_QWIIC_OUT" class="1">
+<segment>
+<pinref part="U3" gate="G$1" pin="OUT"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V QWIIC"/>
+<wire x1="48.26" y1="54.61" x2="48.26" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<junction x="48.26" y="55.88" grouprefs="REGS_3V"/>
+<wire x1="48.26" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<pinref part="3V_QWIIC_JP" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="3V_SD_OUT" class="1">
+<segment>
+<pinref part="U4" gate="G$1" pin="OUT"/>
+<wire x1="43.18" y1="22.86" x2="48.26" y2="22.86" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<pinref part="3V_SD_JP" gate="G$1" pin="2"/>
+<wire x1="50.8" y1="22.86" x2="48.26" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="C14" gate="G$1" pin="1"/>
+<wire x1="48.26" y1="22.86" x2="48.26" y2="19.05" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="3V_QWIIC_OUT1" class="1">
+<segment>
+<pinref part="U11" gate="G$1" pin="OUT"/>
+<pinref part="C36" gate="G$1" pin="1"/>
+<wire x1="106.68" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="111.76" y1="54.61" x2="111.76" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<junction x="111.76" y="55.88" grouprefs="REGS_3V"/>
+<wire x1="111.76" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<pinref part="3V_CODEC_JP" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="CODEC_EN" class="0">
+<segment>
+<wire x1="88.9" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<label x="76.2" y="50.8" size="1.27" layer="95" rot="MR270" xref="yes" grouprefs="REGS_3V"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="50.8" x2="76.2" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<wire x1="81.28" y1="52.07" x2="81.28" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<junction x="81.28" y="50.8" grouprefs="REGS_3V"/>
+<pinref part="U11" gate="G$1" pin="EN"/>
+</segment>
+<segment>
+<pinref part="J7" gate="J1" pin="G3/BUS3"/>
+<wire x1="71.12" y1="160.02" x2="73.66" y2="160.02" width="0.1524" layer="91"/>
+<label x="73.66" y="160.02" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="3V_CODEC" class="1">
+<segment>
+<pinref part="3V_CODEC_JP" gate="G$1" pin="3"/>
+<wire x1="119.38" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91" grouprefs="REGS_3V"/>
+<label x="121.92" y="50.8" size="1.27" layer="95" xref="yes" grouprefs="REGS_3V"/>
 </segment>
 </net>
 </nets>
@@ -19677,31 +19886,6 @@ ground) at a single point.</text>
 </instance>
 <instance part="U$10" gate="G$1" x="210.82" y="243.84" smashed="yes" grouprefs="USB">
 <attribute name="VALUE" x="209.296" y="244.856" size="1.27" layer="96"/>
-</instance>
-<instance part="R21" gate="G$1" x="330.2" y="106.68" smashed="yes" rot="R90" grouprefs="PERIPHERAL_POWER_CONTROL">
-<attribute name="NAME" x="328.676" y="106.68" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="331.724" y="106.68" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="SUPPLY13" gate="G$1" x="330.2" y="114.3" smashed="yes" grouprefs="PERIPHERAL_POWER_CONTROL">
-<attribute name="VALUE" x="330.2" y="117.094" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="U4" gate="G$1" x="347.98" y="99.06" smashed="yes" grouprefs="PERIPHERAL_POWER_CONTROL">
-<attribute name="NAME" x="340.36" y="106.934" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="340.36" y="91.186" size="1.778" layer="96" font="vector" align="top-left"/>
-<attribute name="MPN" x="347.98" y="99.06" size="1.27" layer="96" display="off"/>
-</instance>
-<instance part="GND36" gate="1" x="335.28" y="88.9" smashed="yes" grouprefs="PERIPHERAL_POWER_CONTROL">
-<attribute name="VALUE" x="335.28" y="88.646" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="C14" gate="G$1" x="360.68" y="93.98" smashed="yes" rot="R270" grouprefs="PERIPHERAL_POWER_CONTROL">
-<attribute name="NAME" x="363.601" y="92.456" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="358.521" y="92.456" size="1.778" layer="96" font="vector" rot="R270"/>
-</instance>
-<instance part="GND37" gate="1" x="360.68" y="86.36" smashed="yes" grouprefs="PERIPHERAL_POWER_CONTROL">
-<attribute name="VALUE" x="360.68" y="86.106" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="P+10" gate="1" x="335.28" y="114.3" smashed="yes" grouprefs="PERIPHERAL_POWER_CONTROL">
-<attribute name="VALUE" x="332.74" y="111.76" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="J6" gate="G$1" x="160.02" y="172.72" smashed="yes" rot="MR180" grouprefs="SOLARCHARGER">
 <attribute name="NAME" x="153.67" y="167.005" size="1.778" layer="95" rot="MR180"/>
@@ -20167,9 +20351,6 @@ ground) at a single point.</text>
 <instance part="GND34" gate="1" x="309.88" y="215.9" smashed="yes" grouprefs="CODEC">
 <attribute name="VALUE" x="307.34" y="213.36" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY4" gate="G$1" x="309.88" y="236.22" smashed="yes" grouprefs="CODEC">
-<attribute name="VALUE" x="309.88" y="239.014" size="1.778" layer="96" align="bottom-center"/>
-</instance>
 <instance part="FB1" gate="G$1" x="340.36" y="233.68" smashed="yes" rot="R90" grouprefs="CODEC">
 <attribute name="NAME" x="337.82" y="234.95" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="342.9" y="234.95" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
@@ -20179,9 +20360,6 @@ ground) at a single point.</text>
 </instance>
 <instance part="GND35" gate="1" x="266.7" y="215.9" smashed="yes" grouprefs="CODEC">
 <attribute name="VALUE" x="264.16" y="213.36" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY8" gate="G$1" x="248.92" y="236.22" smashed="yes" grouprefs="CODEC">
-<attribute name="VALUE" x="248.92" y="239.014" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="U$2" gate="G$1" x="302.26" y="154.94" smashed="yes" grouprefs="CODEC">
 <attribute name="VALUE" x="302.26" y="154.686" size="1.778" layer="96" align="top-center"/>
@@ -20345,17 +20523,6 @@ ground) at a single point.</text>
 <pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 <wire x1="203.2" y1="226.06" x2="203.2" y2="229.87" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="GND"/>
-<wire x1="337.82" y1="93.98" x2="335.28" y2="93.98" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<wire x1="335.28" y1="93.98" x2="335.28" y2="91.44" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<pinref part="GND36" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C14" gate="G$1" pin="2"/>
-<pinref part="GND37" gate="1" pin="GND"/>
-<wire x1="360.68" y1="88.9" x2="360.68" y2="90.17" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
 </segment>
 <segment>
 <wire x1="149.86" y1="170.18" x2="157.48" y2="170.18" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
@@ -20641,11 +20808,6 @@ ground) at a single point.</text>
 </net>
 <net name="3.3V" class="1">
 <segment>
-<pinref part="R21" gate="G$1" pin="2"/>
-<pinref part="SUPPLY13" gate="G$1" pin="3.3V"/>
-<wire x1="330.2" y1="114.3" x2="330.2" y2="110.49" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-</segment>
-<segment>
 <pinref part="SUPPLY29" gate="G$1" pin="3.3V"/>
 <wire x1="127" y1="226.06" x2="127" y2="223.52" width="0.1524" layer="91" grouprefs="VOLTAGEREGULATION"/>
 <wire x1="104.14" y1="223.52" x2="106.68" y2="223.52" width="0.1524" layer="91" grouprefs="VOLTAGEREGULATION"/>
@@ -20666,35 +20828,6 @@ ground) at a single point.</text>
 <pinref part="3V3_LED" gate="G$1" pin="2"/>
 <pinref part="SUPPLY30" gate="G$1" pin="3.3V"/>
 <wire x1="137.16" y1="238.76" x2="137.16" y2="241.3" width="0.1524" layer="91" grouprefs="VOLTAGEREGULATION"/>
-</segment>
-<segment>
-<pinref part="C17" gate="G$1" pin="+"/>
-<wire x1="299.72" y1="228.6" x2="299.72" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
-<pinref part="SUPPLY4" gate="G$1" pin="3.3V"/>
-<pinref part="C16" gate="G$1" pin="+"/>
-<pinref part="C9" gate="G$1" pin="+"/>
-<wire x1="320.04" y1="233.68" x2="320.04" y2="228.6" width="0.1524" layer="91" grouprefs="CODEC"/>
-<pinref part="FB1" gate="G$1" pin="1"/>
-<wire x1="320.04" y1="233.68" x2="332.74" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
-<wire x1="332.74" y1="233.68" x2="335.28" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
-<wire x1="332.74" y1="233.68" x2="332.74" y2="210.82" width="0.1524" layer="91" grouprefs="CODEC"/>
-<wire x1="332.74" y1="210.82" x2="345.44" y2="210.82" width="0.1524" layer="91" grouprefs="CODEC"/>
-<pinref part="U1" gate="G$1" pin="VDDIO"/>
-<wire x1="345.44" y1="210.82" x2="345.44" y2="207.01" width="0.1524" layer="91" grouprefs="CODEC"/>
-<wire x1="345.44" y1="207.01" x2="342.9" y2="207.01" width="0.1524" layer="91" grouprefs="CODEC"/>
-<wire x1="309.88" y1="228.6" x2="309.88" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="309.88" y1="233.68" x2="299.72" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="320.04" y1="233.68" x2="309.88" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="309.88" y1="233.68" x2="309.88" y2="236.22" width="0.1524" layer="91"/>
-<junction x="309.88" y="233.68"/>
-<junction x="320.04" y="233.68"/>
-<junction x="332.74" y="233.68"/>
-</segment>
-<segment>
-<pinref part="SUPPLY8" gate="G$1" pin="3.3V"/>
-<wire x1="248.92" y1="236.22" x2="248.92" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
-<pinref part="U2" gate="G$1" pin="IN"/>
-<wire x1="248.92" y1="233.68" x2="251.46" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
 </segment>
 </net>
 <net name="USB_D-" class="0">
@@ -20725,28 +20858,6 @@ ground) at a single point.</text>
 <wire x1="175.26" y1="226.06" x2="182.88" y2="226.06" width="0.1524" layer="91" grouprefs="USB"/>
 <pinref part="R13" gate="R1" pin="2"/>
 <wire x1="182.88" y1="226.06" x2="182.88" y2="223.52" width="0.1524" layer="91" grouprefs="USB"/>
-</segment>
-</net>
-<net name="PERIPHERAL_PWR_CTRL" class="0">
-<segment>
-<wire x1="337.82" y1="99.06" x2="330.2" y2="99.06" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<label x="327.66" y="99.06" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<pinref part="R21" gate="G$1" pin="1"/>
-<wire x1="330.2" y1="99.06" x2="327.66" y2="99.06" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<wire x1="330.2" y1="102.87" x2="330.2" y2="99.06" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<junction x="330.2" y="99.06" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<pinref part="U4" gate="G$1" pin="EN"/>
-</segment>
-</net>
-<net name="3.3V_LP" class="1">
-<segment>
-<label x="363.22" y="104.14" size="1.27" layer="95" xref="yes" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<pinref part="U4" gate="G$1" pin="OUT"/>
-<wire x1="355.6" y1="104.14" x2="360.68" y2="104.14" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<pinref part="C14" gate="G$1" pin="1"/>
-<wire x1="360.68" y1="104.14" x2="363.22" y2="104.14" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<wire x1="360.68" y1="97.79" x2="360.68" y2="104.14" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<junction x="360.68" y="104.14" grouprefs="PERIPHERAL_POWER_CONTROL"/>
 </segment>
 </net>
 <net name="VBUS" class="1">
@@ -20851,12 +20962,6 @@ ground) at a single point.</text>
 </segment>
 </net>
 <net name="V+" class="1">
-<segment>
-<pinref part="U4" gate="G$1" pin="IN"/>
-<wire x1="337.82" y1="104.14" x2="335.28" y2="104.14" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<wire x1="335.28" y1="104.14" x2="335.28" y2="111.76" width="0.1524" layer="91" grouprefs="PERIPHERAL_POWER_CONTROL"/>
-<pinref part="P+10" gate="1" pin="V+"/>
-</segment>
 <segment>
 <pinref part="U6" gate="G$1" pin="OUT"/>
 <pinref part="P+1" gate="1" pin="V+"/>
@@ -21620,6 +21725,36 @@ ground) at a single point.</text>
 <pinref part="U1" gate="G$1" pin="I2S_DIN"/>
 <wire x1="342.9" y1="186.69" x2="347.98" y2="186.69" width="0.1524" layer="91"/>
 <label x="347.98" y="186.69" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="3V_CODEC" class="1">
+<segment>
+<pinref part="C17" gate="G$1" pin="+"/>
+<wire x1="299.72" y1="228.6" x2="299.72" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
+<pinref part="C16" gate="G$1" pin="+"/>
+<pinref part="C9" gate="G$1" pin="+"/>
+<wire x1="320.04" y1="233.68" x2="320.04" y2="228.6" width="0.1524" layer="91" grouprefs="CODEC"/>
+<pinref part="FB1" gate="G$1" pin="1"/>
+<wire x1="320.04" y1="233.68" x2="332.74" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
+<wire x1="332.74" y1="233.68" x2="335.28" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
+<wire x1="332.74" y1="233.68" x2="332.74" y2="210.82" width="0.1524" layer="91" grouprefs="CODEC"/>
+<wire x1="332.74" y1="210.82" x2="345.44" y2="210.82" width="0.1524" layer="91" grouprefs="CODEC"/>
+<pinref part="U1" gate="G$1" pin="VDDIO"/>
+<wire x1="345.44" y1="210.82" x2="345.44" y2="207.01" width="0.1524" layer="91" grouprefs="CODEC"/>
+<wire x1="345.44" y1="207.01" x2="342.9" y2="207.01" width="0.1524" layer="91" grouprefs="CODEC"/>
+<wire x1="309.88" y1="228.6" x2="309.88" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="309.88" y1="233.68" x2="299.72" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="233.68" x2="309.88" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="309.88" y1="233.68" x2="309.88" y2="236.22" width="0.1524" layer="91"/>
+<junction x="309.88" y="233.68"/>
+<junction x="320.04" y="233.68"/>
+<junction x="332.74" y="233.68"/>
+<label x="309.88" y="236.22" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="IN"/>
+<wire x1="248.92" y1="233.68" x2="251.46" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
+<label x="248.92" y="233.68" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
