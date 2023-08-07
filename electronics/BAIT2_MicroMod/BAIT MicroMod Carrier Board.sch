@@ -17729,6 +17729,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attributes>
 </attributes>
 <variantdefs>
+<variantdef name="LoRa"/>
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.000153125" drill="0.00030625">
@@ -17803,15 +17804,21 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND12" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="G1" library="Power or GND " deviceset="GND_POWER" device=""/>
 <part name="J_ASC" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>
-<part name="R5" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-4.7K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="4.7K"/>
+<part name="R5" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-4.7K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="4.7K">
+<variant name="LoRa" populate="no"/>
+</part>
 <part name="D2" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN">
 <attribute name="MPN" value="LTST-S270GKT"/>
+<variant name="LoRa" populate="no"/>
 </part>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J_RSSI" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>
-<part name="R6" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-1K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="1K 1/10W"/>
+<part name="R6" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-1K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="1K 1/10W">
+<variant name="LoRa" populate="no"/>
+</part>
 <part name="D3" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN">
 <attribute name="MPN" value="LTST-S270GKT"/>
+<variant name="LoRa" populate="no"/>
 </part>
 <part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J_RX" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>

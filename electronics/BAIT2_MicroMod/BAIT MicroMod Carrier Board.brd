@@ -3389,6 +3389,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attributes>
 </attributes>
 <variantdefs>
+<variantdef name="LoRa"/>
 </variantdefs>
 <classes>
 <class number="0" name="default" width="0.000153125" drill="0.00030625">
