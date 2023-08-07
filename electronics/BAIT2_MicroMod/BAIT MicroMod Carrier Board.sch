@@ -17803,7 +17803,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND9" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND12" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="G1" library="Power or GND " deviceset="GND_POWER" device=""/>
-<part name="J_ASC" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>
+<part name="J_ASC" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK"/>
 <part name="R5" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-4.7K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="4.7K">
 <variant name="LoRa" populate="no"/>
 </part>
@@ -17812,7 +17812,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <variant name="LoRa" populate="no"/>
 </part>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="J_RSSI" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>
+<part name="J_RSSI" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK"/>
 <part name="R6" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-1K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="1K 1/10W">
 <variant name="LoRa" populate="no"/>
 </part>
@@ -17821,13 +17821,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <variant name="LoRa" populate="no"/>
 </part>
 <part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="J_RX" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>
+<part name="J_RX" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK"/>
 <part name="R7" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-1K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="1K 1/10W"/>
 <part name="D4" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN">
 <attribute name="MPN" value="LTST-S270GKT"/>
 </part>
 <part name="SUPPLY17" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
-<part name="J_TX" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value=""/>
+<part name="J_TX" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK"/>
 <part name="R8" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" deviceset="SMD-RES-1K-5%-1/10W(0603)" device="" package3d_urn="urn:adsk.eagle:package:8004941/1" value="1K 1/10W"/>
 <part name="D5" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-RED" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="RED">
 <attribute name="MPN" value="LTST-S270EKT"/>
@@ -18151,6 +18151,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="3V_QWIIC2_JP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR"/>
 <part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="PGOOD_JMP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39277/1" value=""/>
+<part name="CHG_JMP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39277/1" value=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18288,7 +18290,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="G1" gate="G$1" x="264.16" y="121.92" smashed="yes" grouprefs="WIRELESS"/>
 <instance part="J_ASC" gate="G$1" x="373.38" y="154.94" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="371.094" y="149.86" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="375.92" y="144.78" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="R5" gate="G$1" x="373.38" y="142.24" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="371.856" y="142.24" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -18304,7 +18305,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </instance>
 <instance part="J_RSSI" gate="G$1" x="363.22" y="154.94" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="360.934" y="149.86" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="365.76" y="144.78" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="R6" gate="G$1" x="363.22" y="142.24" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="361.696" y="142.24" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -18320,7 +18320,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </instance>
 <instance part="J_RX" gate="G$1" x="350.52" y="154.94" smashed="yes" rot="R270" grouprefs="WIRELESS">
 <attribute name="NAME" x="352.552" y="159.766" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="347.98" y="165.1" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
 </instance>
 <instance part="R7" gate="G$1" x="350.52" y="142.24" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="348.996" y="142.24" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -18336,7 +18335,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </instance>
 <instance part="J_TX" gate="G$1" x="340.36" y="154.94" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="338.074" y="149.86" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="342.9" y="144.78" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="R8" gate="G$1" x="340.36" y="142.24" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="338.836" y="142.24" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -19996,6 +19994,18 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="22.86" y="157.48" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
+<net name="SD_DETECT" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="CD"/>
+<wire x1="294.64" y1="68.58" x2="292.1" y2="68.58" width="0.1524" layer="91"/>
+<label x="292.1" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J7" gate="J1" pin="G5/BUS5"/>
+<wire x1="71.12" y1="154.94" x2="73.66" y2="154.94" width="0.1524" layer="91"/>
+<label x="73.66" y="154.94" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -20096,13 +20106,13 @@ ground) at a single point.</text>
 <instance part="U$6" gate="G$1" x="48.26" y="175.26" smashed="yes" grouprefs="SOLARCHARGER">
 <attribute name="VALUE" x="46.736" y="176.276" size="1.27" layer="96"/>
 </instance>
-<instance part="D17" gate="G$1" x="27.94" y="114.3" smashed="yes" rot="R90" grouprefs="SOLARCHARGER">
-<attribute name="NAME" x="23.495" y="113.03" size="1.27" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="30.734" y="113.03" size="1.27" layer="96" rot="R90" align="center"/>
+<instance part="D17" gate="G$1" x="35.56" y="114.3" smashed="yes" rot="R90" grouprefs="SOLARCHARGER">
+<attribute name="NAME" x="31.115" y="113.03" size="1.27" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="38.354" y="113.03" size="1.27" layer="96" rot="R90" align="center"/>
 </instance>
-<instance part="R38" gate="G$1" x="38.1" y="114.3" smashed="yes" rot="R180" grouprefs="SOLARCHARGER">
-<attribute name="NAME" x="38.1" y="111.76" size="1.27" layer="95" font="vector" rot="R180" align="center"/>
-<attribute name="VALUE" x="38.1" y="114.3" size="1.016" layer="96" font="vector" ratio="15" rot="R180" align="center"/>
+<instance part="R38" gate="G$1" x="53.34" y="114.3" smashed="yes" rot="R180" grouprefs="SOLARCHARGER">
+<attribute name="NAME" x="53.34" y="111.76" size="1.27" layer="95" font="vector" rot="R180" align="center"/>
+<attribute name="VALUE" x="53.34" y="114.3" size="1.016" layer="96" font="vector" ratio="15" rot="R180" align="center"/>
 </instance>
 <instance part="GND62" gate="1" x="101.6" y="124.46" smashed="yes" grouprefs="SOLARCHARGER">
 <attribute name="VALUE" x="99.06" y="121.92" size="1.778" layer="96"/>
@@ -20139,9 +20149,9 @@ ground) at a single point.</text>
 <attribute name="NAME" x="83.82" y="121.92" size="1.778" layer="95" align="center-left"/>
 <attribute name="MPN" x="78.74" y="149.86" size="1.27" layer="96" display="off"/>
 </instance>
-<instance part="D21" gate="G$1" x="27.94" y="121.92" smashed="yes" rot="R90" grouprefs="SOLARCHARGER">
-<attribute name="NAME" x="23.495" y="120.65" size="1.27" layer="95" rot="R90" align="center"/>
-<attribute name="VALUE" x="30.734" y="120.65" size="1.27" layer="96" rot="R90" align="center"/>
+<instance part="D21" gate="G$1" x="35.56" y="121.92" smashed="yes" rot="R90" grouprefs="SOLARCHARGER">
+<attribute name="NAME" x="31.115" y="120.65" size="1.27" layer="95" rot="R90" align="center"/>
+<attribute name="VALUE" x="38.354" y="120.65" size="1.27" layer="96" rot="R90" align="center"/>
 </instance>
 <instance part="R40" gate="G$1" x="40.64" y="160.02" smashed="yes" rot="R180" grouprefs="SOLARCHARGER">
 <attribute name="NAME" x="40.64" y="157.48" size="1.27" layer="95" font="vector" rot="R180" align="center"/>
@@ -20180,9 +20190,9 @@ ground) at a single point.</text>
 <instance part="U$22" gate="G$1" x="25.4" y="182.88" smashed="yes" grouprefs="SOLARCHARGER">
 <attribute name="VALUE" x="23.876" y="183.896" size="1.27" layer="96"/>
 </instance>
-<instance part="R43" gate="G$1" x="38.1" y="121.92" smashed="yes" rot="R180" grouprefs="SOLARCHARGER">
-<attribute name="NAME" x="38.1" y="119.38" size="1.27" layer="95" font="vector" rot="R180" align="center"/>
-<attribute name="VALUE" x="38.1" y="121.92" size="1.016" layer="96" font="vector" ratio="15" rot="R180" align="center"/>
+<instance part="R43" gate="G$1" x="50.8" y="121.92" smashed="yes" rot="R180" grouprefs="SOLARCHARGER">
+<attribute name="NAME" x="50.8" y="119.38" size="1.27" layer="95" font="vector" rot="R180" align="center"/>
+<attribute name="VALUE" x="50.8" y="121.92" size="1.016" layer="96" font="vector" ratio="15" rot="R180" align="center"/>
 </instance>
 <instance part="R44" gate="G$1" x="40.64" y="147.32" smashed="yes" rot="R180" grouprefs="SOLARCHARGER">
 <attribute name="NAME" x="40.64" y="144.78" size="1.27" layer="95" font="vector" rot="R180" align="center"/>
@@ -20683,6 +20693,14 @@ ground) at a single point.</text>
 <attribute name="NAME" x="217.424" y="49.53" size="1.778" layer="95" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" x="219.71" y="53.34" size="1.778" layer="97"/>
 </instance>
+<instance part="PGOOD_JMP" gate="G$1" x="25.4" y="121.92" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.94" y="119.38" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="27.94" y="125.73" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="CHG_JMP" gate="G$1" x="25.4" y="114.3" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.94" y="111.76" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="27.94" y="118.11" size="1.27" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -21105,9 +21123,9 @@ ground) at a single point.</text>
 <pinref part="U6" gate="G$1" pin="!CHG"/>
 <wire x1="63.5" y1="132.08" x2="58.42" y2="132.08" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
 <wire x1="58.42" y1="132.08" x2="58.42" y2="114.3" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
-<label x="43.18" y="114.3" size="1.778" layer="95" grouprefs="SOLARCHARGER"/>
+<label x="40.64" y="116.84" size="1.778" layer="95" grouprefs="SOLARCHARGER"/>
 <pinref part="R38" gate="G$1" pin="1"/>
-<wire x1="41.91" y1="114.3" x2="58.42" y2="114.3" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
+<wire x1="57.15" y1="114.3" x2="58.42" y2="114.3" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
 </segment>
 </net>
 <net name="ILIM" class="0">
@@ -21123,8 +21141,8 @@ ground) at a single point.</text>
 <pinref part="U6" gate="G$1" pin="!PGOOD"/>
 <wire x1="63.5" y1="134.62" x2="55.88" y2="134.62" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
 <wire x1="55.88" y1="134.62" x2="55.88" y2="121.92" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
-<label x="43.18" y="121.92" size="1.778" layer="95" grouprefs="SOLARCHARGER"/>
-<wire x1="41.91" y1="121.92" x2="55.88" y2="121.92" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
+<label x="43.18" y="124.46" size="1.778" layer="95" grouprefs="SOLARCHARGER"/>
+<wire x1="54.61" y1="121.92" x2="55.88" y2="121.92" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
 <pinref part="R43" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -21167,18 +21185,6 @@ ground) at a single point.</text>
 <wire x1="104.14" y1="165.1" x2="104.14" y2="167.64" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
 </segment>
 <segment>
-<pinref part="D21" gate="G$1" pin="A"/>
-<wire x1="25.4" y1="121.92" x2="15.24" y2="121.92" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
-<label x="17.78" y="121.92" size="1.778" layer="95" grouprefs="SOLARCHARGER"/>
-<pinref part="P+11" gate="1" pin="V+"/>
-</segment>
-<segment>
-<pinref part="D17" gate="G$1" pin="A"/>
-<wire x1="25.4" y1="114.3" x2="15.24" y2="114.3" width="0.1524" layer="91" grouprefs="SOLARCHARGER"/>
-<label x="17.78" y="114.3" size="1.778" layer="95" grouprefs="SOLARCHARGER"/>
-<pinref part="P+12" gate="1" pin="V+"/>
-</segment>
-<segment>
 <pinref part="VIN_LED2" gate="G$1" pin="2"/>
 <wire x1="147.32" y1="241.3" x2="147.32" y2="238.76" width="0.1524" layer="91" grouprefs="VOLTAGEREGULATION"/>
 <pinref part="P+4" gate="1" pin="V+"/>
@@ -21212,6 +21218,16 @@ ground) at a single point.</text>
 <wire x1="91.44" y1="231.14" x2="91.44" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="U8" gate="A" pin="ON/OFF"/>
 <wire x1="91.44" y1="218.44" x2="86.36" y2="218.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+11" gate="1" pin="V+"/>
+<pinref part="PGOOD_JMP" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="121.92" x2="20.32" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+12" gate="1" pin="V+"/>
+<pinref part="CHG_JMP" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="114.3" x2="20.32" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="1">
@@ -21262,14 +21278,14 @@ ground) at a single point.</text>
 <segment>
 <pinref part="D17" gate="G$1" pin="C"/>
 <pinref part="R38" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="114.3" x2="34.29" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="114.3" x2="49.53" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$32" class="0">
 <segment>
 <pinref part="D21" gate="G$1" pin="C"/>
 <pinref part="R43" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="121.92" x2="34.29" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="121.92" x2="46.99" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -21953,6 +21969,20 @@ ground) at a single point.</text>
 <pinref part="U2" gate="G$1" pin="IN"/>
 <wire x1="248.92" y1="233.68" x2="251.46" y2="233.68" width="0.1524" layer="91" grouprefs="CODEC"/>
 <label x="248.92" y="233.68" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$75" class="0">
+<segment>
+<pinref part="PGOOD_JMP" gate="G$1" pin="1"/>
+<pinref part="D21" gate="G$1" pin="A"/>
+<wire x1="30.48" y1="121.92" x2="33.02" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$76" class="0">
+<segment>
+<pinref part="CHG_JMP" gate="G$1" pin="1"/>
+<pinref part="D17" gate="G$1" pin="A"/>
+<wire x1="30.48" y1="114.3" x2="33.02" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

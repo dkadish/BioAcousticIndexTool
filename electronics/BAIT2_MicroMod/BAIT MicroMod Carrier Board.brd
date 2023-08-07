@@ -1658,6 +1658,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <smd name="1" x="-0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
 <smd name="2" x="0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
 </package>
+<package name="SMT-JUMPER_2_NO_SILK" urn="urn:adsk.eagle:footprint:39254/1" library_version="1">
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="0.8636" y1="-1.016" x2="-0.8636" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="0.8636" y1="1.016" x2="1.1176" y2="0.762" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.1176" y1="0.762" x2="-0.8636" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.1176" y1="-0.762" x2="-0.8636" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="0.8636" y1="-1.016" x2="1.1176" y2="-0.762" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.1176" y1="-0.762" x2="1.1176" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.1176" y1="-0.762" x2="-1.1176" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-0.8636" y1="1.016" x2="0.8636" y2="1.016" width="0.1524" layer="21"/>
+<smd name="1" x="-0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<smd name="2" x="0.4064" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="SMT-JUMPER_3_1-NC_TRACE_SILK" urn="urn:adsk.eagle:package:39288/1" type="box" library_version="1">
@@ -1668,6 +1682,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <package3d name="SMT-JUMPER_2_NO_NO-SILK" urn="urn:adsk.eagle:package:39277/1" type="box" library_version="1">
 <packageinstances>
 <packageinstance name="SMT-JUMPER_2_NO_NO-SILK"/>
+</packageinstances>
+</package3d>
+<package3d name="SMT-JUMPER_2_NO_SILK" urn="urn:adsk.eagle:package:39279/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="SMT-JUMPER_2_NO_SILK"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -3605,7 +3624,7 @@ design rules under a new name.</description>
 <element name="ANT2" library="Connector-new" package="U-FL3P-SMD-2.6X2.6X1.0MM" value="U-FL Connector" x="16.51" y="77.47" smashed="yes" rot="R90" grouprefs="WIRELESS">
 <attribute name="NAME" x="19.251" y="75.865" size="0.889" layer="25" ratio="11" rot="R90"/>
 </element>
-<element name="J_ASC" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="" x="73.66" y="54.61" smashed="yes" grouprefs="WIRELESS">
+<element name="J_ASC" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK" x="73.66" y="54.61" smashed="yes" grouprefs="WIRELESS">
 <attribute name="NAME" x="73.66" y="55.753" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="73.66" y="53.467" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
@@ -3669,7 +3688,7 @@ design rules under a new name.</description>
 <element name="H5" library="SparkFun-Hardware" package="STAND-OFF-REFLOW-M2.5" value="STAND-OFF-REFLOW2.5MM_TALL" x="35.814" y="74.676" smashed="yes" grouprefs="MICROMOD_GROUP">
 <attribute name="PROD_ID" value="HW-14899" x="137.414" y="-20.574" size="1.778" layer="27" display="off"/>
 </element>
-<element name="J_RX" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="" x="66.04" y="54.61" smashed="yes" grouprefs="WIRELESS">
+<element name="J_RX" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK" x="66.04" y="54.61" smashed="yes" grouprefs="WIRELESS">
 <attribute name="NAME" x="66.04" y="55.753" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="66.04" y="53.467" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
@@ -3714,7 +3733,7 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CONN-08438" x="112.268" y="122.047" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="3.81" y="48.387" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
 </element>
-<element name="J_TX" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="" x="62.23" y="54.61" smashed="yes" grouprefs="WIRELESS">
+<element name="J_TX" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK" x="62.23" y="54.61" smashed="yes" grouprefs="WIRELESS">
 <attribute name="NAME" x="62.23" y="55.753" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="62.23" y="53.467" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
@@ -3773,7 +3792,7 @@ design rules under a new name.</description>
 <attribute name="MPN" value="RC0603JR-0710KL" x="71.52" y="35.66" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="71.52" y="33.322" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 </element>
-<element name="J_RSSI" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="" x="69.85" y="54.61" smashed="yes" grouprefs="WIRELESS">
+<element name="J_RSSI" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK" x="69.85" y="54.61" smashed="yes" grouprefs="WIRELESS">
 <attribute name="NAME" x="69.85" y="55.753" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="69.85" y="53.467" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
@@ -4512,6 +4531,14 @@ design rules under a new name.</description>
 <attribute name="NAME" x="-13.679" y="-35.813" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="-13.679" y="-38.099" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
+<element name="PGOOD_JMP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_NO-SILK" package3d_urn="urn:adsk.eagle:package:39277/1" value="" x="-18.508" y="-40.83" smashed="yes">
+<attribute name="NAME" x="-18.508" y="-39.687" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="VALUE" x="-18.508" y="-41.973" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+</element>
+<element name="CHG_JMP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_NO-SILK" package3d_urn="urn:adsk.eagle:package:39277/1" value="" x="-22.077" y="-40.83" smashed="yes">
+<attribute name="NAME" x="-22.077" y="-39.687" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="VALUE" x="-22.077" y="-41.973" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+</element>
 </elements>
 <signals>
 <signal name="SPI_SCK" class="2">
@@ -4995,8 +5022,8 @@ design rules under a new name.</description>
 <wire x1="45.72" y1="44.958" x2="44.45" y2="46.14" width="0.508" layer="1"/>
 <wire x1="44.45" y1="46.14" x2="44.45" y2="46.99" width="0.508" layer="1"/>
 <via x="44.45" y="46.99" extent="1-16" drill="0.35"/>
-<wire x1="62.7507" y1="54.61" x2="62.8269" y2="54.61" width="0.508" layer="1"/>
-<wire x1="62.8269" y1="54.61" x2="65.5193" y2="54.61" width="0.508" layer="1"/>
+<wire x1="62.6364" y1="54.61" x2="62.8269" y2="54.61" width="0.508" layer="1"/>
+<wire x1="62.8269" y1="54.61" x2="65.6336" y2="54.61" width="0.508" layer="1"/>
 <wire x1="59.69" y1="55.88" x2="59.69" y2="68.199" width="1.016" layer="16"/>
 <wire x1="59.69" y1="68.199" x2="56.642" y2="71.247" width="1.016" layer="16"/>
 <via x="56.642" y="71.247" extent="1-16" drill="0.35"/>
@@ -6012,7 +6039,7 @@ design rules under a new name.</description>
 <wire x1="56.096" y1="61.7347875" x2="58.42" y2="59.4107875" width="0.2032" layer="1"/>
 <wire x1="58.42" y1="58.42" x2="58.42" y2="56.5686" width="0.2032" layer="16"/>
 <via x="58.42" y="56.5686" extent="1-16" drill="0.35"/>
-<wire x1="70.2945" y1="54.6862" x2="70.3707" y2="54.61" width="0.2032" layer="1"/>
+<wire x1="70.2945" y1="54.6862" x2="70.2564" y2="54.61" width="0.2032" layer="1"/>
 <wire x1="58.42" y1="56.5686" x2="68.6951125" y2="56.5686" width="0.2032" layer="1"/>
 <wire x1="68.6951125" y1="56.5686" x2="70.2945" y2="54.9692125" width="0.2032" layer="1"/>
 <wire x1="70.2945" y1="54.9692125" x2="70.2945" y2="54.6862" width="0.2032" layer="1"/>
@@ -6023,14 +6050,14 @@ design rules under a new name.</description>
 <wire x1="76" y1="67.15" x2="76" y2="64.7842125" width="0.2032" layer="1"/>
 <wire x1="76" y1="64.7842125" x2="74.896" y2="63.6802125" width="0.2032" layer="1"/>
 <wire x1="74.896" y1="62.9453" x2="74.1807" y2="62.23" width="0.2032" layer="1"/>
-<wire x1="74.1807" y1="62.23" x2="74.1807" y2="54.61" width="0.2032" layer="1"/>
+<wire x1="74.1807" y1="62.23" x2="74.0664" y2="54.61" width="0.2032" layer="1"/>
 <wire x1="74.896" y1="63.6802125" x2="74.896" y2="62.9453" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$25">
 <contactref element="R5" pad="2"/>
 <contactref element="J_ASC" pad="1"/>
 <wire x1="73.66" y1="52.832" x2="73.1393" y2="53.3527" width="0.2032" layer="1"/>
-<wire x1="73.1393" y1="53.3527" x2="73.1393" y2="54.61" width="0.2032" layer="1"/>
+<wire x1="73.1393" y1="53.3527" x2="73.2536" y2="54.61" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$34">
 <contactref element="R5" pad="1"/>
@@ -6041,7 +6068,7 @@ design rules under a new name.</description>
 <signal name="N$42">
 <contactref element="R6" pad="2"/>
 <contactref element="J_RSSI" pad="1"/>
-<wire x1="69.3293" y1="54.61" x2="69.3293" y2="53.3527" width="0.2032" layer="1"/>
+<wire x1="69.4436" y1="54.61" x2="69.3293" y2="53.3527" width="0.2032" layer="1"/>
 <wire x1="69.3293" y1="53.3527" x2="69.85" y2="52.832" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$43">
@@ -6059,7 +6086,7 @@ design rules under a new name.</description>
 <signal name="N$44">
 <contactref element="R8" pad="2"/>
 <contactref element="J_TX" pad="1"/>
-<wire x1="61.7093" y1="54.61" x2="61.7093" y2="53.3527" width="0.2032" layer="1"/>
+<wire x1="61.8236" y1="54.61" x2="61.7093" y2="53.3527" width="0.2032" layer="1"/>
 <wire x1="61.7093" y1="53.3527" x2="62.23" y2="52.832" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$45">
@@ -6201,8 +6228,6 @@ design rules under a new name.</description>
 <wire x1="47.3837" y1="16.51" x2="46.213" y2="16.5377" width="0.2032" layer="1"/>
 </signal>
 <signal name="V+" class="1">
-<contactref element="D21" pad="A"/>
-<contactref element="D17" pad="A"/>
 <contactref element="VIN_LED2" pad="2"/>
 <contactref element="U3" pad="1"/>
 <contactref element="U6" pad="10"/>
@@ -6210,10 +6235,6 @@ design rules under a new name.</description>
 <contactref element="POWER_PINS" pad="4"/>
 <contactref element="U4" pad="1"/>
 <wire x1="81.28" y1="11.43" x2="75.553" y2="11.43" width="1.016" layer="1"/>
-<wire x1="75.499809375" y1="11.376809375" x2="72.659" y2="14.605" width="1.016" layer="1"/>
-<wire x1="72.659" y1="14.605" x2="72.632" y2="14.902" width="1.016" layer="1"/>
-<wire x1="72.632" y1="14.902" x2="72.632" y2="16.002" width="1.016" layer="1"/>
-<wire x1="72.632" y1="16.002" x2="72.59595" y2="16.47405" width="1.016" layer="1"/>
 <wire x1="72.59595" y1="16.47405" x2="70.02" y2="19.05" width="1.016" layer="1"/>
 <wire x1="70.02" y1="19.05" x2="62.23" y2="19.05" width="1.016" layer="1"/>
 <wire x1="62.23" y1="19.05" x2="60.96" y2="19.05" width="1.016" layer="1"/>
@@ -6267,8 +6288,13 @@ design rules under a new name.</description>
 <wire x1="45.08" y1="34.158" x2="43.18" y2="32.258" width="0.508" layer="1"/>
 <contactref element="U11" pad="1"/>
 <contactref element="U12" pad="1"/>
+<contactref element="PGOOD_JMP" pad="2"/>
+<contactref element="CHG_JMP" pad="2"/>
+<wire x1="72.59595" y1="16.47405" x2="81.28" y2="11.43" width="0" layer="19" extent="1-1"/>
 <wire x1="-15.386" y1="-4.5661" x2="36.8601" y2="29.53" width="0" layer="19" extent="1-1"/>
 <wire x1="-15.386" y1="-32.9061" x2="-15.386" y2="-4.5661" width="0" layer="19" extent="1-1"/>
+<wire x1="-18.1016" y1="-40.83" x2="-15.386" y2="-32.9061" width="0" layer="19" extent="1-1"/>
+<wire x1="-21.6706" y1="-40.83" x2="-18.1016" y2="-40.83" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="1.8V" class="1">
 <contactref element="C7" pad="1"/>
@@ -6734,7 +6760,7 @@ design rules under a new name.</description>
 <contactref element="J_RX" pad="2"/>
 <contactref element="R7" pad="2"/>
 <wire x1="66.04" y1="52.832" x2="66.5607" y2="53.4407" width="0.2032" layer="1"/>
-<wire x1="66.5607" y1="53.4407" x2="66.5607" y2="54.61" width="0.2032" layer="1"/>
+<wire x1="66.5607" y1="53.4407" x2="66.4464" y2="54.61" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$10">
 <contactref element="THERM2" pad="1"/>
@@ -7343,6 +7369,21 @@ design rules under a new name.</description>
 </signal>
 <signal name="I2C1_SDA">
 <contactref element="J7" pad="51"/>
+</signal>
+<signal name="N$75">
+<contactref element="PGOOD_JMP" pad="1"/>
+<contactref element="D21" pad="A"/>
+<wire x1="-18.9144" y1="-40.83" x2="72.659" y2="14.605" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$76">
+<contactref element="CHG_JMP" pad="1"/>
+<contactref element="D17" pad="A"/>
+<wire x1="-22.4834" y1="-40.83" x2="72.632" y2="16.002" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="SD_DETECT">
+<contactref element="J2" pad="9"/>
+<contactref element="J7" pad="73"/>
+<wire x1="16.76" y1="26.87" x2="23" y2="49.335" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
