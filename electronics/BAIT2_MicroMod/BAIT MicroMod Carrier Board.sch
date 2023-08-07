@@ -20006,6 +20006,20 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="73.66" y="154.94" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
+<net name="HP_RING_SW_NC" class="0">
+<segment>
+<pinref part="J7" gate="J1" pin="G7/BUS7"/>
+<wire x1="71.12" y1="149.86" x2="73.66" y2="149.86" width="0.1524" layer="91"/>
+<label x="73.66" y="149.86" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="HP_TIP_SW_NC" class="0">
+<segment>
+<pinref part="J7" gate="J1" pin="G8"/>
+<wire x1="71.12" y1="147.32" x2="73.66" y2="147.32" width="0.1524" layer="91"/>
+<label x="73.66" y="147.32" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -21983,6 +21997,20 @@ ground) at a single point.</text>
 <pinref part="CHG_JMP" gate="G$1" pin="1"/>
 <pinref part="D17" gate="G$1" pin="A"/>
 <wire x1="30.48" y1="114.3" x2="33.02" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="HP_RING_SW_NC" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="RING_SWITCH"/>
+<wire x1="241.3" y1="203.2" x2="246.38" y2="203.2" width="0.1524" layer="91"/>
+<label x="246.38" y="203.2" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="HP_TIP_SW_NC" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="TIP_SWITCH"/>
+<wire x1="241.3" y1="200.66" x2="246.38" y2="200.66" width="0.1524" layer="91"/>
+<label x="246.38" y="200.66" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
