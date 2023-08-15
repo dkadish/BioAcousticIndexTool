@@ -18153,6 +18153,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="PGOOD_JMP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39277/1" value=""/>
 <part name="CHG_JMP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:39277/1" value=""/>
+<part name="AT_MODE" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR"/>
+<part name="G3" library="Power or GND " deviceset="GND_POWER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18173,17 +18175,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <text x="185.42" y="55.88" size="1.778" layer="97" rot="R90" grouprefs="RTC">0.100uA Leakage
 0.410V drop at 1mA
 1.0V drop at 15mA</text>
-<attribute name="NAME" x="115.316" y="35.56" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="118.364" y="35.56" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-<attribute name="VALUE" x="116.84" y="45.974" size="1.778" layer="96" align="bottom-center"/>
-<attribute name="NAME" x="127" y="35.814" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="127" y="20.066" size="1.778" layer="96" font="vector" align="top-left"/>
-<attribute name="MPN" x="134.62" y="27.94" size="1.27" layer="96" display="off"/>
-<attribute name="VALUE" x="121.92" y="17.526" size="1.778" layer="96" align="top-center"/>
-<attribute name="NAME" x="150.241" y="21.336" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="145.161" y="21.336" size="1.778" layer="96" font="vector" rot="R270"/>
-<attribute name="VALUE" x="147.32" y="14.986" size="1.778" layer="96" align="top-center"/>
-<attribute name="VALUE" x="119.38" y="40.64" size="1.778" layer="96" rot="R90"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
@@ -18603,6 +18594,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="SUPPLY8" gate="G$1" x="119.38" y="63.5" smashed="yes">
 <attribute name="VALUE" x="114.3" y="63.754" size="1.778" layer="96" align="bottom-center"/>
 </instance>
+<instance part="AT_MODE" gate="G$1" x="256.54" y="241.3" smashed="yes" rot="MR90">
+<attribute name="NAME" x="256.921" y="243.84" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="G3" gate="G$1" x="264.16" y="238.76" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -18815,6 +18810,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="88.9" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="GND44" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="AT_MODE" gate="G$1" pin="1"/>
+<wire x1="261.62" y1="241.3" x2="264.16" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="G3" gate="G$1" pin="GND"/>
+<wire x1="264.16" y1="241.3" x2="264.16" y2="238.76" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="3.3V" class="1">
 <segment>
@@ -18920,6 +18921,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="3V_QWIIC2_JP" gate="G$1" pin="1"/>
 <pinref part="SUPPLY8" gate="G$1" pin="3.3V"/>
 <wire x1="119.38" y1="60.96" x2="119.38" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="AT_MODE" gate="G$1" pin="3"/>
+<wire x1="251.46" y1="241.3" x2="248.92" y2="241.3" width="0.1524" layer="91"/>
+<label x="248.92" y="241.3" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="USB_D-" class="0">
@@ -19412,6 +19418,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="184.15" y="210.82" size="0.889" layer="95" ratio="12" rot="R180" xref="yes" grouprefs="PORTS"/>
 <pinref part="E5_EXTRA_PINS" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="AT_MODE" gate="G$1" pin="2"/>
+<wire x1="256.54" y1="236.22" x2="256.54" y2="233.68" width="0.1524" layer="91"/>
+<label x="256.54" y="233.68" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="PA14/SWCLK" class="0">
 <segment>
@@ -19849,7 +19860,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="U3" gate="G$1" pin="OUT"/>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V QWIIC"/>
+<wire x1="43.18" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91" grouprefs="QWIIC REGS_3V"/>
 <wire x1="48.26" y1="54.61" x2="48.26" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>
 <junction x="48.26" y="55.88" grouprefs="REGS_3V"/>
 <wire x1="48.26" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91" grouprefs="REGS_3V"/>

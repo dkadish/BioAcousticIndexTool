@@ -3,7 +3,7 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mic" unit="mic" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
@@ -3630,8 +3630,8 @@ design rules under a new name.</description>
 </element>
 <element name="C10" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" package="C0603" package3d_urn="urn:adsk.eagle:package:8004287/1" value="4.7uf" x="57.15" y="73.66" smashed="yes" rot="R270" grouprefs="WIRELESS">
 <attribute name="MPN" value="CC0603KRX5R6BB475" x="57.15" y="73.66" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="56.896" y="74.93" size="0.635" layer="33" ratio="10" rot="R270"/>
 <attribute name="NAME" x="56.315" y="70.335" size="0.889" layer="25" ratio="11" rot="R90"/>
+<attribute name="NAME" x="56.896" y="74.93" size="0.635" layer="33" ratio="10" rot="R270"/>
 <attribute name="VALUE" value="4.7uf" x="56.24" y="75.0135" size="0.635" layer="27" ratio="10" align="center"/>
 </element>
 <element name="C11" library="Discrete-new" package="C0402" value="DNP" x="15.17" y="70.29" smashed="yes" rot="R180" grouprefs="WIRELESS">
@@ -4235,8 +4235,8 @@ design rules under a new name.</description>
 </element>
 <element name="C33" library="Discrete-new" package="C0603" value="4.7uF" x="49.276" y="76.327" smashed="yes" rot="R90">
 <attribute name="MPN" value="TMCJ0J475MTRF" x="49.276" y="76.327" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="48.641" y="74.422" size="0.889" layer="25" ratio="11" rot="R90"/>
 <attribute name="NAME" x="49.53" y="75.057" size="0.635" layer="33" ratio="10" rot="R90"/>
+<attribute name="NAME" x="48.641" y="74.422" size="0.889" layer="25" ratio="11" rot="R90"/>
 <attribute name="VALUE" x="49.2125" y="76.327" size="0.635" layer="27" ratio="10" rot="R90" align="center"/>
 </element>
 <element name="GND_CON" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="" x="20.32" y="40.64" smashed="yes" rot="MR90">
@@ -4426,8 +4426,8 @@ design rules under a new name.</description>
 </element>
 <element name="C38" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" package="C0603" package3d_urn="urn:adsk.eagle:package:8004287/1" value="100nf" x="90.17" y="41.91" smashed="yes" rot="MR0">
 <attribute name="MPN" value="CC0603KRX7R9BB104" x="90.17" y="41.91" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="NAME" x="89.281" y="43.18" size="0.889" layer="26" ratio="11" rot="MR270"/>
 <attribute name="NAME" x="90.424" y="43.18" size="0.635" layer="34" ratio="10" rot="MR270"/>
+<attribute name="NAME" x="89.281" y="43.18" size="0.889" layer="26" ratio="11" rot="MR270"/>
 <attribute name="VALUE" x="91.7575" y="43.18" size="0.635" layer="28" ratio="10" rot="MR270"/>
 </element>
 <element name="C39" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC1608X85" package3d_urn="urn:adsk.eagle:package:16290898/2" value="220pF" x="87.63" y="41.91" smashed="yes" rot="MR270">
@@ -4467,8 +4467,8 @@ design rules under a new name.</description>
 </element>
 <element name="C36" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" package="C0603" package3d_urn="urn:adsk.eagle:package:8004287/1" value="1uf" x="-10.387" y="-12.35" smashed="yes">
 <attribute name="MPN" value="CC0603KRX7R8BB105" x="-18.892" y="2.816" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="-10.641" y="-11.08" size="0.635" layer="33" ratio="10" rot="R270"/>
 <attribute name="NAME" x="-9.498" y="-11.08" size="0.889" layer="25" ratio="11" rot="R270"/>
+<attribute name="NAME" x="-10.641" y="-11.08" size="0.635" layer="33" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="-11.9745" y="-11.08" size="0.635" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="R1" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" package="R0603" package3d_urn="urn:adsk.eagle:package:8004941/1" value="100K" x="-14.426" y="-12.033" smashed="yes">
@@ -4513,8 +4513,8 @@ design rules under a new name.</description>
 </element>
 <element name="C40" library="OPL_Capacitor" library_urn="urn:adsk.eagle:library:8004261" package="C0603" package3d_urn="urn:adsk.eagle:package:8004287/1" value="1uf" x="-10.387" y="-40.69" smashed="yes">
 <attribute name="MPN" value="CC0603KRX7R8BB105" x="-18.892" y="-25.524" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="-10.641" y="-39.42" size="0.635" layer="33" ratio="10" rot="R270"/>
 <attribute name="NAME" x="-9.498" y="-39.42" size="0.889" layer="25" ratio="11" rot="R270"/>
+<attribute name="NAME" x="-10.641" y="-39.42" size="0.635" layer="33" ratio="10" rot="R270"/>
 <attribute name="VALUE" x="-11.9745" y="-39.42" size="0.635" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="R19" library="OPL_Resistor" library_urn="urn:adsk.eagle:library:8004883" package="R0603" package3d_urn="urn:adsk.eagle:package:8004941/1" value="100K" x="-14.426" y="-40.373" smashed="yes">
@@ -4538,6 +4538,10 @@ design rules under a new name.</description>
 <element name="CHG_JMP" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_NO-SILK" package3d_urn="urn:adsk.eagle:package:39277/1" value="" x="-22.077" y="-40.83" smashed="yes">
 <attribute name="NAME" x="-22.077" y="-39.687" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="-22.077" y="-41.973" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+</element>
+<element name="AT_MODE" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_3_1-NC_TRACE_SILK" package3d_urn="urn:adsk.eagle:package:39288/1" value="MK2_LR" x="-25.877" y="-40.83" smashed="yes">
+<attribute name="NAME" x="-25.877" y="-39.687" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="VALUE" x="-25.877" y="-41.973" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
 </elements>
 <signals>
@@ -4853,6 +4857,7 @@ design rules under a new name.</description>
 <contactref element="J11" pad="S2"/>
 <contactref element="C40" pad="2"/>
 <contactref element="U12" pad="2"/>
+<contactref element="AT_MODE" pad="1"/>
 <wire x1="69.5" y1="63.54" x2="67.25" y2="72.04" width="0" layer="19" extent="1-1"/>
 <wire x1="57.912" y1="73.66" x2="67.25" y2="72.04" width="0" layer="19" extent="1-1"/>
 <wire x1="57.5" y1="68.54" x2="57.912" y2="73.66" width="0" layer="19" extent="1-1"/>
@@ -4935,6 +4940,7 @@ design rules under a new name.</description>
 <wire x1="-15.364" y1="-18.425" x2="-14.064" y2="-20.95" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.436" y1="-32.9061" x2="-14.064" y2="-20.95" width="0" layer="19" extent="1-1"/>
 <wire x1="-10.387" y1="-41.452" x2="-14.436" y2="-32.9061" width="0" layer="19" extent="1-1"/>
+<wire x1="-26.893" y1="-40.83" x2="-14.436" y2="-32.9061" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3.3V" class="1">
 <contactref element="J_TX" pad="2"/>
@@ -5057,12 +5063,14 @@ design rules under a new name.</description>
 <contactref element="3V_CODEC_JP" pad="1"/>
 <contactref element="R19" pad="2"/>
 <contactref element="3V_QWIIC2_JP" pad="1"/>
-<wire x1="-11.004" y1="1.755" x2="22.61" y2="33.782" width="0" layer="19" extent="1-1"/>
-<wire x1="-15.593" y1="1.755" x2="-11.004" y2="1.755" width="0" layer="19" extent="1-1"/>
-<wire x1="-14.695" y1="-8.616" x2="-15.593" y2="1.755" width="0" layer="19" extent="1-1"/>
-<wire x1="-14.426" y1="-12.795" x2="-14.695" y2="-8.616" width="0" layer="19" extent="1-1"/>
-<wire x1="-14.695" y1="-36.956" x2="-14.426" y2="-12.795" width="0" layer="19" extent="1-1"/>
-<wire x1="-14.426" y1="-41.135" x2="-14.695" y2="-36.956" width="0" layer="19" extent="1-1"/>
+<contactref element="AT_MODE" pad="3"/>
+<wire x1="-14.426" y1="-41.135" x2="-24.861" y2="-40.83" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.695" y1="-36.956" x2="-14.426" y2="-41.135" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.426" y1="-12.795" x2="-14.695" y2="-36.956" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.695" y1="-8.616" x2="-14.426" y2="-12.795" width="0" layer="19" extent="1-1"/>
+<wire x1="-15.593" y1="1.755" x2="-14.695" y2="-8.616" width="0" layer="19" extent="1-1"/>
+<wire x1="-11.004" y1="1.755" x2="-15.593" y2="1.755" width="0" layer="19" extent="1-1"/>
+<wire x1="22.61" y1="33.782" x2="-11.004" y2="1.755" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="USB_D-">
 <contactref element="J9" pad="A7"/>
@@ -5782,6 +5790,8 @@ design rules under a new name.</description>
 <wire x1="67.868596875" y1="69.828796875" x2="67.85" y2="69.8102" width="0.2032" layer="16"/>
 <contactref element="U7" pad="24"/>
 <contactref element="E5_EXTRA_PINS" pad="2"/>
+<contactref element="AT_MODE" pad="2"/>
+<wire x1="-25.877" y1="-40.83" x2="64.75" y2="72.04" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PA14/SWCLK">
 <contactref element="E5_SWO" pad="4"/>
