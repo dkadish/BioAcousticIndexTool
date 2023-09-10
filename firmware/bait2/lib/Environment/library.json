@@ -12,7 +12,7 @@
     }
   ],
   "dependencies":{
-    "external-repo": "https://github.com/sparkfun/SparkFun_BQ27441_Arduino_Library.git#v1.1.0"
+    "sparkfun/SparkFun BQ27441 LiPo Fuel Gauge Arduino Library": "^1.1.0"
   },
   "version": "0.1.0",
   "frameworks": "arduino",

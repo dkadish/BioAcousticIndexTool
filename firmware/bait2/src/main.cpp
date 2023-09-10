@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "config.h"
+#include "baitconfig.h"
 #include "sdcard.h"
 #include "logging.h"
 #include "PowerSensor.h"
