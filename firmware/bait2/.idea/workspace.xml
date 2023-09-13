@@ -15,8 +15,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df3954a0-2433-4c77-a6fa-0871afc17b52" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Ecoacoustics/include/FFTReader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Ecoacoustics/library.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Ecoacoustics/src/FFTReader.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/ACI_TemporalWindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/ACI_TemporalWindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/AcousticComplexityIndex.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/AcousticComplexityIndex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/AcousticDifferenceIndex.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/AcousticDifferenceIndex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/AcousticDiversityIndex.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/AcousticDiversityIndex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/fft.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/sdcard.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/baitconfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectFilesBackup/.idea/bait2.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/projectFilesBackup/.idea/misc.xml" beforeDir="false" />
@@ -24,7 +40,6 @@
       <change beforePath="$PROJECT_DIR$/projectFilesBackup/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/projectFilesBackup/CMakeLists.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sdcard.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,11 +147,12 @@
       <recent name="$PROJECT_DIR$/lib/Logging" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/Ecoacoustics/include" />
       <recent name="$PROJECT_DIR$/tmp" />
       <recent name="$PROJECT_DIR$/lib/Display/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="PlatformIO.PlatformIO">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -205,7 +221,7 @@
       <workItem from="1692102040863" duration="644000" />
       <workItem from="1692968612889" duration="94000" />
       <workItem from="1693896551894" duration="566000" />
-      <workItem from="1693929229531" duration="14883000" />
+      <workItem from="1693929229531" duration="19564000" />
     </task>
     <servers />
   </component>

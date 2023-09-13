@@ -4,6 +4,7 @@
 #include "logging.h"
 #include "PowerSensor.h"
 #include "OLEDDisplay.h"
+#include "FFTReader.h"
 
 PowerSensor powerSensor = PowerSensor(10, "power.csv", 6600);
 
