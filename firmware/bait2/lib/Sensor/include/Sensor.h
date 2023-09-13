@@ -18,6 +18,8 @@ public:
      *
      * @param interval Interval in seconds
      */
+    Sensor(int interval);
+
     Sensor(int interval, const char *filepath);
 
     virtual void setup() {

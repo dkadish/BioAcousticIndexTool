@@ -1,0 +1,18 @@
+{
+  "name": "Ecoacoustics",
+  "keywords": "audio, ecology, ecoacoustics",
+  "description": "Arduino library for computing ecoacoustic indices",
+  "authors":
+  [
+    {
+      "name": "David Kadish",
+      "email": "david@small-things.xyz",
+      "url": "https://small-things.xyz",
+      "maintainer": true
+    }
+  ],
+  "dependencies": ["Audio"],
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "teensy"
+}

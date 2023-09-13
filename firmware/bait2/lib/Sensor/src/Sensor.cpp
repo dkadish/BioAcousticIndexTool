@@ -4,6 +4,9 @@
 
 #include "Sensor.h"
 
+Sensor::Sensor(int interval) : _interval(interval), m_filepath("") {
+}
+
 Sensor::Sensor(int interval, const char *filepath) : _interval(interval), m_filepath(filepath) {
 }
 
