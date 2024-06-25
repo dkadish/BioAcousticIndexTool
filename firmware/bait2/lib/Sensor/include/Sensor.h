@@ -12,58 +12,71 @@
 /** Base class for a sensor operating in the BAIT system.
  *
  */
-class Sensor {
+class Sensor
+{
 public:
     /**
      *
      * @param interval Interval in seconds
      */
-    Sensor(int interval);
+    Sensor(int interval, int debugInterval = 0);
 
-    Sensor(int interval, const char *filepath);
+    Sensor(int interval, const char *filepath, int debugInterval = 0);
 
-    virtual void setup() {
+    virtual void setup()
+    {
         chrono.restart();
     };
 
-    //TODO Return status code for main loop error status
+    // TODO Return status code for main loop error status
     virtual void loop();
 
-    virtual void start() { chrono.restart(); };
+    virtual void start()
+    {
+        chrono.restart();
+        debugChrono.restart();
+    };
 
-    virtual void reset() { chrono.restart(); };
+    virtual void reset()
+    {
+        chrono.restart();
+        debugChrono.restart();
+    };
 
     virtual void process() {};
 
     virtual void record() {};
 
+    virtual void debug() {};
+
     int getInterval() { return _interval; }
 
-    virtual int firstMeasurement() {
+    virtual int firstMeasurement()
+    {
         return Sensor::timeToFirstMeasurement(_interval);
     }
 
-    static int timeToFirstMeasurement(int m_interval) {
+    static int timeToFirstMeasurement(int m_interval)
+    {
         return m_interval - (now() % m_interval);
     }
 
-    const char * getFilePath(){ return m_filepath; };
+    const char *getFilePath() { return m_filepath; };
 
-    void writeTimestamp(stream_t* f);
+    void writeTimestamp(stream_t *f);
 
-    int getStatus(){ return m_status; };
+    int getStatus() { return m_status; };
 
 protected:
-    int m_status=0;
+    int m_status = 0;
 
 private:
-    int _interval; /**< Time between measurements in seconds. */
+    int _interval;       /**< Time between measurements in seconds. */
+    int m_debugInterval; /**< Time between debug messages in seconds. */
 
-    const char * m_filepath;
+    const char *m_filepath;
 
-    Chrono chrono;
-
+    Chrono chrono, debugChrono;
 };
 
-
-#endif //BAIT_SENSOR_H
+#endif // BAIT_SENSOR_H

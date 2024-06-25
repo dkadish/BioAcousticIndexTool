@@ -8,16 +8,21 @@
 #include <Audio.h>
 #include <Sensor.h>
 
-class FFTReader: public Sensor {
+class FFTReader : public Sensor
+{
 public:
-    FFTReader(AudioAnalyzeFFT256 &fft);
-    FFTReader(AudioAnalyzeFFT256 &fft, int averageTogether);
+    FFTReader(AudioAnalyzeFFT256 &fft, const char *filepath, bool recordSpectrogram = false, int averageTogether = 2, int debugInterval = 1);
+    // FFTReader(AudioAnalyzeFFT256 &fft, int averageTogether=2);
 
     virtual void setup() override;
     virtual void loop() override;
     virtual float get(int i);
+    virtual void debug();
 
-    bool available(){
+    virtual void recordFFT();
+
+    bool available()
+    {
         return _available;
     }
 
@@ -27,21 +32,21 @@ public:
     void resetCount();
 
 private:
-
     AudioAnalyzeFFT256 &_fft;
-    bool _available=false;
+    bool _available = false;
     float fft[length];
     long _count;
-    int _avg_together=2;
+    bool _record_spectrogram; // Wheether the spectrogram is recorded to SD card
+    int _avg_together;
 
 #ifdef SAVE_SPECTROGRAM
-    static const int _max_count = 250; //8610
+    static const int _max_count = 250; // 8610
     float _spectrogram[length][_max_count];
+
 public:
-    float getSpectro(int f, int t){ return _spectrogram[f][t]; };
-    int getMaxCount(){ return _max_count; };
+    float getSpectro(int f, int t) { return _spectrogram[f][t]; };
+    int getMaxCount() { return _max_count; };
 #endif
 };
 
-
-#endif //SBAT_FFTREADER_H
+#endif // SBAT_FFTREADER_H
