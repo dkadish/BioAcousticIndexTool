@@ -32,7 +32,7 @@ AudioControlSGTL5000 sgtl5000; // xy=412,358
 // GUItool: end automatically generated code
 
 PowerSensor powerSensor = PowerSensor(10, "/power.csv", 4400);
-FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", true);
+FFTReader fftReader = FFTReader(fft256_l, "/fft.csv");
 
 // OLEDDisplay display = OLEDDisplay();0
 
