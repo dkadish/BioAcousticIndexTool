@@ -679,3 +679,5 @@ firmware/bait/CMakeListsPrivate.txt
 firmware/bait/.pio/
 
 docs/.ztr-directory
+
+firmware/bait2/.vscode/c_cpp_properties.json
