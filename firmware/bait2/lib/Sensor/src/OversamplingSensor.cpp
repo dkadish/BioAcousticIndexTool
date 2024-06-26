@@ -4,5 +4,16 @@
 
 #include "OversamplingSensor.h"
 
-OversamplingSensor::OversamplingSensor(int interval, int measureInterval) : Sensor(interval, nullptr),
-                                                                            measureInterval(measureInterval) {}
+OversamplingSensor::OversamplingSensor(int interval, int measureInterval, int debugInterval) : Sensor(interval, debugInterval),
+                                                                                               m_measureInterval(measureInterval) {}
+
+void OversamplingSensor::loop()
+{
+  // Check the main interval and the debug message interval
+  Sensor::loop();
+
+  if (m_measure.hasPassed(m_measureInterval * 1000L, true))
+  {
+    sample();
+  }
+}

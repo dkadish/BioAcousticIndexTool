@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": "bait2"
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "string_view": "cpp"
+    }
+  }
+}

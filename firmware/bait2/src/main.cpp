@@ -5,6 +5,7 @@
 #include "PowerSensor.h"
 // #include "OLEDDisplay.h"
 #include "FFTReader.h"
+#include "RMS.h"
 
 #include <Audio.h>
 #include <SPI.h>
@@ -32,13 +33,14 @@ AudioControlSGTL5000 sgtl5000; // xy=412,358
 // GUItool: end automatically generated code
 
 PowerSensor powerSensor = PowerSensor(10, "/power.csv", 4400);
-FFTReader fftReader = FFTReader(fft256_l, "/fft.csv");
+FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
+RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv");
 
 // OLEDDisplay display = OLEDDisplay();0
 
 void audioSetup()
 {
-    AudioMemory(8);
+    AudioMemory(20);
     sgtl5000.enable();
     sgtl5000.volume(0.5);
 }
@@ -85,6 +87,7 @@ void setup()
     powerSensor.setup();
     // display.setup();
     fftReader.setup();
+    rms.setup();
 
     DEBUG("Setup Complete.")
 }
@@ -95,6 +98,7 @@ void loop()
 {
     powerSensor.loop();
     fftReader.loop();
+    rms.loop();
 
     // oledLoop();
 }
