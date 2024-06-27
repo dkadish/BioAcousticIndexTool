@@ -32,7 +32,7 @@ void RootMeanSquare::record()
     float avg_rms = currentRMS();
 
     // Timestamp, RMS
-    DEBUG("%d", avg_rms)
+    DEBUG("RMS (for period): %f", avg_rms)
 
     digitalWrite(LED_BUILTIN, HIGH);
 
