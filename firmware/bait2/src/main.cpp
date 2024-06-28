@@ -2,6 +2,7 @@
 #include "baitconfig.h"
 #include "sdcard.h"
 #include "logging.h"
+#include "lora.h"
 #include "PowerSensor.h"
 // #include "OLEDDisplay.h"
 #include "FFTReader.h"
@@ -32,7 +33,9 @@ AudioConnection patchCord6(i2s, 1, rms_r, 0);
 AudioControlSGTL5000 sgtl5000; // xy=412,358
 // GUItool: end automatically generated code
 
-PowerSensor powerSensor = PowerSensor(10, "/power.csv", 4400);
+LoRaWANTTN lora = LoRaWANTTN();
+
+PowerSensor powerSensor = PowerSensor(5L * 60L, "/power.csv", &lora, 4400);
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
 RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv");
 
@@ -55,12 +58,12 @@ void setup()
 
     audioSetup();
 
-    Serial.begin(115200);
+    Serial.begin(9600);
 
 #ifdef WAIT_FOR_SERIAL
     for (int i = 0; i < 10 && !Serial; i++)
     {
-        Serial.begin(115200);
+        Serial.begin(9600);
         delay(100);
         DEBUG("Waiting for Serial...")
     }
@@ -84,6 +87,7 @@ void setup()
 
     DEBUG("SD Initialised.")
 
+    lora.setup();
     powerSensor.setup();
     // display.setup();
     fftReader.setup();
@@ -101,6 +105,8 @@ void loop()
     rms.loop();
 
     // oledLoop();
+
+    lora.loop();
 }
 
 // **************************************************************************************************

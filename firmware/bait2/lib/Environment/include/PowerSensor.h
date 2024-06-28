@@ -6,11 +6,12 @@
 #define BAIT2_POWERSENSOR_H
 
 #include "Sensor.h"
+#include "lora.h"
 
 class PowerSensor : public Sensor
 {
 public:
-    PowerSensor(int interval, const char *filepath, int initialCapacity);
+    PowerSensor(int interval, const char *filepath, LoRaWANTTN *lorattn, int initialCapacity);
 
     void setup() override;
 
@@ -26,6 +27,9 @@ public:
         capacity = 0.0, // Read remaining capacity (in mAh)
         power = 0.0,    // Read power consumption (in mW)
         health = 0.0;   // Read state-of-health (in %)
+
+private:
+    LoRaWANTTN *m_lwTTN;
 };
 
 #endif // BAIT2_POWERSENSOR_H

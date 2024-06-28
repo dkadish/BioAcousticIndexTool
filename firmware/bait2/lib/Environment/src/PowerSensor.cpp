@@ -7,8 +7,8 @@
 #include "PowerSensor.h"
 #include <SparkFunBQ27441.h>
 
-PowerSensor::PowerSensor(int interval, const char *filepath, int initialCapacity) : Sensor(interval, filepath),
-                                                                                    initialCapacity(initialCapacity) {}
+PowerSensor::PowerSensor(int interval, const char *filepath, LoRaWANTTN *lorawanTTN, int initialCapacity) : Sensor(interval, filepath),
+                                                                                                            initialCapacity(initialCapacity), m_lwTTN(lorawanTTN) {}
 
 void PowerSensor::setup()
 {
@@ -52,6 +52,20 @@ void PowerSensor::record()
     DEBUG("%d, %d, %d, %d, %d, %d, %d", (int)soc, (int)volts, (int)current, (int)capacity, (int)power, (int)health, initialCapacity)
 
     digitalWrite(LED_BUILTIN, HIGH);
+
+    // Record LoRaWAN data
+    m_lwTTN->getLPP().addPercentage(1, soc);
+    m_lwTTN->getLPP().addVoltage(2, volts / 1000.0);                 // V
+    m_lwTTN->getLPP().addCurrent(3, current / 1000.0);               // A
+    m_lwTTN->getLPP().addGenericSensor(4, capacity / 1000.0);        // Ah, Remaining Capacity
+    m_lwTTN->getLPP().addPower(5, power / 1000.0);                   // W
+    m_lwTTN->getLPP().addPercentage(6, health);                      // %
+    m_lwTTN->getLPP().addGenericSensor(7, initialCapacity / 1000.0); // Ah, Initial Capacity
+
+    // Mark that there is data to send
+    m_lwTTN->setDirty();
+
+    // Record to SD card
 
     //    File f = SD.open(getFilePath(), FILE_WRITE);
     FsFile f;

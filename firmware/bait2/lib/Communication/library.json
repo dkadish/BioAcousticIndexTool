@@ -1,7 +1,7 @@
 {
-  "name": "Sensor",
-  "keywords": "sensor",
-  "description": "Arduino Library for Non-Blocking Sensors",
+  "name": "Communication",
+  "keywords": "communication, lora, lorawan",
+  "description": "Arduino Library for communicating with The Things Network using a WIO-E5 LoRaWAN Module and CayenneLPP",
   "authors": [
     {
       "name": "David Kadish",
@@ -11,9 +11,7 @@
     }
   ],
   "dependencies": {
-    "PaulStoffregen/Time": "^1.6.1",
-    "thomasfredericks/Chrono": "^1.2.0",
-    "Communication": "^0.1.0"
+    "electroniccats/CayenneLPP": "^1.4.0"
   },
   "version": "0.1.0",
   "frameworks": "arduino",
