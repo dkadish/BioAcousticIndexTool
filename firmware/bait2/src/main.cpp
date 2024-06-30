@@ -17,27 +17,40 @@
 #include <SD.h>
 #include <SerialFlash.h>
 
-// GUItool: begin automatically generated code
-AudioInputI2S i2s;           // xy=242,151
-AudioOutputUSB usb;          // xy=602,297
-AudioAnalyzeFFT256 fft256_l; // xy=624,76
-AudioAnalyzeFFT256 fft256_r; // xy=627,132
-AudioAnalyzeRMS rms_l;       // xy=630,190
-AudioAnalyzeRMS rms_r;       // xy=621,244
-AudioConnection patchCord1(i2s, 0, fft256_l, 0);
-AudioConnection patchCord2(i2s, 0, usb, 0);
-AudioConnection patchCord3(i2s, 0, rms_l, 0);
-AudioConnection patchCord4(i2s, 1, fft256_r, 0);
-AudioConnection patchCord5(i2s, 1, usb, 1);
-AudioConnection patchCord6(i2s, 1, rms_r, 0);
-AudioControlSGTL5000 sgtl5000; // xy=412,358
+// NOTE: MK1 seems to be much more sensitiv and stable than mk2. That is the one the is LEFT in the code
+//  GUItool: begin automatically generated code
+AudioInputI2S i2s;           // xy=139,174
+AudioAmplifier amp_l;        // xy=292,156
+AudioAnalyzeFFT256 fft256_l; // xy=568,129
+AudioAnalyzePeak peak_l;     // xy=569,55
+AudioAnalyzeRMS rms_l;       // xy=568,92
+// AudioAmplifier amp_r;        // xy=294,202
+// AudioAnalyzeFFT256 fft256_r; // xy=557,271
+// AudioAnalyzePeak peak_r;     // xy=560,193
+// AudioAnalyzeRMS rms_r;       // xy=558,231
+AudioOutputUSB usb; // xy=561,385
+AudioConnection patchCord1(i2s, 0, amp_l, 0);
+AudioConnection patchCord3(amp_l, rms_l);
+AudioConnection patchCord4(amp_l, peak_l);
+AudioConnection patchCord5(amp_l, fft256_l);
+AudioConnection patchCord6(amp_l, 0, usb, 0);
+AudioConnection patchCord11(amp_l, 0, usb, 1);
+// AudioConnection patchCord2(i2s, 1, amp_r, 0);
+// AudioConnection patchCord7(amp_r, peak_r);
+// AudioConnection patchCord8(amp_r, rms_r);
+// AudioConnection patchCord9(amp_r, fft256_r);
+// AudioConnection patchCord10(amp_r, 0, usb, 1);
+AudioControlSGTL5000 sgtl5000; // xy=700,563
 // GUItool: end automatically generated code
+
+float gain_l = 32.0; // Seems to be a good default value
+// float gain_r = 1.0;
 
 LoRaWANTTN lora = LoRaWANTTN();
 
 PowerSensor powerSensor = PowerSensor(5L * 60L, "/power.csv", &lora, 4400);
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
-RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv");
+RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, 5L * 60L);
 
 // OLEDDisplay display = OLEDDisplay();0
 
@@ -46,6 +59,9 @@ void audioSetup()
     AudioMemory(20);
     sgtl5000.enable();
     sgtl5000.volume(0.5);
+
+    amp_l.gain(gain_l);
+    // amp_r.gain(gain_r);
 }
 
 void setup()
@@ -193,5 +209,29 @@ void serialEvent()
             Serial.println("Listing directory: /");
             printDirectory(root, 0);
         }
+        else if (inChar == 'G')
+        {
+            gain_l *= 2.0;
+            amp_l.gain(gain_l);
+            Serial.printf("Gain L: %f\n", gain_l);
+        }
+        else if (inChar == 'g')
+        {
+            gain_l /= 2.0;
+            amp_l.gain(gain_l);
+            Serial.printf("Gain L: %f\n", gain_l);
+        }
+        // else if (inChar == 'H')
+        // {
+        //     gain_r *= 2.0;
+        //     amp_r.gain(gain_r);
+        //     Serial.printf("Gain R: %f\n", gain_r);
+        // }
+        // else if (inChar == 'h')
+        // {
+        //     gain_r /= 2.0;
+        //     amp_r.gain(gain_r);
+        //     Serial.printf("Gain R: %f\n", gain_r);
+        // }
     }
 }

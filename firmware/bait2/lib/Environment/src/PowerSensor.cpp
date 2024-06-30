@@ -5,10 +5,13 @@
 #include "logging.h"
 
 #include "PowerSensor.h"
+#include "SensorDefinitions.h"
 #include <SparkFunBQ27441.h>
 
 PowerSensor::PowerSensor(int interval, const char *filepath, LoRaWANTTN *lorawanTTN, int initialCapacity) : Sensor(interval, filepath),
-                                                                                                            initialCapacity(initialCapacity), m_lwTTN(lorawanTTN) {}
+                                                                                                            initialCapacity(initialCapacity), m_lwTTN(lorawanTTN)
+{
+}
 
 void PowerSensor::setup()
 {
@@ -54,13 +57,13 @@ void PowerSensor::record()
     digitalWrite(LED_BUILTIN, HIGH);
 
     // Record LoRaWAN data
-    m_lwTTN->getLPP().addPercentage(1, soc);
-    m_lwTTN->getLPP().addVoltage(2, volts / 1000.0);                 // V
-    m_lwTTN->getLPP().addCurrent(3, current / 1000.0);               // A
-    m_lwTTN->getLPP().addGenericSensor(4, capacity / 1000.0);        // Ah, Remaining Capacity
-    m_lwTTN->getLPP().addPower(5, power / 1000.0);                   // W
-    m_lwTTN->getLPP().addPercentage(6, health);                      // %
-    m_lwTTN->getLPP().addGenericSensor(7, initialCapacity / 1000.0); // Ah, Initial Capacity
+    m_lwTTN->getLPP().addPercentage(STATE_OF_CHARGE, soc);
+    m_lwTTN->getLPP().addVoltage(VOLTAGE, volts / 1000.0);                 // V
+    m_lwTTN->getLPP().addCurrent(CURRENT, current / 1000.0);               // A
+    m_lwTTN->getLPP().addGenericSensor(REMAINING_CAPACITY, capacity);      // mAh, Remaining Capacity
+    m_lwTTN->getLPP().addPower(POWER_CONSUMPTION, power / 1000.0);         // W
+    m_lwTTN->getLPP().addPercentage(BATTERY_HEALTH, health);               // %
+    m_lwTTN->getLPP().addGenericSensor(INITIAL_CAPACITY, initialCapacity); // mAh, Initial Capacity
 
     // Mark that there is data to send
     m_lwTTN->setDirty();

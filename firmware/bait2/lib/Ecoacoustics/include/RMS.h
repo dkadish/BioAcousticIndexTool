@@ -7,11 +7,12 @@
 
 #include <Audio.h>
 #include <OversamplingSensor.h>
+#include "lora.h"
 
 class RootMeanSquare : public OversamplingSensor
 {
 public:
-    RootMeanSquare(AudioAnalyzeRMS &rms, const char *filepath, int interval = 60, int measureInterval = 0, int debugInterval = 1);
+    RootMeanSquare(AudioAnalyzeRMS &rms, const char *filepath, LoRaWANTTN *lorattn, int interval = 60, int measureInterval = 0, int debugInterval = 1);
 
     void setup() override;
 
@@ -22,7 +23,7 @@ public:
     void debug() override;
 
     long getCount() const;
-    void resetCount();
+    void reset();
 
 private:
     float currentRMS() { return m_count > 0 ? m_rms_accumulator / (float)m_count : 0.0; };
@@ -31,6 +32,8 @@ private:
     float m_rms_accumulator = 0.0; // Accumulate RMS values over the oversampling period
     bool m_available = false;
     long m_count = 0;
+
+    LoRaWANTTN *m_lwTTN;
 };
 
 #endif // SBAT_RMS_H

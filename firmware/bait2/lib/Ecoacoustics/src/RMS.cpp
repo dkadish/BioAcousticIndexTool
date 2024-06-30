@@ -4,8 +4,9 @@
 
 #include "logging.h"
 #include "RMS.h"
+#include "SensorDefinitions.h"
 
-RootMeanSquare::RootMeanSquare(AudioAnalyzeRMS &rms, const char *filepath, int interval, int measureInterval, int debugInterval) : OversamplingSensor(interval, measureInterval, debugInterval), m_rms(rms)
+RootMeanSquare::RootMeanSquare(AudioAnalyzeRMS &rms, const char *filepath, LoRaWANTTN *lorattn, int interval, int measureInterval, int debugInterval) : OversamplingSensor(interval, measureInterval, debugInterval), m_rms(rms), m_lwTTN(lorattn)
 {
 }
 
@@ -29,10 +30,19 @@ void RootMeanSquare::sample()
 void RootMeanSquare::record()
 {
 
-    float avg_rms = currentRMS();
+    float avg_rms = currentRMS() * 1000.0;
+    reset();
 
     // Timestamp, RMS
     DEBUG("RMS (for period): %f", avg_rms)
+
+    // Record LoRaWAN data
+    m_lwTTN->getLPP().addAnalogInput(ROOT_MEAN_SQUARE, avg_rms);
+
+    // Mark that there is data to send
+    m_lwTTN->setDirty();
+
+    // Record to SD card
 
     digitalWrite(LED_BUILTIN, HIGH);
 
@@ -50,13 +60,11 @@ void RootMeanSquare::record()
     f.close();
 
     digitalWrite(LED_BUILTIN, LOW);
-
-    resetCount();
 }
 
 void RootMeanSquare::debug()
 {
-    DEBUG("RMS: %f", currentRMS());
+    DEBUG("RMS: Current %f, Accumulated %f, Count %ld", currentRMS(), m_rms_accumulator, m_count);
 }
 
 long RootMeanSquare::getCount() const
@@ -64,7 +72,8 @@ long RootMeanSquare::getCount() const
     return m_count;
 }
 
-void RootMeanSquare::resetCount()
+void RootMeanSquare::reset()
 {
     m_count = 0;
+    m_rms_accumulator = 0.0;
 }

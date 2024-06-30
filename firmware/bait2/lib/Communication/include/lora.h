@@ -6,6 +6,7 @@
 #define BAIT2_LORA_H
 
 #include <CayenneLPP.h>
+#include <Chrono.h>
 
 class LoRaWANTTN
 {
@@ -28,6 +29,7 @@ public:
 private:
   CayenneLPP m_lpp;
   bool m_dirty = false;
+  Chrono m_sendDelay;
 };
 
 #endif // BAIT2_LORA_H

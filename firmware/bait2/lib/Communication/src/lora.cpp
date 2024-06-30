@@ -30,8 +30,8 @@ void LoRaWANTTN::setup()
 
 void LoRaWANTTN::loop()
 {
-  // Code to be executed in loop
-  if (m_dirty)
+  // If there's new data and we have delayed for 1 second, send it.
+  if (m_dirty && m_sendDelay.hasPassed(1000))
   {
     send();
   }
@@ -77,6 +77,9 @@ bool LoRaWANTTN::send()
   // Reset the lpp buffer
   m_lpp.reset();
   m_dirty = false;
+  // Reset and then pause the send delay timer so that it is ready for next time.
+  m_sendDelay.restart();
+  m_sendDelay.stop();
 
   DEBUG("LPP state reset");
 
@@ -86,4 +89,7 @@ bool LoRaWANTTN::send()
 void LoRaWANTTN::setDirty()
 {
   m_dirty = true;
+
+  // Resume the send delay timer if it has stopped.
+  m_sendDelay.resume();
 }
