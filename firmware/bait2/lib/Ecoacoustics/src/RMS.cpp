@@ -17,14 +17,18 @@ void RootMeanSquare::setup()
     Serial.print("Starting RMS...");
 }
 
-void RootMeanSquare::sample()
+bool RootMeanSquare::sample()
 {
     // Don't worry about subsampling rate here. Just sample when available.
     if (m_rms.available())
     {
         m_rms_accumulator += m_rms.read();
         m_count++;
+
+        return true;
     }
+
+    return false;
 }
 
 void RootMeanSquare::record()

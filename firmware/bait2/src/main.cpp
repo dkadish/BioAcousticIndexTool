@@ -6,6 +6,7 @@
 #include "PowerSensor.h"
 // #include "OLEDDisplay.h"
 #include "FFTReader.h"
+#include "BME680.h"
 #include "RMS.h"
 
 #include <Audio.h>
@@ -50,7 +51,8 @@ LoRaWANTTN lora = LoRaWANTTN();
 
 PowerSensor powerSensor = PowerSensor(5L * 60L, "/power.csv", &lora, 4400);
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
-RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, 5L * 60L);
+EnvironmentalSensor envSensor = EnvironmentalSensor("/env.csv", &lora, 5 * 60);
+RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, 5L * 60L, 0, -1);
 
 // OLEDDisplay display = OLEDDisplay();0
 
@@ -107,6 +109,7 @@ void setup()
     powerSensor.setup();
     // display.setup();
     fftReader.setup();
+    envSensor.setup();
     rms.setup();
 
     DEBUG("Setup Complete.")
@@ -118,6 +121,7 @@ void loop()
 {
     powerSensor.loop();
     fftReader.loop();
+    envSensor.loop();
     rms.loop();
 
     // oledLoop();

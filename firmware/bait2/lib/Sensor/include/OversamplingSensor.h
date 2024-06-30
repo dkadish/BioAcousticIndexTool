@@ -13,7 +13,7 @@ public:
     OversamplingSensor(int interval, int measureInterval, int debugInterval = 0);
 
     virtual void loop();
-    virtual void sample() {};
+    virtual bool sample() { return true; };
 
 private:
     Chrono m_measure;

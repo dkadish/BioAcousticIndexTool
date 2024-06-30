@@ -16,7 +16,7 @@ public:
 
     void setup() override;
 
-    void sample() override;
+    bool sample() override;
 
     void record() override;
 

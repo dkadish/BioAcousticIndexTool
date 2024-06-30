@@ -7,3 +7,10 @@
 #define INITIAL_CAPACITY 7
 
 #define ROOT_MEAN_SQUARE 8
+
+#define TEMPERATURE 9
+#define HUMIDITY 10
+#define PRESSURE 11
+#define GAS 12
+
+#define LIGHT 13

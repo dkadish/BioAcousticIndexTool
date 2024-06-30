@@ -2,8 +2,7 @@
   "name": "Environment",
   "keywords": "sensor",
   "description": "Arduino Library for Environmental Sensors",
-  "authors":
-  [
+  "authors": [
     {
       "name": "David Kadish",
       "email": "david@small-things.xyz",
@@ -11,8 +10,12 @@
       "maintainer": true
     }
   ],
-  "dependencies":{
-    "sparkfun/SparkFun BQ27441 LiPo Fuel Gauge Arduino Library": "^1.1.0"
+  "dependencies": {
+    "sparkfun/SparkFun BQ27441 LiPo Fuel Gauge Arduino Library": "^1.1.0",
+    "adafruit/Adafruit BME680 Library": "^2.0.4",
+    "adafruit/Adafruit TSL2591 Library": "^1.4.5",
+    "adafruit/Adafruit BusIO": "^1.16.1",
+    "adafruit/Adafruit Unified Sensor": "^1.1.14"
   },
   "version": "0.1.0",
   "frameworks": "arduino",

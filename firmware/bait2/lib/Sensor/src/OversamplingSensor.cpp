@@ -12,8 +12,11 @@ void OversamplingSensor::loop()
   // Check the main interval and the debug message interval
   Sensor::loop();
 
-  if (m_measure.hasPassed(m_measureInterval * 1000L, true))
+  if (m_measure.hasPassed(m_measureInterval * 1000L, false))
   {
-    sample();
+    if (sample())
+    {
+      m_measure.restart();
+    };
   }
 }
