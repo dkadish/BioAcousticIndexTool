@@ -5,10 +5,14 @@
 #include "lora.h"
 #include "PowerSensor.h"
 // #include "OLEDDisplay.h"
-#include "FFTReader.h"
 #include "BME680.h"
 #include "LightSensor.h"
 #include "RMS.h"
+
+// Spectral Audio
+#include "FFTReader.h"
+#include "ACI_TemporalWindow.h"
+#include "AcousticComplexityIndex.h"
 
 #include <Audio.h>
 #include <SPI.h>
@@ -51,10 +55,15 @@ float gain_l = 32.0; // Seems to be a good default value
 LoRaWANTTN lora = LoRaWANTTN();
 
 PowerSensor powerSensor = PowerSensor(5L * 60L, "/power.csv", &lora, 4400);
-FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
 EnvironmentalSensor envSensor = EnvironmentalSensor("/env.csv", &lora, 5 * 60);
 LightSensor lightSensor = LightSensor("/light.csv", &lora, 5 * 60);
+
 RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, 5L * 60L, 0, -1);
+
+// Spectral Audio
+FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
+ACI_TemporalWindow aci_window = ACI_TemporalWindow(30, fftReader, false, false, 0); // IS THIS RIGHT PARAMETERS?
+AcousticComplexityIndex aci = AcousticComplexityIndex(15L * 60L, aci_window, "/aci.csv", &lora);
 
 // OLEDDisplay display = OLEDDisplay();0
 
@@ -110,10 +119,13 @@ void setup()
     lora.setup();
     powerSensor.setup();
     // display.setup();
-    fftReader.setup();
     envSensor.setup();
     lightSensor.setup();
+
     rms.setup();
+
+    fftReader.setup();
+    aci_window.setup();
 
     DEBUG("Setup Complete.")
 }
@@ -123,10 +135,13 @@ int v = 0;
 void loop()
 {
     powerSensor.loop();
-    fftReader.loop();
     envSensor.loop();
     lightSensor.loop();
+
     rms.loop();
+
+    fftReader.loop();
+    aci_window.loop();
 
     // oledLoop();
 
