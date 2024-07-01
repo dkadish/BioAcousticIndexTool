@@ -13,7 +13,7 @@
   "dependencies": {
     "sparkfun/SparkFun BQ27441 LiPo Fuel Gauge Arduino Library": "^1.1.0",
     "adafruit/Adafruit BME680 Library": "^2.0.4",
-    "adafruit/Adafruit TSL2591 Library": "^1.4.5",
+    "Adafruit_TSL2591_Library": "^1.4.6",
     "adafruit/Adafruit BusIO": "^1.16.1",
     "adafruit/Adafruit Unified Sensor": "^1.1.14"
   },

@@ -13,4 +13,6 @@
 #define PRESSURE 11
 #define GAS 12
 
-#define LIGHT 13
+#define LUMINOSITY 13
+#define INFRARED 14
+#define VISIBLE 15
