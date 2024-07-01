@@ -12,7 +12,7 @@ private:
   LoRaWANTTN *m_lwTTN;
 
   tsl2591Gain_t m_gainMode = TSL2591_GAIN_LOW;
-  tsl2591IntegrationTime_t m_integrationMode = TSL2591_INTEGRATIONTIME_100MS;
+  tsl2591IntegrationTime_t m_integrationMode = TSL2591_INTEGRATIONTIME_200MS; // TSL2591_INTEGRATIONTIME_100MS;
 
   // Accumulators
   float m_luxAccumulator;

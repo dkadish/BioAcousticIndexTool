@@ -23,29 +23,31 @@ void LightSensor::setup()
   m_sampleTimer.stop();
 }
 
+// TODO Should this use microseconds?
 long LightSensor::getMillisFromIntegrationTime(tsl2591IntegrationTime_t integrationTime)
 {
   switch (integrationTime)
   {
   case TSL2591_INTEGRATIONTIME_100MS:
-    return 100L;
+    return 120L;
   case TSL2591_INTEGRATIONTIME_200MS:
-    return 200L;
+    return 240L;
   case TSL2591_INTEGRATIONTIME_300MS:
-    return 300L;
+    return 360L;
   case TSL2591_INTEGRATIONTIME_400MS:
-    return 400L;
+    return 480L;
   case TSL2591_INTEGRATIONTIME_500MS:
-    return 500L;
-  case TSL2591_INTEGRATIONTIME_600MS:
     return 600L;
+  case TSL2591_INTEGRATIONTIME_600MS:
+    return 720L;
   default:
-    return 100L;
+    return 120L;
   }
 }
 
 void LightSensor::startSampling()
 {
+  TRACE("Starting sampling on TSL2591 (%ld)", millis());
   // Start sampling the sensor
   m_tsl.enable();
   m_sampleTimer.restart();
@@ -66,6 +68,8 @@ void LightSensor::readSample()
 
   ir = lum >> 16;
   full = lum & 0xFFFF;
+
+  TRACE("%ld | IR: %d, Full: %d, Dual: %ld", millis(), ir, full, lum);
 
   /* Calculate the actual lux value */
   /* 0 = sensor overflow (too much light) */
