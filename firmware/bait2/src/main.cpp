@@ -48,9 +48,12 @@ AudioControlSGTL5000 sgtl5000; // xy=700,563
 float gain_l = 32.0; // Seems to be a good default value
 // float gain_r = 1.0;
 
+// Parameters
+const int batteryCapacity = 6600; // mAh
+
 LoRaWANTTN lora = LoRaWANTTN();
 
-PowerSensor powerSensor = PowerSensor(5L * 60L, "/power.csv", &lora, 4400);
+PowerSensor powerSensor = PowerSensor(5L * 60L, "/power.csv", &lora, batteryCapacity);
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
 EnvironmentalSensor envSensor = EnvironmentalSensor("/env.csv", &lora, 5 * 60);
 LightSensor lightSensor = LightSensor("/light.csv", &lora, 5 * 60);
