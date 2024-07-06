@@ -5,90 +5,62 @@
 #include <SD.h>
 #include "AcousticComplexityIndex.h"
 #include "parameters.h"
+#include "logging.h"
+#include "SensorDefinitions.h"
 
-AcousticComplexityIndex::AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw) :
-    Sensor(interval), _aci(aci_tw) {
-
+AcousticComplexityIndex::AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, const char *filepath, LoRaWANTTN *lorattn, boolean printWindowCount) : Sensor(interval), _aci(aci_tw), m_lwTTN(lorattn), _printWindowCount(printWindowCount)
+{
 }
 
-AcousticComplexityIndex::AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, boolean printWindowCount) :
-        Sensor(interval), _aci(aci_tw), _printWindowCount(printWindowCount) {
-
-}
-
-void AcousticComplexityIndex::reset() {
+void AcousticComplexityIndex::reset()
+{
     Sensor::reset();
 
     _aci.zero();
 }
 
-void AcousticComplexityIndex::record() {
-    Sensor::record();
+void AcousticComplexityIndex::record()
+{
+    float aci = _aci.getValue();
 
-    Serial.print(year());
-    Serial.print("-");
-    Serial.print(month());
-    Serial.print("-");
-    Serial.print(day());
-    Serial.print(" ");
-    Serial.print(hour());
-    Serial.print(":");
-    if (minute() < 10)
-        Serial.print('0');
-    Serial.print(minute());
-    Serial.print(":");
-    if (second() < 10)
-        Serial.print('0');
-    Serial.print(second());
-    Serial.print(", ");
+    // ACI
+    DEBUG("ACI: %f, Windows count: %d\n", aci, _aci.getCount());
 
-    // ACI/ADI
-    Serial.print(_aci.getValue(), PRECISION);
-    if(_printWindowCount){
-        Serial.print(", ");
-        // Number of windows processed (j)
-        Serial.print(_aci.getCount());
+    // Record LoRaWAN data
+    m_lwTTN->getLPP().addAnalogInput(ACOUSTIC_COMPLEXITY_INDEX, aci);
+
+    // Mark that there is data to send
+    m_lwTTN->setDirty();
+
+    // Record to SD card
+    digitalWrite(LED_BUILTIN, HIGH);
+
+    FsFile f;
+    if (!f.open(getFilePath(), O_WRITE | O_CREAT | O_AT_END)) // O_CREAT | O_APPEND))
+    {
+        DEBUG("Error opening file")
+        digitalWrite(LED_BUILTIN, LOW);
+        return;
     }
-    Serial.println();
+    Sensor::writeTimestamp(&f);
 
-    File dataFile = SD.open("aci.csv", FILE_WRITE);
-    if (dataFile) {
-        // Time
-        dataFile.print(year());
-        dataFile.print("-");
-        dataFile.print(month());
-        dataFile.print("-");
-        dataFile.print(day());
-        dataFile.print(" ");
-        dataFile.print(hour());
-        dataFile.print(":");
-        if (minute() < 10)
-            dataFile.print('0');
-        dataFile.print(minute());
-        dataFile.print(":");
-        if (second() < 10)
-            dataFile.print('0');
-        dataFile.print(second());
-        dataFile.print(", ");
+    int charsWritten = f.printf("%f", aci);
+    f.println();
+    f.close();
 
-        // ACI/ADI
-        dataFile.print(_aci.getValue(), PRECISION);
-        if(_printWindowCount){
-            dataFile.print(", ");
-            // Number of windows processed (j)
-            dataFile.print(_aci.getCount());
-        }
-        dataFile.println();
+    digitalWrite(LED_BUILTIN, LOW);
 
-        dataFile.close();
-    } else {
-        Serial.println("ACI: Can't open file.");
-    }
+    reset();
 }
 
-void AcousticComplexityIndex::process() {
-    Sensor::process();
+void AcousticComplexityIndex::process() {}
 
-    record();
-    reset();
+void AcousticComplexityIndex::debug()
+{
+    Sensor::debug();
+
+    if (_printWindowCount)
+    {
+        DEBUG("ACI: %f, Windows count: %d\n", _aci.getValue(), _aci.getCount());
+    }
 }

@@ -5,15 +5,14 @@
 #ifndef SBAT_ACOUSTICCOMPLEXITYINDEX_H
 #define SBAT_ACOUSTICCOMPLEXITYINDEX_H
 
-
 #include "Sensor.h"
 #include "ACI_TemporalWindow.h"
+#include "lora.h"
 
-class AcousticComplexityIndex : public Sensor {
+class AcousticComplexityIndex : public Sensor
+{
 public:
-
-    AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw);
-    AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, boolean printWindowCount);
+    AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, const char *filepath, LoRaWANTTN *lorattn, boolean printWindowCount = false);
 
     void reset() override;
 
@@ -21,12 +20,14 @@ public:
 
     void process() override;
 
+    void debug() override;
+
 private:
+    ACI_TemporalWindow &_aci;
 
-    ACI_TemporalWindow & _aci;
+    boolean _printWindowCount;
 
-    boolean _printWindowCount= false;
+    LoRaWANTTN *m_lwTTN;
 };
 
-
-#endif //SBAT_ACOUSTICCOMPLEXITYINDEX_H
+#endif // SBAT_ACOUSTICCOMPLEXITYINDEX_H
