@@ -23,7 +23,6 @@
 #include <SD.h>
 #include <SerialFlash.h>
 
-// NOTE: MK1 seems to be much more sensitiv and stable than mk2. That is the one the is LEFT in the code
 //  GUItool: begin automatically generated code
 AudioInputI2S i2s;           // xy=139,174
 AudioAmplifier amp_l;        // xy=292,156
@@ -49,7 +48,7 @@ AudioConnection patchCord11(amp_l, 0, usb, 1);
 AudioControlSGTL5000 sgtl5000; // xy=700,563
 // GUItool: end automatically generated code
 
-float gain_l = 32.0; // Seems to be a good default value
+float gain_l = 36.0; // Seems to be a good default value
 // float gain_r = 1.0;
 
 // Parameters
