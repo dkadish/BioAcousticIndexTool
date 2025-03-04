@@ -1,12 +1,19 @@
-//
-// Created by David Kadish on 25/07/2024.
-//
+/*
+ * This file contains the implementation of the RootMeanSquare class, which is responsible for
+ * calculating the root mean square (RMS) value of audio signals. The class interfaces with
+ * an AudioAnalyzeRMS object to read RMS values and records the data to an SD card and a LoRaWAN
+ * network. The class also provides debugging information and handles the setup and reset of the
+ * RMS calculations.
+ *
+ * Created by David Kadish on 25/07/2024.
+ */
 
 #include "logging.h"
 #include "RMS.h"
 #include "SensorDefinitions.h"
 
-RootMeanSquare::RootMeanSquare(AudioAnalyzeRMS &rms, const char *filepath, LoRaWANTTN *lorattn, int interval, int measureInterval, int debugInterval) : OversamplingSensor(interval, measureInterval, debugInterval), m_rms(rms), m_lwTTN(lorattn)
+RootMeanSquare::RootMeanSquare(AudioAnalyzeRMS &rms, const char *filepath, LoRaWANTTN *lorattn, int interval, int measureInterval, int debugInterval)
+    : OversamplingSensor(interval, measureInterval, debugInterval), m_rms(rms), m_lwTTN(lorattn)
 {
 }
 
@@ -14,7 +21,7 @@ void RootMeanSquare::setup()
 {
     Sensor::setup();
 
-    Serial.print("Starting RMS...");
+    DEBUG("Starting RMS...")
 }
 
 bool RootMeanSquare::sample()
@@ -34,7 +41,7 @@ bool RootMeanSquare::sample()
 void RootMeanSquare::record()
 {
 
-    float avg_rms = currentRMS() * 1000.0;
+    float avg_rms = currentRMS();
     reset();
 
     // Timestamp, RMS
@@ -59,7 +66,7 @@ void RootMeanSquare::record()
     }
     Sensor::writeTimestamp(&f);
 
-    int charsWritten = f.printf("%f", avg_rms);
+    int charsWritten = f.printf("%d", (int)avg_rms);
     f.println();
     f.close();
 
@@ -68,7 +75,8 @@ void RootMeanSquare::record()
 
 void RootMeanSquare::debug()
 {
-    DEBUG("RMS: Current %f, Accumulated %f, Count %ld", currentRMS(), m_rms_accumulator, m_count);
+    float avg_rms = currentRMS();
+    DEBUG("RMS: Current %f, Accumulated %f, Count %ld", avg_rms, m_rms_accumulator, m_count);
 }
 
 long RootMeanSquare::getCount() const

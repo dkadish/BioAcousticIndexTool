@@ -120,10 +120,15 @@ void LightSensor::record()
     float ir = currentIR();           // Raw
     float visible = currentVisible(); // Raw
 
+    DEBUG("Lux for period %f", lux);
+
     // Send data over LoRaWAN
     m_lwTTN->getLPP().addLuminosity(LUMINOSITY, lux);
     m_lwTTN->getLPP().addAnalogInput(INFRARED, ir);
     m_lwTTN->getLPP().addAnalogInput(VISIBLE, visible);
+
+    // Mark that there is data to send
+    m_lwTTN->setDirty();
   }
   else
   {

@@ -60,7 +60,7 @@ PowerSensor powerSensor = PowerSensor(5L * 60L, "/power.csv", &lora, batteryCapa
 EnvironmentalSensor envSensor = EnvironmentalSensor("/env.csv", &lora, 5 * 60);
 LightSensor lightSensor = LightSensor("/light.csv", &lora, 5 * 60);
 
-RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, 5L * 60L, 0, -1);
+RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, 5 * 60);
 
 // Spectral Audio
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
@@ -71,7 +71,7 @@ AcousticComplexityIndex aci = AcousticComplexityIndex(15L * 60L, aci_window, "/a
 
 void audioSetup()
 {
-    AudioMemory(20);
+    AudioMemory(200);
     sgtl5000.enable();
     sgtl5000.volume(0.5);
 

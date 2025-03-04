@@ -9,37 +9,48 @@
 
 /* Debug messages */
 #ifndef VERBOSITY
-    #define VERBOSITY 4
+#define VERBOSITY 4
 #endif
 
 #if VERBOSITY >= 1
-#define ERROR(msg, ...) Serial.printf(msg, ##__VA_ARGS__); Serial.println();
+#define ERROR(msg, ...)                \
+    Serial.printf(msg, ##__VA_ARGS__); \
+    Serial.println();
 #else
 #define ERROR(...)
 #endif
 
 #if VERBOSITY >= 2
-#define WARNING(msg, ...) Serial.printf(msg, ##__VA_ARGS__); Serial.println();
+#define WARNING(msg, ...)              \
+    Serial.printf(msg, ##__VA_ARGS__); \
+    Serial.println();
 #else
 #define WARNING(...)
 #endif
 
 #if VERBOSITY >= 3
-#define INFO(msg, ...) Serial.printf(msg, ##__VA_ARGS__); Serial.println();
+#define INFO(msg, ...)                 \
+    Serial.printf(msg, ##__VA_ARGS__); \
+    Serial.println();
 #else
 #define INFO(...)
 #endif
 
 #if VERBOSITY >= 4
-#define DEBUG(msg, ...) Serial.printf(msg, ##__VA_ARGS__); Serial.println();
+#define DEBUG(msg, ...)                  \
+    Serial.printf("(%ld) > ", millis()); \
+    Serial.printf(msg, ##__VA_ARGS__);   \
+    Serial.println();
 #else
 #define DEBUG(...)
 #endif
 
 #if VERBOSITY >= 5
-#define TRACE(msg, ...) Serial.printf(msg, ##__VA_ARGS__); Serial.println();
+#define TRACE(msg, ...)                \
+    Serial.printf(msg, ##__VA_ARGS__); \
+    Serial.println();
 #else
 #define TRACE(...)
 #endif
 
-#endif //BAIT2_LOGGING_H
+#endif // BAIT2_LOGGING_H

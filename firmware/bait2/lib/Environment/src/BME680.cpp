@@ -66,6 +66,9 @@ void EnvironmentalSensor::record()
     m_lwTTN->getLPP().addRelativeHumidity(HUMIDITY, humidity);
     m_lwTTN->getLPP().addBarometricPressure(PRESSURE, pressure);
     m_lwTTN->getLPP().addAnalogInput(GAS, gas);
+
+    // Mark that there is data to send
+    m_lwTTN->setDirty();
   }
   else
   {

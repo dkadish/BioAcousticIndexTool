@@ -12,7 +12,7 @@
 class RootMeanSquare : public OversamplingSensor
 {
 public:
-    RootMeanSquare(AudioAnalyzeRMS &rms, const char *filepath, LoRaWANTTN *lorattn, int interval = 60, int measureInterval = 0, int debugInterval = 1);
+    RootMeanSquare(AudioAnalyzeRMS &rms, const char *filepath, LoRaWANTTN *lorattn, int interval = 60, int measureInterval = 0, int debugInterval = 30);
 
     void setup() override;
 

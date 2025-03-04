@@ -30,16 +30,21 @@ void LoRaWANTTN::setup()
 
 void LoRaWANTTN::loop()
 {
-  // If there's new data and we have delayed for 1 second, send it.
-  if (m_dirty && m_sendDelay.hasPassed(1000))
+  // If there's new data   and we have delayed for 1 second, send it.
+  if (m_dirty && m_sendDelay.hasPassed(m_sendDelayMillis))
   {
     send();
   }
 
-  if (Serial1.available())
+  /*TODO
+   * The other way of doing this is to have a queue where data are added and then sent when there is
+   * free bandwidth.
+   */
+
+  /*if (Serial1.available())
   {                               // If anything comes in Serial1 (pins 0 & 1)
     Serial.write(Serial1.read()); // read it and send it out Serial (USB)
-  }
+  }*/
 }
 
 // bool LoRaWANTTN::registerSensor()
@@ -53,12 +58,12 @@ bool LoRaWANTTN::send()
 {
   // TODO: Use the +CMSGHEX function and wait for ACK to ensure data has been sent.
 
-  Serial.print("AT+CMSGHEX=\"");
+  /*Serial.print("AT+CMSGHEX=\"");
   for (int i = 0; i < m_lpp.getSize(); i++)
   {
     Serial.printf("%02X", m_lpp.getBuffer()[i]);
   }
-  Serial.println("\"");
+  Serial.println("\"");*/
 
   DEBUG("Sending data to TTN");
 
@@ -90,6 +95,8 @@ void LoRaWANTTN::setDirty()
 {
   m_dirty = true;
 
+  // Reset the timer on new data
+  m_sendDelay.restart();
   // Resume the send delay timer if it has stopped.
   m_sendDelay.resume();
 }
