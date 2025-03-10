@@ -66,28 +66,26 @@ void LightSensor::readSample()
 
   m_tsl.disable();
 
+#ifdef USE_RAW_LIGHT
   ir = lum >> 16;
   full = lum & 0xFFFF;
 
   TRACE("%ld | IR: %d, Full: %d, Dual: %ld", millis(), ir, full, lum);
+#else
+  TRACE("%ld | LUX: %ld", millis(), lum);
+
+#endif
 
   /* Calculate the actual lux value */
   /* 0 = sensor overflow (too much light) */
   float light = m_tsl.calculateLux(full, ir);
 
-  // if (light > 0.0)
-  // { // Only record if there is light
   m_luxAccumulator += light;
+#ifdef USE_RAW_LIGHT
   m_irAccumulator += (uint32_t)ir;
   m_visibleAccumulator += (uint32_t)full;
+#endif
   m_count++;
-  //   return true;
-  // }
-  // else
-  // {
-  //   // TODO: Autorange
-  //   return false;
-  // }
 }
 
 /* The Adafruit library is blocking. In order to sample the sensor without blocking the main loop,
@@ -116,16 +114,20 @@ void LightSensor::record()
   // Record the sampled data to a file or and send over LoRaWAN
   if (m_count > 0)
   {
-    float lux = currentLux();         // Lux
+    float lux = currentLux(); // Lux
+#ifdef USE_RAW_LIGHT
     float ir = currentIR();           // Raw
     float visible = currentVisible(); // Raw
+#endif
 
     DEBUG("Lux for period %f", lux);
 
     // Send data over LoRaWAN
     m_lwTTN->getLPP().addLuminosity(LUMINOSITY, lux);
+#ifdef USE_RAW_LIGHT
     m_lwTTN->getLPP().addAnalogInput(INFRARED, ir);
     m_lwTTN->getLPP().addAnalogInput(VISIBLE, visible);
+#endif
 
     // Mark that there is data to send
     m_lwTTN->setDirty();
@@ -139,14 +141,20 @@ void LightSensor::record()
 void LightSensor::debug()
 {
   // Output debug information to the console or debug interface
+#ifdef USE_RAW_LIGHT
   DEBUG("LUX: %f lm, IR %f, Visible: %f. Count: %ld", currentLux(), currentIR(), currentVisible(), m_count);
+#else
+  DEBUG("LUX: %f. Count: %ld", currentLux(), m_count);
+#endif
 }
 
 void LightSensor::reset()
 {
   // Reset the accumulators and count
   m_luxAccumulator = 0.0;
+#ifdef USE_RAW_LIGHT
   m_irAccumulator = 0L;
   m_visibleAccumulator = 0L;
+#endif
   m_count = 0;
 }

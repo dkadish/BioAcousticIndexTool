@@ -16,16 +16,20 @@ private:
 
   // Accumulators
   float m_luxAccumulator;
+#ifdef USE_RAW_LIGHT
   uint32_t m_irAccumulator;
   uint32_t m_visibleAccumulator;
+#endif
   long m_count = 0;
 
   Chrono m_sampleTimer;
 
   // Functions
   float currentLux() { return m_count > 0 ? m_luxAccumulator / (float)m_count : 0.0; };
+#ifdef USE_RAW_LIGHT
   float currentIR() { return m_count > 0 ? (float)m_irAccumulator / (float)m_count : 0.0; };
   float currentVisible() { return m_count > 0 ? (float)m_visibleAccumulator / (float)m_count : 0.0; };
+#endif
 
   // Sampling functions
   void startSampling();
