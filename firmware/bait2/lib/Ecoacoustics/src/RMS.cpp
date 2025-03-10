@@ -41,7 +41,7 @@ bool RootMeanSquare::sample()
 void RootMeanSquare::record()
 {
 
-    float avg_rms = currentRMS();
+    float avg_rms = currentRMS() * 100;
     reset();
 
     // Timestamp, RMS
@@ -75,7 +75,7 @@ void RootMeanSquare::record()
 
 void RootMeanSquare::debug()
 {
-    float avg_rms = currentRMS();
+    float avg_rms = currentRMS() * 100;
     DEBUG("RMS: Current %f, Accumulated %f, Count %ld", avg_rms, m_rms_accumulator, m_count);
 }
 
