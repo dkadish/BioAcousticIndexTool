@@ -8,7 +8,7 @@
 #include "logging.h"
 #include "SensorDefinitions.h"
 
-AcousticComplexityIndex::AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, const char *filepath, LoRaWANTTN *lorattn, boolean printWindowCount) : Sensor(interval), _aci(aci_tw), m_lwTTN(lorattn), _printWindowCount(printWindowCount)
+AcousticComplexityIndex::AcousticComplexityIndex(ACI_TemporalWindow &aci_tw, const char *filepath, LoRaWANTTN *lorattn, int interval, int debugInterval = 30) : Sensor(interval, debugInterval), _aci(aci_tw), m_lwTTN(lorattn)
 {
 }
 
@@ -59,8 +59,5 @@ void AcousticComplexityIndex::debug()
 {
     Sensor::debug();
 
-    if (_printWindowCount)
-    {
-        DEBUG("ACI: %f, Windows count: %d\n", _aci.getValue(), _aci.getCount());
-    }
+    DEBUG("ACI: %f, Windows count: %d", _aci.getValue(), _aci.getCount());
 }

@@ -12,7 +12,7 @@
 class AcousticComplexityIndex : public Sensor
 {
 public:
-    AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, const char *filepath, LoRaWANTTN *lorattn, boolean printWindowCount = false);
+    AcousticComplexityIndex(ACI_TemporalWindow &aci_tw, const char *filepath, LoRaWANTTN *lorattn, int interval, int debugInterval = 30);
 
     void reset() override;
 
@@ -24,8 +24,6 @@ public:
 
 private:
     ACI_TemporalWindow &_aci;
-
-    boolean _printWindowCount;
 
     LoRaWANTTN *m_lwTTN;
 };

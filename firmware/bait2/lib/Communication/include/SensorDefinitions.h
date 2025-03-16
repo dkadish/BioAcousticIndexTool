@@ -14,7 +14,7 @@
 #define GAS 12
 
 #define LUMINOSITY 13
-#define INFRARED 14
-#define VISIBLE 15
+#define INFRARED 14 // Deprecated
+#define VISIBLE 15  // Deprecated
 
 #define ACOUSTIC_COMPLEXITY_INDEX 16

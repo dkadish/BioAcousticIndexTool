@@ -1,6 +1,8 @@
 #ifndef LIGHTSENSOR_H
 #define LIGHTSENSOR_H
 
+#define USE_RAW_LIGHT
+
 #include "OversamplingSensor.h"
 #include "lora.h"
 #include <Adafruit_TSL2591.h>
@@ -12,7 +14,7 @@ private:
   LoRaWANTTN *m_lwTTN;
 
   tsl2591Gain_t m_gainMode = TSL2591_GAIN_LOW;
-  tsl2591IntegrationTime_t m_integrationMode = TSL2591_INTEGRATIONTIME_200MS; // TSL2591_INTEGRATIONTIME_100MS;
+  tsl2591IntegrationTime_t m_integrationMode = TSL2591_INTEGRATIONTIME_100MS;
 
   // Accumulators
   float m_luxAccumulator;

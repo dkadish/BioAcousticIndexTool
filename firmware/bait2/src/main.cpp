@@ -65,7 +65,7 @@ RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, 5 * 60);
 // Spectral Audio
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
 ACI_TemporalWindow aci_window = ACI_TemporalWindow(30, fftReader, false, false, 0); // IS THIS RIGHT PARAMETERS?
-AcousticComplexityIndex aci = AcousticComplexityIndex(15L * 60L, aci_window, "/aci.csv", &lora);
+AcousticComplexityIndex aci = AcousticComplexityIndex(aci_window, "/aci.csv", &lora, 5 * 60, 60);
 
 // OLEDDisplay display = OLEDDisplay();0
 
@@ -128,6 +128,7 @@ void setup()
 
     fftReader.setup();
     aci_window.setup();
+    aci.setup();
 
     DEBUG("Setup Complete.")
 }
@@ -144,6 +145,7 @@ void loop()
 
     fftReader.loop();
     aci_window.loop();
+    aci.loop();
 
     // oledLoop();
 

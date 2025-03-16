@@ -83,7 +83,7 @@ void LightSensor::readSample()
   m_luxAccumulator += light;
 #ifdef USE_RAW_LIGHT
   m_irAccumulator += (uint32_t)ir;
-  m_visibleAccumulator += (uint32_t)full;
+  m_visibleAccumulator += (uint32_t)(full - ir);
 #endif
   m_count++;
 }
