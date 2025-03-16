@@ -11,7 +11,7 @@
 class PowerSensor : public Sensor
 {
 public:
-    PowerSensor(int interval, const char *filepath, LoRaWANTTN *lorattn, int initialCapacity);
+    PowerSensor(const char *filepath, LoRaWANTTN *lorattn, int interval, int initialCapacity);
 
     void setup() override;
 

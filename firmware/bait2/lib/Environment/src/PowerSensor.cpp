@@ -8,7 +8,7 @@
 #include "SensorDefinitions.h"
 #include <SparkFunBQ27441.h>
 
-PowerSensor::PowerSensor(int interval, const char *filepath, LoRaWANTTN *lorawanTTN, int initialCapacity) : Sensor(interval, filepath),
+PowerSensor::PowerSensor(const char *filepath, LoRaWANTTN *lorawanTTN, int interval, int initialCapacity) : Sensor(interval, filepath),
                                                                                                             initialCapacity(initialCapacity), m_lwTTN(lorawanTTN)
 {
 }

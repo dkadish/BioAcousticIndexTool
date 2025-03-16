@@ -22,6 +22,7 @@ void AcousticComplexityIndex::reset()
 void AcousticComplexityIndex::record()
 {
     float aci = _aci.getValue();
+    reset();
 
     // ACI
     DEBUG("ACI: %f, Windows count: %d\n", aci, _aci.getCount());
@@ -49,8 +50,6 @@ void AcousticComplexityIndex::record()
     f.close();
 
     digitalWrite(LED_BUILTIN, LOW);
-
-    reset();
 }
 
 void AcousticComplexityIndex::process() {}

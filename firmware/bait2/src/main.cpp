@@ -53,19 +53,20 @@ float gain_l = 36.0; // Seems to be a good default value
 
 // Parameters
 const int batteryCapacity = 6600; // mAh
+const int interval = 5 * 60;      // 5 minutes, in seconds
 
 LoRaWANTTN lora = LoRaWANTTN();
 
-PowerSensor powerSensor = PowerSensor(5L * 60L, "/power.csv", &lora, batteryCapacity);
-EnvironmentalSensor envSensor = EnvironmentalSensor("/env.csv", &lora, 5 * 60);
-LightSensor lightSensor = LightSensor("/light.csv", &lora, 5 * 60);
+PowerSensor powerSensor = PowerSensor("/power.csv", &lora, interval, batteryCapacity);
+EnvironmentalSensor envSensor = EnvironmentalSensor("/env.csv", &lora, interval);
+LightSensor lightSensor = LightSensor("/light.csv", &lora, interval);
 
-RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, 5 * 60);
+RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, interval);
 
 // Spectral Audio
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
-ACI_TemporalWindow aci_window = ACI_TemporalWindow(30, fftReader, false, false, 0); // IS THIS RIGHT PARAMETERS?
-AcousticComplexityIndex aci = AcousticComplexityIndex(aci_window, "/aci.csv", &lora, 5 * 60, 60);
+ACI_TemporalWindow aci_window = ACI_TemporalWindow(5, fftReader, false, false, 0); // IS THIS RIGHT PARAMETERS?
+AcousticComplexityIndex aci = AcousticComplexityIndex(aci_window, "/aci.csv", &lora, interval, 60);
 
 // OLEDDisplay display = OLEDDisplay();0
 
