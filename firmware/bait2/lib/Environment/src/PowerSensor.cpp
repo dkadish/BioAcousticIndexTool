@@ -61,7 +61,7 @@ void PowerSensor::record()
     m_lwTTN->getLPP().addVoltage(VOLTAGE, volts / 1000.0);                 // V
     m_lwTTN->getLPP().addCurrent(CURRENT, current / 1000.0);               // A
     m_lwTTN->getLPP().addGenericSensor(REMAINING_CAPACITY, capacity);      // mAh, Remaining Capacity
-    m_lwTTN->getLPP().addPower(POWER_CONSUMPTION, power / 1000.0);         // W
+    m_lwTTN->getLPP().addGenericSensor(POWER_CONSUMPTION, power);          // mW (spec says Watts, but as a uint32_t)
     m_lwTTN->getLPP().addPercentage(BATTERY_HEALTH, health);               // %
     m_lwTTN->getLPP().addGenericSensor(INITIAL_CAPACITY, initialCapacity); // mAh, Initial Capacity
 
