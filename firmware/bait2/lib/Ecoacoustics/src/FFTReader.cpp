@@ -56,9 +56,9 @@ void FFTReader::setup()
 {
     Sensor::setup();
 
-    Serial.print("Starting FFT with ");
-    Serial.print(_avg_together);
-    Serial.println(" values averaged together.");
+    // Serial.print("Starting FFT with ");
+    // Serial.print(_avg_together);
+    // Serial.println(" values averaged together.");
     _fft.averageTogether(_avg_together);
     _fft.windowFunction(AudioWindowHamming256);
 

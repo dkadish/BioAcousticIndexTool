@@ -17,11 +17,13 @@
 #include <Audio.h>
 #include <SPI.h>
 /****************** AUDIO */
-#include <Audio.h>
 #include <Wire.h>
-#include <SPI.h>
 #include <SD.h>
 #include <SerialFlash.h>
+
+#ifndef INTERVAL_SECONDS
+#define INTERVAL_SECONDS 5 * 60
+#endif
 
 //  GUItool: begin automatically generated code
 AudioInputI2S i2s;           // xy=139,174
@@ -52,8 +54,8 @@ float gain_l = 36.0; // Seems to be a good default value
 // float gain_r = 1.0;
 
 // Parameters
-const int batteryCapacity = 6600; // mAh
-const int interval = 5 * 60;      // 5 minutes, in seconds
+const int batteryCapacity = 10400;     // mAh
+const int interval = INTERVAL_SECONDS; // 5 minutes, in seconds
 
 LoRaWANTTN lora = LoRaWANTTN();
 

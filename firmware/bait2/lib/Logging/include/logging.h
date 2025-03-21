@@ -8,9 +8,7 @@
 #define BAIT2_LOGGING_H
 
 /* Debug messages */
-#ifndef VERBOSITY
-#define VERBOSITY 4
-#endif
+#define VERBOSITY 0
 
 #if VERBOSITY >= 1
 #define ERROR(msg, ...)                \

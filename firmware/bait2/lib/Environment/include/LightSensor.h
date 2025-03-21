@@ -6,12 +6,11 @@
 #include "OversamplingSensor.h"
 #include "lora.h"
 #include <Adafruit_TSL2591.h>
-
 class LightSensor : public OversamplingSensor
 {
 private:
-  Adafruit_TSL2591 m_tsl; // LightSensor sensor for light
   LoRaWANTTN *m_lwTTN;
+  Adafruit_TSL2591 m_tsl; // LightSensor sensor for light
 
   tsl2591Gain_t m_gainMode = TSL2591_GAIN_LOW;
   tsl2591IntegrationTime_t m_integrationMode = TSL2591_INTEGRATIONTIME_100MS;

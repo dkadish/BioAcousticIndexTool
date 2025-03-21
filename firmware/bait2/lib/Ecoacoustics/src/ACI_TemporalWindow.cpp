@@ -90,7 +90,7 @@ void ACI_TemporalWindow::process()
     //     }
 
 #ifdef ACI_TW_LOG_VALUES
-    Serial.println("Saving ACI_TW Value.");
+    DEBUG("Saving ACI_TW Value.");
     AudioNoInterrupts();
     File dataFile = SD.open("aci_tw.csv", FILE_WRITE | O_APPEND);
     if (dataFile)
@@ -102,7 +102,7 @@ void ACI_TemporalWindow::process()
     }
     else
     {
-        Serial.println("ACI_TW: Can't open file.");
+        DEBUG("ACI_TW: Can't open file.");
     }
     AudioInterrupts();
 #endif
