@@ -2,13 +2,13 @@
 // Created by David Kadish on 14/11/2018.
 //
 
-#ifndef SBAT_SENSOR_H
-#define SBAT_SENSOR_H
+#ifndef BAIT_SENSOR_H
+#define BAIT_SENSOR_H
 
 #include <TimeLib.h>
 #include <Metro.h>
 
-/** Base class for a sensor operating in the SBAT system.
+/** Base class for a sensor operating in the BAIT system.
  *
  */
 class Sensor {
@@ -19,18 +19,24 @@ public:
      */
     Sensor(int interval);
 
-    virtual void setup(){ metro.interval(_interval*1000L); metro.reset(); };
-    virtual void loop(){ if(metro.check()) process(); };
+    virtual void setup() {
+        metro.interval(_interval * 1000L);
+        metro.reset();
+    };
 
-    virtual void start(){ metro.reset(); };
-    virtual void reset(){ metro.reset(); };
+    virtual void loop() { if (metro.check()) process(); };
 
-    virtual void process(){};
-    virtual void record(){};
+    virtual void start() { metro.reset(); };
 
-    int getInterval(){ return _interval; }
+    virtual void reset() { metro.reset(); };
 
-    virtual int firstMeasurement(){
+    virtual void process() {};
+
+    virtual void record() {};
+
+    int getInterval() { return _interval; }
+
+    virtual int firstMeasurement() {
         return Sensor::timeToFirstMeasurement(_interval);
     }
 
@@ -38,9 +44,11 @@ public:
         return m_interval - (now() % m_interval);
     }
 
-    void enablePrint(){ _print=true; };
-    void disablePrint(){ _print=false; };
-    bool getPrint(){ return _print; };
+    void enablePrint() { _print = true; };
+
+    void disablePrint() { _print = false; };
+
+    bool getPrint() { return _print; };
 
 //    bool ready(){ return metro.check(); }
 
@@ -53,4 +61,4 @@ private:
 };
 
 
-#endif //SBAT_SENSOR_H
+#endif //BAIT_SENSOR_H

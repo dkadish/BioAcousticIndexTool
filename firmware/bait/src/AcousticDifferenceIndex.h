@@ -2,8 +2,8 @@
 // Created by David Kadish on 15/11/2018.
 //
 
-#ifndef SBAT_ACOUSTICDIFFERENCEINDEX_H
-#define SBAT_ACOUSTICDIFFERENCEINDEX_H
+#ifndef BAIT_ACOUSTICDIFFERENCEINDEX_H
+#define BAIT_ACOUSTICDIFFERENCEINDEX_H
 
 
 #include "Sensor.h"
@@ -24,7 +24,7 @@ public:
     void record() override;
 
 private:
-    FFTReader & _fft;
+    FFTReader &_fft;
 
     float diff_freq[FFTReader::length];
     float diff_cumfreq[FFTReader::length];
@@ -32,4 +32,4 @@ private:
 };
 
 
-#endif //SBAT_ACOUSTICDIFFERENCEINDEX_H
+#endif //BAIT_ACOUSTICDIFFERENCEINDEX_H

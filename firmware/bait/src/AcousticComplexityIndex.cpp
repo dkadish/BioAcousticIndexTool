@@ -7,7 +7,7 @@
 #include "parameters.h"
 
 AcousticComplexityIndex::AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw) :
-    Sensor(interval), _aci(aci_tw) {
+        Sensor(interval), _aci(aci_tw) {
 
 }
 
@@ -44,7 +44,7 @@ void AcousticComplexityIndex::record() {
 
     // ACI/ADI
     Serial.print(_aci.getValue(), PRECISION);
-    if(_printWindowCount){
+    if (_printWindowCount) {
         Serial.print(", ");
         // Number of windows processed (j)
         Serial.print(_aci.getCount());
@@ -73,7 +73,7 @@ void AcousticComplexityIndex::record() {
 
         // ACI/ADI
         dataFile.print(_aci.getValue(), PRECISION);
-        if(_printWindowCount){
+        if (_printWindowCount) {
             dataFile.print(", ");
             // Number of windows processed (j)
             dataFile.print(_aci.getCount());

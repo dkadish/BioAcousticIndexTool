@@ -12,7 +12,7 @@
 
 #include <Wire.h>
 #include <SPI.h>
-#include "sbat_audio.h"
+#include "bait_audio.h"
 #include "sdcard.h"
 #include <SerialFlash.h>
 
@@ -34,7 +34,9 @@ long environmentSensingInterval = 5L * 60L; // in seconds
 long aciSubwindowInterval = 30L;
 long soundSensingInterval = 15L * 60L;
 
+#ifndef ARDUINO_TEENSY_MICROMOD
 BatteryVoltageSensor batt = BatteryVoltageSensor(environmentSensingInterval, A17);
+#endif
 
 const int averageTogether = 1; // Don't average FFT values
 FFTReader fft = FFTReader(aa_fft, averageTogether);
@@ -44,21 +46,25 @@ ACI_TemporalWindow aci_tw = ACI_TemporalWindow(aciSubwindowInterval, fft);
 AcousticComplexityIndex aci = AcousticComplexityIndex(soundSensingInterval, aci_tw);
 AcousticDiversityIndex adi = AcousticDiversityIndex(soundSensingInterval, fft);
 AcousticDifferenceIndex diff = AcousticDifferenceIndex(soundSensingInterval, fft);
-Metro sleepTimer(soundSensingInterval*1000L+1L);
+Metro sleepTimer(soundSensingInterval * 1000L + 1L);
 
 AtmosphericSensors atm = AtmosphericSensors(environmentSensingInterval);
 
-time_t getTeensy3Time()
-{
+time_t getTeensy3Time() {
     return Teensy3Clock.get();
 }
+
 void time_loop();
+
 unsigned long processSyncMessage();
 
 void setup_lowpower();
-void loop_lowpower();
-LowPowerBatteryWake lowPowerBatteryWake = LowPowerBatteryWake(A17, setup_lowpower, loop_lowpower);
 
+void loop_lowpower();
+
+#ifndef ARDUINO_TEENSY_MICROMOD
+LowPowerBatteryWake lowPowerBatteryWake = LowPowerBatteryWake(A17, setup_lowpower, loop_lowpower);
+#endif
 
 void setup() {
     delay(2000);
@@ -66,7 +72,7 @@ void setup() {
     Wire.begin();
     delay(2000);
     setSyncProvider(getTeensy3Time);
-    setSyncInterval(60*60); // Sync with the RTC every hour
+    setSyncInterval(60 * 60); // Sync with the RTC every hour
 
     Serial.begin(9600);
     delay(2000);
@@ -74,9 +80,11 @@ void setup() {
     sd_setup();
     audio_setup();
 
+#ifndef ARDUINO_TEENSY_MICROMOD
     batt.setVoltageDividers(22e3, 22e3);
     batt.setup();
     batt.loop();
+#endif
 
     fft.setup();
 
@@ -107,6 +115,7 @@ void setup() {
         Serial.print('0');
     Serial.println(second());
 
+#ifndef ARDUINO_TEENSY_MICROMOD
     lowPowerBatteryWake.setThresholds(3.7, 3.9);
     lowPowerBatteryWake.setVoltageDividers(22e3, 22e3);
     lowPowerBatteryWake.setSleepTime(0,5,0);
@@ -116,19 +125,23 @@ void setup() {
 
     // Testing
 //    lowPowerBatteryWake.inhibitSleep();
+#endif
 
     sleepTimer.reset();
 }
 
 void loop() {
+
+#ifndef ARDUINO_TEENSY_MICROMOD
     lowPowerBatteryWake.loop();
 
     batt.loop();
+#endif
     atm.loop();
 
     // FFT dependent loops
     fft.loop();
-    if(fft.available()) {
+    if (fft.available()) {
         aci_tw.loop();
         aci.loop();
         adi.loop();
@@ -144,10 +157,12 @@ void loop() {
     // Testing
 //    lowPowerBatteryWake.inhibitSleep();
 
-    if(sleepTimer.check()){
+    if (sleepTimer.check()) {
         Serial.println("Sleeping for 3...");
         delay(100);
+#ifndef ARDUINO_TEENSY_MICROMOD
         lowPowerBatteryWake.sleepFor(3);
+#endif
         sleepTimer.reset();
     }
 
@@ -157,9 +172,11 @@ void loop() {
 /**
  * Wake back up from low power sleep
  */
-void setup_lowpower(){
+void setup_lowpower() {
     // Reset all of the sensors/metronomes
+#ifndef ARDUINO_TEENSY_MICROMOD
     batt.reset();
+#endif
     atm.reset();
 
     aci_tw.reset();
@@ -168,20 +185,24 @@ void setup_lowpower(){
     diff.reset();
 }
 
-void loop_lowpower(){
+void loop_lowpower() {
     // Loop to get averaged measurements
-    for(int i=0; i < 10; i++){
+    for (int i = 0; i < 10; i++) {
+#ifndef ARDUINO_TEENSY_MICROMOD
         batt.loop();
+#endif
         atm.loop();
         delay(10);
     }
 
     // Process and write values
+#ifndef ARDUINO_TEENSY_MICROMOD
     batt.process();
+#endif
     atm.process();
 }
 
-void time_loop(){
+void time_loop() {
     if (Serial.available()) {
         time_t t = processSyncMessage();
         if (t != 0) {
@@ -199,18 +220,18 @@ unsigned long processSyncMessage() {
     unsigned long pctime = 0L;
     const unsigned long DEFAULT_TIME = 1357041600; // Jan 1 2013
 
-    if(Serial.find(TIME_HEADER)) {
+    if (Serial.find(TIME_HEADER)) {
         pctime = Serial.parseInt();
-        pctime += TZ_ADJ*60*60;
+        pctime += TZ_ADJ * 60 * 60;
         return pctime;
-        if( pctime < DEFAULT_TIME) { // check the value is a valid time (greater than Jan 1 2013)
+        if (pctime < DEFAULT_TIME) { // check the value is a valid time (greater than Jan 1 2013)
             pctime = 0L; // return 0 to indicate that the time is not valid
         }
     }
     return pctime;
 }
 
-void printTimestamp(){
+void printTimestamp() {
     Serial.print(year());
     Serial.print("-");
     Serial.print(month());

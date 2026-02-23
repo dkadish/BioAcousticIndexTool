@@ -2,8 +2,8 @@
 // Created by David Kadish on 15/11/2018.
 //
 
-#ifndef SBAT_ACOUSTICCOMPLEXITYINDEX_H
-#define SBAT_ACOUSTICCOMPLEXITYINDEX_H
+#ifndef BAIT_ACOUSTICCOMPLEXITYINDEX_H
+#define BAIT_ACOUSTICCOMPLEXITYINDEX_H
 
 
 #include "Sensor.h"
@@ -13,6 +13,7 @@ class AcousticComplexityIndex : public Sensor {
 public:
 
     AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw);
+
     AcousticComplexityIndex(int interval, ACI_TemporalWindow &aci_tw, boolean printWindowCount);
 
     void reset() override;
@@ -23,10 +24,10 @@ public:
 
 private:
 
-    ACI_TemporalWindow & _aci;
+    ACI_TemporalWindow &_aci;
 
-    boolean _printWindowCount= false;
+    boolean _printWindowCount = false;
 };
 
 
-#endif //SBAT_ACOUSTICCOMPLEXITYINDEX_H
+#endif //BAIT_ACOUSTICCOMPLEXITYINDEX_H

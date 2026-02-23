@@ -1,0 +1,19 @@
+{
+  "name": "Communication",
+  "keywords": "communication, lora, lorawan",
+  "description": "Arduino Library for communicating with The Things Network using a WIO-E5 LoRaWAN Module and CayenneLPP",
+  "authors": [
+    {
+      "name": "David Kadish",
+      "email": "david@small-things.xyz",
+      "url": "https://small-things.xyz",
+      "maintainer": true
+    }
+  ],
+  "dependencies": {
+    "electroniccats/CayenneLPP": "^1.4.0"
+  },
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "teensy"
+}

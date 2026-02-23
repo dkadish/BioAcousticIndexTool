@@ -1,0 +1,20 @@
+#define STATE_OF_CHARGE 1
+#define VOLTAGE 2
+#define CURRENT 3
+#define REMAINING_CAPACITY 4
+#define POWER_CONSUMPTION 5
+#define BATTERY_HEALTH 6
+#define INITIAL_CAPACITY 7
+
+#define ROOT_MEAN_SQUARE 8
+
+#define TEMPERATURE 9
+#define HUMIDITY 10
+#define PRESSURE 11
+#define GAS 12
+
+#define LUMINOSITY 13
+#define INFRARED 14 // Deprecated
+#define VISIBLE 15  // Deprecated
+
+#define ACOUSTIC_COMPLEXITY_INDEX 16
