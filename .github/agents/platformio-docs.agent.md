@@ -1,3 +1,9 @@
+---
+name: platformio-documentation-specialist
+description: Specialized agent for creating and improving documentation in PlatformIO projects
+tools: ['read', 'search', 'edit']
+---
+
 # Agent README — PlatformIO Code Documentation Agent
 
 ## Purpose
