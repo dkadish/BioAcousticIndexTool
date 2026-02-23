@@ -5,4 +5,7 @@
 
 .pio
 CMakeListsPrivate.txt
-cmake-build-*/ 
+cmake-build-*/
+
+# Doxygen generated output
+docs/
