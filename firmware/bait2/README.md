@@ -316,7 +316,7 @@ A `Doxyfile` is included for generating browsable HTML documentation into `docs/
 ```bash
 cd firmware/bait2
 doxygen Doxyfile
-# Open docs/html/index.html in a browser
+# Open docs/index.html in a browser
 ```
 
 [Doxygen](https://www.doxygen.nl/index.html) must be installed. On macOS:

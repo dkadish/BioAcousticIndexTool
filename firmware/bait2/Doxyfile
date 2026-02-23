@@ -1,6 +1,6 @@
 # Doxyfile for BAIT2 firmware
 # Run: doxygen Doxyfile  (from firmware/bait2/)
-# Output: docs/html/index.html
+# Output: docs/index.html
 
 #---------------------------------------------------------------------------
 # Project
@@ -8,7 +8,6 @@
 PROJECT_NAME           = "BAIT2 Firmware"
 PROJECT_BRIEF          = "BioAcoustic Index Tool — Generation 2"
 PROJECT_NUMBER         = 0.1.0
-OUTPUT_DIRECTORY       = docs
 
 #---------------------------------------------------------------------------
 # Input
@@ -61,7 +60,9 @@ PREDEFINED             = ARDUINO \
 # Output formats
 #---------------------------------------------------------------------------
 GENERATE_HTML          = YES
-HTML_OUTPUT            = html
+# Output goes directly to firmware/bait2/docs/ (not docs/html/)
+OUTPUT_DIRECTORY       = .
+HTML_OUTPUT            = docs
 GENERATE_LATEX         = NO
 
 #---------------------------------------------------------------------------
