@@ -1,0 +1,54 @@
+//
+// Created by David Kadish on 25/05/2023.
+//
+
+// Would this work with an ArrayList of sinks
+
+#ifndef BAIT2_LOGGING_H
+#define BAIT2_LOGGING_H
+
+/* Debug messages */
+#define VERBOSITY 0
+
+#if VERBOSITY >= 1
+#define ERROR(msg, ...)                \
+    Serial.printf(msg, ##__VA_ARGS__); \
+    Serial.println();
+#else
+#define ERROR(...)
+#endif
+
+#if VERBOSITY >= 2
+#define WARNING(msg, ...)              \
+    Serial.printf(msg, ##__VA_ARGS__); \
+    Serial.println();
+#else
+#define WARNING(...)
+#endif
+
+#if VERBOSITY >= 3
+#define INFO(msg, ...)                 \
+    Serial.printf(msg, ##__VA_ARGS__); \
+    Serial.println();
+#else
+#define INFO(...)
+#endif
+
+#if VERBOSITY >= 4
+#define DEBUG(msg, ...)                  \
+    Serial.printf("(%ld) > ", millis()); \
+    Serial.printf(msg, ##__VA_ARGS__);   \
+    Serial.println();
+#else
+#define DEBUG(...)
+#endif
+
+#if VERBOSITY >= 5
+#define TRACE(msg, ...)                \
+    Serial.printf(msg, ##__VA_ARGS__); \
+    Serial.println();
+#else
+#define TRACE(...)
+#endif
+
+#endif // BAIT2_LOGGING_H

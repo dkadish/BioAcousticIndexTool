@@ -20,8 +20,8 @@
 // Created by David Kadish on 13/12/2018.
 //
 
-#ifndef SBAT_BATTERYMEASUREMENT_H
-#define SBAT_BATTERYMEASUREMENT_H
+#ifndef BAIT_BATTERYMEASUREMENT_H
+#define BAIT_BATTERYMEASUREMENT_H
 
 #include <Arduino.h>
 
@@ -30,23 +30,23 @@ class BatteryMeasurement {
 protected:
     float _r1 = 22e3;
     float _r2 = 22e3;
-    float _voltage=0.0;
+    float _voltage = 0.0;
 
     static constexpr float _vref = 3.3;
 
 public:
-    void setVoltageDividers(float R1, float R2){
+    void setVoltageDividers(float R1, float R2) {
         _r1 = R1;
         _r2 = R2;
     }
 
-    float calculateVoltage(int measurement){
-        float v_measured = map((float)measurement, 0.0, 1023.0, 0.0, _vref);
-        float v = v_measured * (_r1 + _r2) / _r2 ;
+    float calculateVoltage(int measurement) {
+        float v_measured = map((float) measurement, 0.0, 1023.0, 0.0, _vref);
+        float v = v_measured * (_r1 + _r2) / _r2;
 
         return v;
     }
 };
 
 
-#endif //SBAT_BATTERYMEASUREMENT_H
+#endif //BAIT_BATTERYMEASUREMENT_H

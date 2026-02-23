@@ -1,0 +1,20 @@
+{
+  "name": "Display",
+  "keywords": "display, oled",
+  "description": "Arduino Library for a BAIT OLED Debugging Display",
+  "authors":
+  [
+    {
+      "name": "David Kadish",
+      "email": "david@small-things.xyz",
+      "url": "https://small-things.xyz",
+      "maintainer": true
+    }
+  ],
+  "dependencies":{
+    "sparkfun/SparkFun Qwiic OLED Arduino Library": "^1.0"
+  },
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "teensy"
+}

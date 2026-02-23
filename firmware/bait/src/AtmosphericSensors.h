@@ -2,8 +2,8 @@
 // Created by David Kadish on 16/11/2018.
 //
 
-#ifndef SBAT_ATMOSPHERICSENSORS_H
-#define SBAT_ATMOSPHERICSENSORS_H
+#ifndef BAIT_ATMOSPHERICSENSORS_H
+#define BAIT_ATMOSPHERICSENSORS_H
 
 
 #include <Adafruit_Si7021.h>
@@ -39,4 +39,4 @@ private:
 };
 
 
-#endif //SBAT_ATMOSPHERICSENSORS_H
+#endif //BAIT_ATMOSPHERICSENSORS_H

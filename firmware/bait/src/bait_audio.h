@@ -6,10 +6,8 @@
  * (https://github.itu.dk/davk/ecosystem-soundscape/wiki/Standalone-Biodiversity-Assessment-Tool#sleep-mode)
  */
 
-#ifndef SBAT_AUDIO_H
-#define SBAT_AUDIO_H
-
-#define USE_I2S
+#ifndef BAIT_AUDIO_H
+#define BAIT_AUDIO_H
 
 #ifdef USE_ANALOG_16
 #define ANALOG_PIN 16
@@ -45,14 +43,14 @@ AudioConnection     pcFilter(i2s, highpass);
 #ifdef USE_ANALOG_16
 AudioConnection     pcFilter(adc, highpass);
 #endif
-AudioConnection     pcAmp(highpass, amp);
-AudioConnection     pcFFT(amp, aa_fft);
+AudioConnection pcAmp(highpass, amp);
+AudioConnection pcFFT(amp, aa_fft);
 #ifdef USB_AUDIO // See [1]
 AudioConnection     pcUSB_L(amp, 0, usb, 0);
 AudioConnection     pcUSB_R(amp, 0, usb, 1);
 #endif
 
-void audio_setup(){
+void audio_setup() {
     // Audio connections require memory to work.  For more
     // detailed information, see the MemoryAndCpuUsage example
     AudioMemory(200);
@@ -74,4 +72,4 @@ void audio_setup(){
 //    aa_fft.windowFunction(AudioWindowHanning1024);
 }
 
-#endif //SBAT_AUDIO_H
+#endif //BAIT_AUDIO_H

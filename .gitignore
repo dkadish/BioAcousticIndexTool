@@ -364,7 +364,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -674,3 +673,11 @@ electronics/Examples/
 electronics/BAIT2_MicroMod/Production/
 
 electronics/BAIT2_MicroMod/dxfimp.scr
+
+firmware/bait/CMakeListsPrivate.txt
+
+firmware/bait/.pio/
+
+docs/.ztr-directory
+
+firmware/bait2/.vscode/c_cpp_properties.json

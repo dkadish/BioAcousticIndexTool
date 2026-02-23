@@ -437,3 +437,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Zettlr
+*.ztr-directory
+.ztr-directory

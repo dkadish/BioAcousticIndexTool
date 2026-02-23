@@ -2,8 +2,8 @@
 // Created by David Kadish on 14/11/2018.
 //
 
-#ifndef SBAT_BATTERYVOLTAGESENSOR_H
-#define SBAT_BATTERYVOLTAGESENSOR_H
+#ifndef BAIT_BATTERYVOLTAGESENSOR_H
+#define BAIT_BATTERYVOLTAGESENSOR_H
 
 #include <Sensor.h>
 
@@ -11,7 +11,7 @@
 #include <Metro.h>
 #include "BatteryMeasurement.h"
 
-class BatteryVoltageSensor: public Sensor, public BatteryMeasurement  {
+class BatteryVoltageSensor : public Sensor, public BatteryMeasurement {
 public:
     BatteryVoltageSensor(int interval, int batteryVoltagePin);
 
@@ -37,4 +37,4 @@ private:
 };
 
 
-#endif //SBAT_BATTERYVOLTAGESENSOR_H
+#endif //BAIT_BATTERYVOLTAGESENSOR_H

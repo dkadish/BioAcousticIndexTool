@@ -1,0 +1,35 @@
+//
+// Created by David Kadish on 24/05/2023.
+//
+
+#ifndef BAIT2_POWERSENSOR_H
+#define BAIT2_POWERSENSOR_H
+
+#include "Sensor.h"
+#include "lora.h"
+
+class PowerSensor : public Sensor
+{
+public:
+    PowerSensor(const char *filepath, LoRaWANTTN *lorattn, int interval, int initialCapacity);
+
+    void setup() override;
+
+    void process() override;
+
+    void record() override;
+
+    // private:
+    int initialCapacity;
+    float soc = 0.0,    // Read state-of-charge (in %)
+        volts = 0.0,    // Read voltage (in mV)
+        current = 0.0,  // Read average current (in mA)
+        capacity = 0.0, // Read remaining capacity (in mAh)
+        power = 0.0,    // Read power consumption (in mW)
+        health = 0.0;   // Read state-of-health (in %)
+
+private:
+    LoRaWANTTN *m_lwTTN;
+};
+
+#endif // BAIT2_POWERSENSOR_H
