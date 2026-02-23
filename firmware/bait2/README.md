@@ -309,6 +309,29 @@ CayenneLPP channel IDs are defined in `lib/Communication/include/SensorDefinitio
 
 ---
 
+## Generating HTML API Documentation
+
+A `Doxyfile` is included for generating browsable HTML documentation into `docs/`:
+
+```bash
+cd firmware/bait2
+doxygen Doxyfile
+# Open docs/html/index.html in a browser
+```
+
+[Doxygen](https://www.doxygen.nl/index.html) must be installed. On macOS:
+```bash
+brew install doxygen
+```
+On Debian/Ubuntu:
+```bash
+sudo apt install doxygen
+```
+
+The `docs/` output directory is git-ignored (it is a build artefact).
+
+---
+
 ## Troubleshooting
 
 ### SD card fails to initialise

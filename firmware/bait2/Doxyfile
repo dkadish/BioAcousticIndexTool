@@ -1,0 +1,82 @@
+# Doxyfile for BAIT2 firmware
+# Run: doxygen Doxyfile  (from firmware/bait2/)
+# Output: docs/html/index.html
+
+#---------------------------------------------------------------------------
+# Project
+#---------------------------------------------------------------------------
+PROJECT_NAME           = "BAIT2 Firmware"
+PROJECT_BRIEF          = "BioAcoustic Index Tool — Generation 2"
+PROJECT_NUMBER         = 0.1.0
+OUTPUT_DIRECTORY       = docs
+
+#---------------------------------------------------------------------------
+# Input
+#---------------------------------------------------------------------------
+# Start from the main README so it becomes the Doxygen main page
+USE_MDFILE_AS_MAINPAGE = README.md
+
+INPUT                  = README.md \
+                         src/ \
+                         include/ \
+                         lib/Ecoacoustics/include/ \
+                         lib/Ecoacoustics/src/ \
+                         lib/Ecoacoustics/README.md \
+                         lib/Communication/include/ \
+                         lib/Communication/src/ \
+                         lib/Communication/README.md \
+                         lib/Environment/include/ \
+                         lib/Environment/src/ \
+                         lib/Environment/README.md \
+                         lib/Sensor/include/ \
+                         lib/Sensor/src/ \
+                         lib/Sensor/README.md \
+                         lib/Logging/include/ \
+                         lib/Logging/README.md
+
+RECURSIVE              = NO
+FILE_PATTERNS          = *.h *.cpp *.md
+EXTENSION_MAPPING      = md=Markdown
+
+#---------------------------------------------------------------------------
+# Extraction
+#---------------------------------------------------------------------------
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+#---------------------------------------------------------------------------
+# Preprocessing
+#---------------------------------------------------------------------------
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+# Exclude board-specific guards that would hide code from Doxygen
+PREDEFINED             = ARDUINO \
+                         DESKTOP_NATIVE \
+                         USE_STATUS_LED \
+                         USE_RAW_LIGHT \
+                         SAVE_SPECTROGRAM
+
+#---------------------------------------------------------------------------
+# Output formats
+#---------------------------------------------------------------------------
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+
+#---------------------------------------------------------------------------
+# Diagrams (disable if Graphviz is not installed)
+#---------------------------------------------------------------------------
+HAVE_DOT               = NO
+
+#---------------------------------------------------------------------------
+# Source browsing
+#---------------------------------------------------------------------------
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+VERBATIM_HEADERS       = YES
+
+#---------------------------------------------------------------------------
+# Warnings
+#---------------------------------------------------------------------------
+WARN_NO_PARAMDOC       = YES
