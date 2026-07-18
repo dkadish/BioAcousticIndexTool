@@ -134,6 +134,14 @@ void setup()
     aci.setup();
 
     DEBUG("Setup Complete.")
+
+    // Sync all sensor timers so they fire together after one interval
+    powerSensor.start();
+    envSensor.start();
+    lightSensor.start();
+    rms.start();
+    aci.start();
+
 }
 
 int v = 0;
