@@ -2,7 +2,7 @@
 
 #include "logging.h"
 
-LoRaWANTTN::LoRaWANTTN() : m_lpp(51)
+LoRaWANTTN::LoRaWANTTN() : m_lpp(80)
 {
   // Constructor initialization code here
   m_lpp.reset();
