@@ -21,7 +21,8 @@ void sd_setup() {
     if (!sd.begin(SD_CONFIG)) {
         WARNING("SD Card Failed to Initilise.")
 #ifdef WAIT_FOR_SERIAL
-        sd.initErrorHalt(&Serial);
+	 ERROR("SD initialisation failed. Continuing without SD logging (card absent?).")
+
 #endif
     }
 }
