@@ -2,7 +2,7 @@
 
 #include "logging.h"
 
-LoRaWANTTN::LoRaWANTTN() : m_lpp(80)
+LoRaWANTTN::LoRaWANTTN() : m_lpp(80) // NB: A packet size of 80 should be within the EU regs, but may violate LoRaWAN standards outside of Europe
 {
   // Constructor initialization code here
   m_lpp.reset();
