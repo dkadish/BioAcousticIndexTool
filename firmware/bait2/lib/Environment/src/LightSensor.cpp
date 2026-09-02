@@ -61,7 +61,7 @@ void LightSensor::readSample()
   // TODO: is this still necessary?
   /* Early silicon seems to have issues when there is a sudden jump in */
   /* light levels. :( To work around this for now sample the sensor 2x */
-  uint32_t lum = m_tsl.getFullLuminosityManual();
+  uint32_t lum = m_tsl.getFullLuminosity();
   // lum = getFullLuminosity();
 
   m_tsl.disable();
