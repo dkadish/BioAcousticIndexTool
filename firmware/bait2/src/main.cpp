@@ -7,7 +7,7 @@
 // #include "OLEDDisplay.h"
 #include "BME680.h"
 #include "LightSensor.h"
-#include "PowerModeTest.h"
+#include "AudioPower.h"
 #include "RMS.h"
 
 // Spectral Audio
@@ -70,9 +70,6 @@ RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, interval);
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
 ACI_TemporalWindow aci_window = ACI_TemporalWindow(5, fftReader, false, false, 0); // IS THIS RIGHT PARAMETERS?
 AcousticComplexityIndex aci = AcousticComplexityIndex(aci_window, "/aci.csv", &lora, interval, 60);
-
-// Power mode test harness (serial-triggered via 'P' command)
-PowerModeTest powerModeTest = PowerModeTest(powerSensor, "/powermode.csv", 60, 120, 1000);
 
 // OLEDDisplay display = OLEDDisplay();0
 
@@ -163,8 +160,6 @@ void loop()
     fftReader.loop();
     aci_window.loop();
     aci.loop();
-
-    powerModeTest.loop();
 
     // oledLoop();
 
@@ -291,16 +286,22 @@ void serialEvent()
         }
         else if (inChar == 'P' && atLen == 0)
         {
-            if (powerModeTest.isRunning())
+            // Holds until toggled again - for a manual USB-meter A/B power
+            // measurement, not an automated one (the BQ27441 fuel gauge can't
+            // report current/power/SoC without a battery attached, so this
+            // deliberately doesn't try to log/compare readings itself).
+            static bool audioOn = true;
+            if (audioOn)
             {
-                Serial.println("Power mode test: stopping");
-                powerModeTest.stop();
+                Serial.println("Audio processing: off");
+                AudioPower::off();
             }
             else
             {
-                Serial.println("Power mode test: starting (baseline -> audio_off -> done)");
-                powerModeTest.start();
+                Serial.println("Audio processing: on");
+                AudioPower::on();
             }
+            audioOn = !audioOn;
         }
         // Anything else is accumulated into a line and forwarded to the
         // LoRa module on Serial1 once a newline is received.
