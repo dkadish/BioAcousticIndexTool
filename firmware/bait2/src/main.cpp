@@ -7,6 +7,7 @@
 // #include "OLEDDisplay.h"
 #include "BME680.h"
 #include "LightSensor.h"
+#include "AudioPower.h"
 #include "RMS.h"
 
 // Spectral Audio
@@ -133,7 +134,17 @@ void setup()
     aci_window.setup();
     aci.setup();
 
+
     DEBUG("Setup Complete.")
+
+    // Sync all sensor timers so they fire together after one interval
+    powerSensor.start();
+    envSensor.start();
+    lightSensor.start();
+    rms.start();
+    aci.start();
+
+
 }
 
 int v = 0;
@@ -153,6 +164,8 @@ void loop()
     // oledLoop();
 
     lora.loop();
+
+    serialEvent();
 }
 
 // **************************************************************************************************
@@ -228,40 +241,93 @@ void printDirectory(File dir, int numSpaces)
 
 void serialEvent()
 {
+    static char atBuf[128];
+    static int atLen = 0;
+    static bool busy = false;
+
+    // Re-entrancy guard: Serial.write()/flush() can call yield(), which
+    // re-invokes serialEvent(). Without this, a nested call reads part of the
+    // input line and corrupts atBuf (dropped/reordered chars in AT commands).
+    if (busy)
+        return;
+    busy = true;
+
+    // Relay any LoRa module responses back to the host.
+    // NB: no Serial.flush() anywhere in here - flushing blocks loop() whenever
+    // the USB host isn't draining the port, which stalls the LoRa send cadence
+    // and stops TTN uplinks.
+    while (Serial1.available())
+    {
+        Serial.write(Serial1.read());
+    }
+
     while (Serial.available())
     {
-        // get the new byte:
         char inChar = (char)Serial.read();
 
-        if (inChar == 'F')
+        // Single-character debug commands.
+        if (inChar == 'F' && atLen == 0)
         {
             File root = SD.open("/");
             Serial.println("Listing directory: /");
             printDirectory(root, 0);
         }
-        else if (inChar == 'G')
+        else if (inChar == 'G' && atLen == 0)
         {
             gain_l *= 2.0;
             amp_l.gain(gain_l);
             Serial.printf("Gain L: %f\n", gain_l);
         }
-        else if (inChar == 'g')
+        else if (inChar == 'g' && atLen == 0)
         {
             gain_l /= 2.0;
             amp_l.gain(gain_l);
             Serial.printf("Gain L: %f\n", gain_l);
         }
-        // else if (inChar == 'H')
-        // {
-        //     gain_r *= 2.0;
-        //     amp_r.gain(gain_r);
-        //     Serial.printf("Gain R: %f\n", gain_r);
-        // }
-        // else if (inChar == 'h')
-        // {
-        //     gain_r /= 2.0;
-        //     amp_r.gain(gain_r);
-        //     Serial.printf("Gain R: %f\n", gain_r);
-        // }
+        else if (inChar == 'P' && atLen == 0)
+        {
+            // Holds until toggled again - for a manual USB-meter A/B power
+            // measurement, not an automated one (the BQ27441 fuel gauge can't
+            // report current/power/SoC without a battery attached, so this
+            // deliberately doesn't try to log/compare readings itself).
+            static bool audioOn = true;
+            if (audioOn)
+            {
+                Serial.println("Audio processing: off");
+                AudioPower::off();
+            }
+            else
+            {
+                Serial.println("Audio processing: on");
+                AudioPower::on();
+            }
+            audioOn = !audioOn;
+        }
+        // Anything else is accumulated into a line and forwarded to the
+        // LoRa module on Serial1 once a newline is received.
+        else
+        {
+            if (inChar == '\n' || inChar == '\r')
+            {
+                if (atLen > 0)
+                {
+                    atBuf[atLen] = '\0';
+                    Serial.println();
+                    Serial1.println(atBuf);
+                    atLen = 0;
+                }
+            }
+            else if (atLen < (int)sizeof(atBuf) - 1)
+            {
+                if (atLen == 0)
+                {
+                    Serial.print("> ");
+                }
+                Serial.print(inChar);
+                atBuf[atLen++] = inChar;
+            }
+        }
     }
+
+    busy = false;
 }
