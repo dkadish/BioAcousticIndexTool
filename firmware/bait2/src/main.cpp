@@ -248,12 +248,22 @@ void serialEvent()
 {
     static char atBuf[128];
     static int atLen = 0;
+    static bool busy = false;
+
+    // Re-entrancy guard: Serial.write()/flush() can call yield(), which
+    // re-invokes serialEvent(). Without this, a nested call reads part of the
+    // input line and corrupts atBuf (dropped/reordered chars in AT commands).
+    if (busy)
+        return;
+    busy = true;
 
     // Relay any LoRa module responses back to the host.
+    // NB: no Serial.flush() anywhere in here - flushing blocks loop() whenever
+    // the USB host isn't draining the port, which stalls the LoRa send cadence
+    // and stops TTN uplinks.
     while (Serial1.available())
     {
         Serial.write(Serial1.read());
-        Serial.flush();
     }
 
     while (Serial.available())
@@ -313,9 +323,10 @@ void serialEvent()
                     Serial.print("> ");
                 }
                 Serial.print(inChar);
-                Serial.flush();
                 atBuf[atLen++] = inChar;
             }
         }
     }
+
+    busy = false;
 }
