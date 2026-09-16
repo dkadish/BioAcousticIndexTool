@@ -96,7 +96,9 @@ The [`analysis/`](analysis/) directory contains Jupyter notebooks and R Markdown
 
 ## Citation
 
-If you use this code in your work, please cite the associated article: https://www.tandfonline.com/doi/full/10.1080/09524622.2021.1939786
+If you use this code in your work, please cite the associated article:
+
+Kadish, D. C., & Stoy, K. (2021). *BioAcoustic Index Tool: long-term biodiversity monitoring using on-sensor acoustic index calculations*. *Bioacoustics, 30*(4), 431-448. https://doi.org/10.1080/09524622.2021.1939786
 
 ## Contributing
 
