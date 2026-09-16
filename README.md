@@ -10,6 +10,7 @@ BAIT records soundscape data and computes standard ecoacoustic metrics — inclu
 - [Repository Structure](#repository-structure)
 - [Hardware Versions](#hardware-versions)
 - [Getting Started](#getting-started)
+- [Citation](#citation)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -92,6 +93,10 @@ See [`docs/developing.md`](docs/developing.md) for detailed setup instructions.
 ### Data Analysis
 
 The [`analysis/`](analysis/) directory contains Jupyter notebooks and R Markdown files for verifying acoustic index calculations and visualising results. See [`analysis/README.md`](analysis/README.md) for details.
+
+## Citation
+
+If you use this code in your work, please cite the associated article: https://www.tandfonline.com/doi/full/10.1080/09524622.2021.1939786
 
 ## Contributing
 
