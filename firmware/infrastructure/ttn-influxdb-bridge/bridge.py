@@ -2,30 +2,6 @@
 """TTN -> InfluxDB bridge.
 
 Data path:  Teensy --LoRaWAN--> TTN --MQTT--> this bridge --> InfluxDB
-
-Subscribes to the TTN Application Server MQTT broker and writes one InfluxDB
-point per uplink to the `sensor_data` measurement (tag: device). The entire
-`uplink_message` object is flattened onto that single point -- e.g.
-`uplink_message_decoded_payload_temperature_9`, `uplink_message_rx_metadata_0_rssi`,
-`uplink_message_f_cnt` -- plus the MQTT `topic`. No per-field splitting; on
-export each uplink is one wide row (pivot on `_field`; see README).
-
-TTN must have a payload formatter configured (e.g. CayenneLPP) for the
-`uplink_message_decoded_payload_*` fields to be present.
-
-All configuration is via environment variables (see .env.example):
-
-  TTN_APP_ID      TTN application id, e.g. "my-bait-app"   (required)
-  TTN_API_KEY     TTN API key with uplink read rights, "NNSXS.xxxx..."  (required)
-  TTN_REGION      TTN cluster region, default "eu1"
-  TTN_TENANT      TTN tenant, default "ttn" (Community Edition)
-  TTN_MQTT_HOST   override broker host (default "<region>.cloud.thethings.network")
-  TTN_MQTT_PORT   default 8883 (TLS)
-
-  INFLUX_URL      default "http://influxdb:8086"
-  INFLUX_TOKEN    InfluxDB token   (required)
-  INFLUX_ORG      default "bait"
-  INFLUX_BUCKET   default "bait2"
 """
 import numbers
 import os
@@ -128,8 +104,6 @@ def on_message(client, userdata, msg):
             return
 
         # One point per uplink, with the whole uplink_message JSON flattened onto
-        # it (uplink_message_decoded_payload_*, uplink_message_rx_metadata_0_*,
-        # uplink_message_f_cnt, ...). No per-field splitting.
         point = Point("sensor_data").tag("device", device_id).tag("source", "ttn")
         point = point.field("topic", msg.topic)
 
