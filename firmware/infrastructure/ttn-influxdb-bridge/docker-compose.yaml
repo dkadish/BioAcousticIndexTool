@@ -1,0 +1,54 @@
+# TTN -> InfluxDB monitoring stack.
+#
+#   Teensy --LoRaWAN--> TTN --MQTT--> ttn-bridge --> influxdb
+#
+# Config comes from .env (copy .env.example -> .env and fill in).
+
+services:
+  influxdb:
+    image: influxdb:2.7
+    container_name: bait-influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: ${INFLUX_USER:-admin}
+      DOCKER_INFLUXDB_INIT_PASSWORD: ${INFLUX_PASSWORD:?set INFLUX_PASSWORD in .env}
+      DOCKER_INFLUXDB_INIT_ORG: ${INFLUX_ORG:-bait}
+      DOCKER_INFLUXDB_INIT_BUCKET: ${INFLUX_BUCKET:-bait2}
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${INFLUX_TOKEN:?set INFLUX_TOKEN in .env}
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+    healthcheck:
+      test: ["CMD", "influx", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 15s
+
+  ttn-bridge:
+    build: .
+    container_name: bait-ttn-bridge
+    restart: unless-stopped
+    # bridge.py is mounted, so a code edit only needs `docker compose restart ttn-bridge`
+    # (no --build). requirements/Dockerfile changes still need `up -d --build`.
+    volumes:
+      - ./bridge.py:/app/bridge.py:ro
+    depends_on:
+      influxdb:
+        condition: service_healthy
+    environment:
+      # TTN
+      TTN_APP_ID: ${TTN_APP_ID:?set TTN_APP_ID in .env}
+      TTN_API_KEY: ${TTN_API_KEY:?set TTN_API_KEY in .env}
+      TTN_REGION: ${TTN_REGION:-eu1}
+      TTN_TENANT: ${TTN_TENANT:-ttn}
+      TTN_DEVICE_ID: ${TTN_DEVICE_ID:-}
+      # InfluxDB
+      INFLUX_URL: http://influxdb:8086
+      INFLUX_TOKEN: ${INFLUX_TOKEN}
+      INFLUX_ORG: ${INFLUX_ORG:-bait}
+      INFLUX_BUCKET: ${INFLUX_BUCKET:-bait2}
+
+volumes:
+  influxdb_data:
