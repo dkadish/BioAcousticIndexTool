@@ -18,3 +18,6 @@
 #define VISIBLE 15  // Deprecated
 
 #define ACOUSTIC_COMPLEXITY_INDEX 16
+#define BIOACOUSTIC_INDEX 17
+#define TOTAL_ENTROPY 18
+#define ACOUSTIC_EVENT_RATE 19 // Events per second

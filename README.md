@@ -24,6 +24,9 @@ Traditional soundscape monitoring requires transporting recording equipment to t
 | **ACI** | Acoustic Complexity Index — captures the variability in sound intensity across frequency bins |
 | **ADI** | Acoustic Diversity Index — measures the diversity of sound across frequency bands (Shannon entropy) |
 | **ADE** | Acoustic Difference Index — measures the difference between consecutive time windows |
+| **BI** | Bioacoustic Index — area of the mean spectrum above its minimum between 2 and 8 kHz |
+| **H** | Total acoustic entropy — product of temporal (Ht) and spectral (Hf) entropy |
+| **Events** | Acoustic event count — rises of the sound level above the background noise |
 
 ## Repository Structure
 

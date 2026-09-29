@@ -1,8 +1,13 @@
 # Ecoacoustics Library
 
 Real-time computation of ecoacoustic indices from live FFT audio data on the Teensy
-MicroMod. Implements the Acoustic Complexity Index (ACI) along with supporting classes
-for FFT reading, RMS measurement, and prototype Acoustic Difference / Diversity indices.
+MicroMod. Implements the Acoustic Complexity Index (ACI), Bioacoustic Index (BI), total
+acoustic entropy (Htf) and an acoustic event count, along with supporting classes for FFT
+reading, RMS measurement, and prototype Acoustic Difference / Diversity indices.
+
+The maths for BI, Htf and the event count is in the board-independent
+[`EcoacousticMath`](../EcoacousticMath) library, which is unit-tested on the desktop
+(`pio test -e desktop`). The classes here handle timing, SD logging and LoRaWAN.
 
 **Source**: `lib/Ecoacoustics/`  
 **Library metadata**: `lib/Ecoacoustics/library.json`
@@ -448,6 +453,33 @@ Prototype implementation of an Acoustic Diversity Index. Divides the spectrum in
 
 ---
 
+### `BioacousticIndex`, `TotalEntropy`, `AcousticEventCount`
+
+**Headers**: `include/BioacousticIndex.h`, `include/TotalEntropy.h`, `include/AcousticEventCount.h`
+**Maths**: `lib/EcoacousticMath` (`BioacousticIndexAccumulator`, `TotalEntropyAccumulator`, `AcousticEventAccumulator`)
+
+Each class reads every new `FFTReader` frame and, at the end of each `interval`, writes one
+row to its CSV file and one value to the LoRaWAN payload. Memory use is fixed and does not
+depend on the interval length.
+
+| Class | Definition | Default parameters | CSV row | LoRaWAN channel |
+|-------|------------|--------------------|---------|-----------------|
+| `BioacousticIndex` | soundecology `bioacoustic_index`: area of the mean dB spectrum above its minimum in the band | 2000–8000 Hz | `timestamp, bi, frames` | `BIOACOUSTIC_INDEX` (17) |
+| `TotalEntropy` | seewave `H` = Ht × Hf. Hf is the entropy of the mean spectrum; Ht is the entropy of a per-frame envelope `sqrt(Σ|X_k|²)` | — | `timestamp, h, ht, hf, frames` | `TOTAL_ENTROPY` (18) |
+| `AcousticEventCount` | Rises of the band level to at least background + threshold, where background is the mode of the level histogram (Towsey et al. 2014) | 1000–8000 Hz, 3 dB | `timestamp, events, background_db, frames` | `ACOUSTIC_EVENT_RATE` (19), events per second |
+
+```cpp
+BioacousticIndex bi = BioacousticIndex(fftReader, "/bi.csv", &lora, interval);
+TotalEntropy entropy = TotalEntropy(fftReader, "/entropy.csv", &lora, interval);
+AcousticEventCount events = AcousticEventCount(fftReader, "/events.csv", &lora, interval);
+```
+
+Verification against soundecology/seewave is in
+[`analysis/aci_verification/new_indices`](../../../../analysis/aci_verification/new_indices).
+The choice of parameters is tracked in #69.
+
+---
+
 ## Compile-time Parameters
 
 Defined in `include/parameters.h`:
@@ -464,3 +496,4 @@ Defined in `include/parameters.h`:
 |---------|-------|
 | `Audio` (Teensy) | `AudioAnalyzeFFT256`, `AudioAnalyzeRMS` — provided by the Teensy Audio library |
 | `Sensor` (local) | Base class for all sensors |
+| `EcoacousticMath` (local) | Board-independent index maths |

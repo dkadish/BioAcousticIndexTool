@@ -17,6 +17,7 @@ public:
     virtual void setup() override;
     virtual void loop() override;
     virtual float get(int i);
+    const float *getSpectrum() const { return fft; } // The most recent frame, length values
     virtual void debug();
 
     virtual void recordFFT();

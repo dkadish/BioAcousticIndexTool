@@ -13,6 +13,9 @@
 #include "FFTReader.h"
 #include "ACI_TemporalWindow.h"
 #include "AcousticComplexityIndex.h"
+#include "BioacousticIndex.h"
+#include "TotalEntropy.h"
+#include "AcousticEventCount.h"
 
 #include <Audio.h>
 #include <SPI.h>
@@ -69,6 +72,9 @@ RootMeanSquare rms = RootMeanSquare(rms_l, "/rms.csv", &lora, interval);
 FFTReader fftReader = FFTReader(fft256_l, "/fft.csv", false, 2, -1);
 ACI_TemporalWindow aci_window = ACI_TemporalWindow(5, fftReader, false, false, 0); // IS THIS RIGHT PARAMETERS?
 AcousticComplexityIndex aci = AcousticComplexityIndex(aci_window, "/aci.csv", &lora, interval, 60);
+BioacousticIndex bi = BioacousticIndex(fftReader, "/bi.csv", &lora, interval);
+TotalEntropy entropy = TotalEntropy(fftReader, "/entropy.csv", &lora, interval);
+AcousticEventCount events = AcousticEventCount(fftReader, "/events.csv", &lora, interval);
 
 // OLEDDisplay display = OLEDDisplay();0
 
@@ -132,6 +138,9 @@ void setup()
     fftReader.setup();
     aci_window.setup();
     aci.setup();
+    bi.setup();
+    entropy.setup();
+    events.setup();
 
     DEBUG("Setup Complete.")
 
@@ -141,6 +150,9 @@ void setup()
     lightSensor.start();
     rms.start();
     aci.start();
+    bi.start();
+    entropy.start();
+    events.start();
 }
 
 int v = 0;
@@ -156,6 +168,9 @@ void loop()
     fftReader.loop();
     aci_window.loop();
     aci.loop();
+    bi.loop();
+    entropy.loop();
+    events.loop();
 
     // oledLoop();
 
