@@ -292,6 +292,10 @@ pio test -e desktop
 
 This is the fastest way to verify core functionality without needing a physical Teensy board.
 
+The desktop suite lives in `test/test_desktop/` and covers the board-independent index maths in
+`lib/EcoacousticMath` (Bioacoustic Index, total entropy and acoustic event count). Code that should
+be tested this way must not include Arduino, Teensy Audio or SD headers.
+
 ### Embedded Tests (Requires Hardware)
 
 To run tests on a connected Teensy MicroMod:

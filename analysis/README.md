@@ -18,6 +18,7 @@ Scripts and notebooks for verifying and visualising the acoustic index calculati
 | `compare_bait_soundecology_chunks.Rmd` | R Markdown — chunk-level comparison of ACI calculations |
 | `generate_spectrogram_using_spectro.Rmd` | R Markdown — spectrogram generation using the `spectro` function |
 | `soundecology_aci.csv` | Reference ACI values computed with `soundecology` |
+| `new_indices/` | Bioacoustic Index, total entropy and event count vs. `soundecology`/`seewave` (see its README) |
 | `SOUND/` | Sample audio files used for verification |
 | `aci_clumps/` | Intermediate ACI clump data |
 | `aci_totals/` | Final ACI total values |

@@ -1,7 +1,7 @@
 {
-  "name": "Ecoacoustics",
+  "name": "EcoacousticMath",
   "keywords": "audio, ecology, ecoacoustics",
-  "description": "Arduino library for computing ecoacoustic indices",
+  "description": "Board-independent maths for spectral acoustic indices (Bioacoustic Index, total entropy, acoustic event count)",
   "authors":
   [
     {
@@ -11,8 +11,7 @@
       "maintainer": true
     }
   ],
-  "dependencies": ["Audio", "EcoacousticMath"],
   "version": "0.1.0",
-  "frameworks": "arduino",
-  "platforms": "teensy"
+  "frameworks": "*",
+  "platforms": "*"
 }
